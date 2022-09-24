@@ -22,12 +22,13 @@ export default defineUserConfig({
   ],
   theme: recoTheme({
     style: '@vuepress-reco/style-default',
+    lang: 'zh-CN',
     logo: '/logo.png',
     author: '飒爽师叔',
     authorAvatar: '/head.png',
     docsRepo: 'https://github.com/vlssu/vlssu.github.io',
     docsBranch: 'master',
-    docsDir: 'example',
+    docsDir: '',
     lastUpdatedText: '',
     // series 为原 sidebar
     // series: {
@@ -140,6 +141,5 @@ export default defineUserConfig({
       background: '/comment.webp'  // 背景图
     },
   }),
-  lang: 'zh-CN',
   // debug: true,
 })
