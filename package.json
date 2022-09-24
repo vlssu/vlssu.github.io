@@ -1,0 +1,17 @@
+{
+  "name": "vlssu_blog",
+  "version": "2.0.0",
+  "description": "师叔の小窝",
+  "repository": "git@github.com:vlssu/vlssu.github.io.git",
+  "author": "vlssu <vlssu@vlssu.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "start": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "dependencies": {
+    "vuepress": "2.0.0-beta.51",
+    "vuepress-theme-reco": "v2.0.0-beta.40"
+  }
+}
