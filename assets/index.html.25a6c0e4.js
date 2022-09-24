@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-dabe7a70","path":"/tags/Go/1/","title":"","lang":"en-US","frontmatter":{"layout":"Categories"},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{e as data};

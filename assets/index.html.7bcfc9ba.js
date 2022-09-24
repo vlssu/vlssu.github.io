@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-f27a674c","path":"/categories/jiaocheng/2/","title":"","lang":"en-US","frontmatter":{"layout":"Categories"},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{e as data};

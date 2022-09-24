@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-ec4eb378","path":"/tags/yilong/1/","title":"","lang":"en-US","frontmatter":{"layout":"Categories"},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{e as data};
