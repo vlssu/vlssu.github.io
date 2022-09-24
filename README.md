@@ -9,6 +9,15 @@ banner:
   tagline: 愿你保持初心和善良,笑里尽是温暖与坦荡。
   # heroImage: '/logo.png'
   bgImage: '/WechatIMG3.jpg'
+blog:
+  socialLinks:
+    - { icon: 'BrandGithub', link: 'https://github.com/vlssu' }
+    - { icon: 'BrandGmail', link: 'mailto:vlssu@vlssu.com' }
+    - { icon: 'DeviceTv', link: 'https://space.bilibili.com/22219285' }
+    - { icon: 'Qq', link: 'tencent://message/?uin=1305300729' }
+    - { icon: 'BrandTelegram', link: 'https://t.me/vlssu' }
+    - { icon: 'Donate', link: 'https://afdian.net/a/Vlssu' }
+    - { icon: 'BrandDiscord', link: 'https://discord.gg/wt7DmfY' }
 bannerBrand:
   heroImage: /logo.png
   heroImageStyle:
