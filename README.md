@@ -14,10 +14,10 @@ blog:
     - { icon: 'BrandGithub', link: 'https://github.com/vlssu' }
     - { icon: 'BrandGmail', link: 'mailto:vlssu@vlssu.com' }
     - { icon: 'DeviceTv', link: 'https://space.bilibili.com/22219285' }
-    - { icon: 'Qq', link: 'tencent://message/?uin=1305300729' }
-    - { icon: 'BrandTelegram', link: 'https://t.me/vlssu' }
-    - { icon: 'Donate', link: 'https://afdian.net/a/Vlssu' }
+    - { icon: 'Qq', link: 'https://jq.qq.com/?_wv=1027&k=54xnf9b' }
+    # - { icon: 'BrandTelegram', link: 'https://t.me/vlssu' }
     - { icon: 'BrandDiscord', link: 'https://discord.gg/wt7DmfY' }
+    - { icon: 'Donate', link: 'https://afdian.net/a/Vlssu' }
 bannerBrand:
   heroImage: /logo.png
   heroImageStyle:
