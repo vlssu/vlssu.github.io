@@ -3,6 +3,11 @@ import type { DefaultThemeOptions } from 'vuepress'
 import recoTheme from 'vuepress-theme-reco'
 
 export default defineUserConfig({
+  locales: {
+    '/': {
+      lang: 'zh-CN'
+    }
+  },
   title: '师叔の小窝',
   description: 'Share knowledge and stay happy',
   dest: 'public',
@@ -22,14 +27,13 @@ export default defineUserConfig({
   ],
   theme: recoTheme({
     style: '@vuepress-reco/style-default',
-    lang: 'zh-CN',
     logo: '/logo.png',
     author: '飒爽师叔',
     authorAvatar: '/head.png',
     docsRepo: 'https://github.com/vlssu/vlssu.github.io',
     docsBranch: 'master',
     docsDir: '',
-    lastUpdatedText: '',
+    lastUpdatedText: '最后更新时间',
     // series 为原 sidebar
     // series: {
     //   '/docs/theme-reco/': [
@@ -144,6 +148,5 @@ export default defineUserConfig({
       },
     },
   }),
-  lang: 'zh-CN',
   // debug: true,
 })
