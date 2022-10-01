@@ -1,6 +1,7 @@
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 import recoTheme from 'vuepress-theme-reco'
+import { pwaPlugin } from '@vuepress/plugin-pwa'
 
 export default defineUserConfig({
   locales: {
@@ -16,7 +17,7 @@ export default defineUserConfig({
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
     ['meta', { name: 'author', content: '飒爽师叔' }],
     ['meta', { name: 'keywords', content: 'vuepress,飒爽师叔,ValiantShishu,vlssu,vuepress-theme-reco,theme,blog,博客' }],
-    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
     ['meta', { name: 'theme-color', content: '#42b983' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
@@ -148,5 +149,10 @@ export default defineUserConfig({
       },
     },
   }),
+  plugins: [
+    pwaPlugin({
+      skipWaiting: true,
+    }),
+  ]
   // debug: true,
 })
