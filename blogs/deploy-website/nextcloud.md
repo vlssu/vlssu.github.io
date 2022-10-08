@@ -22,21 +22,37 @@ categories:
 ## 环境部署
 ### 系统更新
 - 首先你要确保你的系统是最新的
-```sh
-yum update # (Centos)
-//Ubuntu需要两条指令来升级
-apt-get update -y # (Ubuntu)
-apt-get upgrade -y # (Ubuntu)
+
+:::: code-group
+::: code-group-item Centos
+```bash
+yum update -y
 ```
+:::
+::: code-group-item Ubuntu
+```bash
+apt-get update -y
+apt-get upgrade -y
+```
+:::
+::::
 
 ### 宝塔安装
 1. 使用指令安装
-```sh
-//Centos指令
-yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh
-//Ubuntu指令
-wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh
+
+:::: code-group
+::: code-group-item Centos
+```bash
+yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh ed8484bec
 ```
+:::
+::: code-group-item Ubuntu/Deepin
+```bash
+wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh ed8484bec
+```
+:::
+::::
+
 2. 安装所需环境
 - 首次进入会让你安装基础程序【这里选**LAMP**个人喜欢这个，并且不需要自己添加伪静态】
   - 这里选择版本为：

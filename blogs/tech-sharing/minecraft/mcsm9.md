@@ -50,22 +50,40 @@ wget -qO- https://gitee.com/mcsmanager/script/raw/master/setup.sh | bash
 ## 环境部署
 ### 系统更新
 - 首先你要确保你的系统是最新的
+
+:::: code-group
+::: code-group-item Centos
 ```bash
-yum update # (Centos)
-//Ubuntu需要两条指令来升级
-apt-get update -y # (Ubuntu)
-apt-get upgrade -y # (Ubuntu)
+yum update -y
 ```
+:::
+::: code-group-item Ubuntu
+```bash
+apt-get update -y
+apt-get upgrade -y
+```
+:::
+::::
 
 ### 安装node.js
 
 - **若发现国内下载很慢可以参考这篇来使用国内镜像部署**[**[Linux系统如何安装node管理器]**](../linux/node.html)
 
 1. 安装Git
+
+:::: code-group
+::: code-group-item Centos
 ```bash
-yum install git -y # (Centos)
-apt install git # (Ubuntu)
+yum install git -y
 ```
+:::
+::: code-group-item Ubuntu
+```bash
+apt install git -y
+```
+:::
+::::
+
 2. 安装node.js管理器等组件
 ```bash
 git clone https://github.com/creationix/nvm.git ~/nvm
@@ -83,36 +101,32 @@ nvm use v16.14.0
 ### 安装java
 - 如果要看更精细的步骤可以看这个文章 [[如何在Linux系统中安装Java8]](../linux/java8.html)
 
-#### Centos
-- 使用`yum`安装`java`。
-
+:::: code-group
+::: code-group-item Centos
 ```bash
-# 安装java8
+# 安装java8 按需安装，建议直接下载用绝对链接来开服
 # yum install java-1.8.0-openjdk java-1.8.0-openjdk-devel
-# 安装java11 按需安装，建议直接下载用绝对链接来开服
-# yum install java-11-openjdk java-11-openjdk-devel
-# 安装java17 按需安装，建议直接下载用绝对链接来开服
+
+# 安装java17
 yum install java-17-openjdk java-17-openjdk-devel
 # 查看java版本
 java -version
 ```
-
-#### Ubuntu
-1. 安装`java`
+:::
+::: code-group-item Ubuntu
 ```bash
+# apt install openjdk-8-jdk
+
 apt install openjdk-17-jdk
-```
-2. 如果我们在服务器上安装了多个Java版本，我们可以使用<b>update-alternatives</b>系统更改默认版本
-```bash
-sudo update-alternatives --config java
-```
-要维持当前值[*]请按<回车键>，或者键入选择的编号：<br>
-在出现提示时输入号码并按Enter键。
+# 如果我们在服务器上安装了多个Java版本，我们可以使用 update-alternatives 来更改系统默认版本
+# 要维持当前值[*]请按<回车键>，或者键入选择的编号：<br>
+# 在出现提示时输入号码并按Enter键。
 
-3. 查看`java`版本
-```bash
+# 查看java版本
 java -version
 ```
+:::
+::::
 
 ### 安装MCSM
 
