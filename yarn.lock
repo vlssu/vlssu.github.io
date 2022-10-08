@@ -1893,7 +1893,19 @@
     "@vuepress/core" "2.0.0-beta.51"
     prismjs "^1.28.0"
 
-"@vuepress/plugin-pwa@^2.0.0-beta.51":
+"@vuepress/plugin-pwa-popup@^2.0.0-beta.51":
+  version "2.0.0-beta.51"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-pwa-popup/-/plugin-pwa-popup-2.0.0-beta.51.tgz#a3e1922c26652649225e4a569a030e4be386d806"
+  integrity sha512-Z9lAJr/+AzhQQiE1sI1ghDTI9lc9KHZEbTazDlLTUBkHqWLJ7Km3zwOK2srfTjuava5LtSm/TpqJuHdIU2hWZw==
+  dependencies:
+    "@vuepress/client" "2.0.0-beta.51"
+    "@vuepress/core" "2.0.0-beta.51"
+    "@vuepress/plugin-pwa" "2.0.0-beta.51"
+    "@vuepress/shared" "2.0.0-beta.51"
+    "@vuepress/utils" "2.0.0-beta.51"
+    vue "^3.2.37"
+
+"@vuepress/plugin-pwa@2.0.0-beta.51", "@vuepress/plugin-pwa@^2.0.0-beta.51":
   version "2.0.0-beta.51"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-pwa/-/plugin-pwa-2.0.0-beta.51.tgz#e764b5b2a7a38bc4570879bd4eb7bdd8b9509224"
   integrity sha512-thnak32+oGweQoG+J7/Q/7l0uKN+zwhSUwZ867ktad8H2S0gY8+NgJAyaBYtQ0kf01tC9txVFYcyrORi+aFc/A==

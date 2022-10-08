@@ -2,6 +2,7 @@ import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 import recoTheme from 'vuepress-theme-reco'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
+import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 
 export default defineUserConfig({
@@ -149,6 +150,14 @@ export default defineUserConfig({
   plugins: [
     pwaPlugin({
       skipWaiting: true,
+    }),
+    pwaPopupPlugin({
+      locales: {
+        '/': {
+          message: '发现新内容可用',
+          buttonText: '刷新',
+        },
+      },
     }),
     // 图片缩放 https://v2.vuepress.vuejs.org/zh/reference/plugin/medium-zoom.html
     mediumZoomPlugin({
