@@ -1,13 +1,12 @@
 ---
 home: true
 modules:
-  - Banner
+  - bannerBrand
   - Blog
   - Footer
 banner:
   heroText: 师叔の小窝
   tagline: 愿你保持初心和善良,笑里尽是温暖与坦荡。
-  # heroImage: '/logo.png'
   bgImage: '/WechatIMG3.jpg'
 blog:
   socialLinks:
@@ -19,16 +18,9 @@ blog:
     - { icon: 'BrandDiscord', link: 'https://discord.gg/wt7DmfY' }
     - { icon: 'Donate', link: 'https://afdian.net/a/Vlssu' }
 bannerBrand:
-  heroImage: /logo.png
-  heroImageStyle:
-    maxWidth: '200px'
-    width: '100%'
-    display: block
-    margin: '0 auto 2rem'
-    borderRadius: '1rem'
-  bgImage: '/bg.svg'
-  heroText: 师叔の小窝
-  tagline: 愿你保持初心和善良,笑里尽是温暖与坦荡。
+  bgImage: '/WechatIMG3.jpg'
+  title: 师叔の小窝
+  description: 愿你保持初心和善良,笑里尽是温暖与坦荡。
   # buttons:
   #   - { text: Guide, link: '/docs/guide/introduce' }
   #   - { text: Default Style, link: '/docs/style-default-api/introduce', type: 'plain' }
