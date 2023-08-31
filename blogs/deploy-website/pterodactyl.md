@@ -8,7 +8,6 @@ tags:
  - 汉化
 categories: 
  - 教程
-sticky: 1
 ---
 
 ::: theorem
@@ -33,8 +32,7 @@ sticky: 1
 |            | 22.04 | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。 |
 | **CentOS** | 7     | :white_check_mark: | 需要额外的 repos。                 |
 |            | 8     | :white_check_mark: | 请注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux。 |
-| **Debian** | 9     | :white_check_mark: | 需要额外的 repos。                 |
-|            | 10    | :white_check_mark: |                                    |
+| **Debian** | 10    | :white_check_mark: |                                    |
 |            | 11    | :white_check_mark: |                                    |
 
 ## 安装宝塔面板
@@ -60,7 +58,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 `LNMP` 和 `LAMP` 分别代表着 `Linux` `Nginx\Apache` `Mysql` `PHP`   
 阁下选择版本请务必保证 `PHP`版本 >=  `8.1`、 `MySQL`版本 >=  `5.7`    
 这一般会在阁下第一次登录宝塔面板时提示安装，我不在此赘述，若阁下错过提示，可点击 `软件商店` 自行安装    
-在安装完毕时，建议将 `PHP` 的**函数禁用**全部删除，并且在拓展里安装 `fileinfo` ,他的作用还是很大的。
+在安装完毕后，在 `PHP` 的**禁用函数**里删除 `putenv`、 `exec`、 `proc_open`、 `shell_exec`，并且在扩展里安装 `fileinfo` `redis`
 
 ## 新建站点并开始构建
 
@@ -70,15 +68,12 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 ![如果你看到我说明图挂了](./images/pterodactyl_1.png)
 
 ### 下载并上传程序文件至网站目录
-::: tip 使用翼龙中国开发版程序
-翼龙中国开发版 是在 翼龙官方上游仓库上实时同步 进行的汉化，包含了翼龙官方最新的功能更新/修复，同时也可能带来了新的问题，若阁下喜欢使用开发版，则可使用以下命令下载开发版程序
 
 ``` bash
 https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
-# 如果阁下下不动这个文件，可以使用 Fastgit 提供的国内反向代理来下载 链接如下
-https://hub.fastgit.xyz/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
+# 如果阁下下不动这个文件，可以使用 gh-proxy 提供的CF反向代理来下载 链接如下
+https://ghproxy.com/https://github.com/pterodactyl-china/panel/releases/latest/download/panel.tar.gz
 ```
-:::
 
 ### 进入网站目录解压程序文件并设置环境文件
 
@@ -178,7 +173,7 @@ php artisan p:user:make
 我们需要做的第一件事是创建一个新的 Cronjob，它每分钟运行一次以处理特定的任务，例如会话清理并将计划任务发送到守护进程。 您需要使用 `sudo crontab -e` 打开您的 `crontab`，然后将以下字符串以新一行粘贴进去，并保存更改。
 
 ```bash
-* * * * * php /var/www/pterodactyl/artisan schedule:run >> /dev/null 2>&1
+* * * * * php /www/wwwroot/pterodactyl/artisan schedule:run >> /dev/null 2>&1
 ```
 
 ### 创建队列监听服务
@@ -193,7 +188,7 @@ php artisan p:user:make
 
 [Unit]
 Description=Pterodactyl Queue Worker
-After=redis-server.service
+# After=redis-server.service
 
 [Service]
 # 在某些系统上用户和组可能不同。
@@ -201,7 +196,7 @@ After=redis-server.service
 User=www
 Group=www
 Restart=always
-ExecStart=/usr/bin/php /var/www/pterodactyl/artisan queue:work --queue=high,standard,low --sleep=3 --tries=3
+ExecStart=/usr/bin/php /www/wwwroot/pterodactyl/artisan queue:work --queue=high,standard,low --sleep=3 --tries=3
 StartLimitInterval=180
 StartLimitBurst=30
 RestartSec=5s
@@ -216,7 +211,7 @@ WantedBy=multi-user.target
 
 ::: tip
 如果你没有使用 `redis` 做任何事情，你应该删除 `After=` 一行，否则服务启动时会遇到错误。      
-如果你的面板路径并不是 `/var/www/pterodactyl/`，请替换为你面板的绝对路径，否则邮件服务将无法使用。      
+如果你的面板路径并不是 `/www/wwwroot/pterodactyl/`，请替换为你面板的绝对路径，否则邮件服务将无法使用。      
 如果你宝塔默认命令行使用的并不是 `8.1`PHP 可以尝试使用绝对路径，将 `/usr/bin/php` 改为 `/www/server/php/81/bin/php`
 :::
 

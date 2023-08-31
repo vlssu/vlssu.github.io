@@ -36,16 +36,16 @@ nvm use stable
 
 ### node 国内镜像
 ```bash
-export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
+export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node
 ```
 ### npm 国内镜像
 ```bash
-npm config set registry https://registry.npm.taobao.org
+npm config set registry https://registry.npmmirror.com
 ```
 
 
 ### npm WIN 国内镜像源
 ```bash
-npm config set registry https://registry.npm.taobao.org --global
-npm config set disturl https://npm.taobao.org/dist --global
+npm config set registry https://registry.npmmirror.com --global
+npm config set disturl https://npmmirror.com/mirrors/node --global
 ```
