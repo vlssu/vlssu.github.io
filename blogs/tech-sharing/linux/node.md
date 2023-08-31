@@ -8,7 +8,7 @@ tags:
  - Node
  - npm
 categories:
- - Linux使用小知识
+ - Linux小知识
 ---
 
 1. 安装github

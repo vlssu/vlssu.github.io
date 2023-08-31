@@ -7,7 +7,7 @@ tags:
  - CentOs
  - Ubuntu
 categories:
- - Linux使用小知识
+ - Linux小知识
 publish: false
 ---
 

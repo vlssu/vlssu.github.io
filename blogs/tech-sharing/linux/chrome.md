@@ -5,7 +5,7 @@ cover: https://api.vlssu.com/img/?20220424
 tags:
  - Chrome
 categories: 
- - Linux使用小知识
+ - Linux小知识
 ---
 
 1. 配置yum源（root用户）

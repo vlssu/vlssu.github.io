@@ -6,7 +6,7 @@ tags:
  - Ubuntu
  - Python
 categories: 
- - Linux使用小知识
+ - Linux小知识
 ---
 
 由于现在新项目都需要3.9，3.8及一下都不支持，然后我由想在win上直接弄，方便，所以需要在Ubuntu 20.04单独安装Python3.9环境教程。

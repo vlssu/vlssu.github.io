@@ -5,7 +5,7 @@ cover: https://api.vlssu.com/img/?200303
 tags:
  - Docker
 categories: 
- - Linux使用小知识
+ - Linux小知识
 ---
 
 ## 安装 Docker

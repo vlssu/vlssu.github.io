@@ -6,7 +6,7 @@ tags:
  - Go
  - Ubuntu
 categories: 
- - Linux使用小知识
+ - Linux小知识
 ---
 
 ### 下载 Go 压缩包

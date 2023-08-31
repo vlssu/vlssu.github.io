@@ -5,7 +5,7 @@ cover: https://api.vlssu.com/img/?200305
 tags:
  - Linux
 categories: 
- - Linux使用小知识
+ - Linux小知识
 ---
 
 ## 临时生效

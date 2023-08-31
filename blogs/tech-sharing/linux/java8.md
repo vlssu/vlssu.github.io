@@ -8,7 +8,7 @@ tags:
  - Ubuntu
  - Java
 categories:
- - Linux使用小知识
+ - Linux小知识
 ---
 ## Centos
 使用`yum`安装`java8`。
