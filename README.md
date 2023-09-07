@@ -10,13 +10,13 @@ banner:
   bgImage: '/WechatIMG3.jpg'
 blog:
   socialLinks:
-    - { icon: 'BrandGithub', link: 'https://github.com/vlssu' }
-    - { icon: 'BrandGmail', link: 'mailto:vlssu@vlssu.com' }
-    - { icon: 'DeviceTv', link: 'https://space.bilibili.com/22219285' }
-    - { icon: 'Qq', link: 'https://jq.qq.com/?_wv=1027&k=54xnf9b' }
+    - { icon: 'LogoGithub', link: 'https://github.com/vlssu' }
+    - { icon: 'Email', link: 'mailto:vlssu@vlssu.com' }
+    - { icon: 'VideoChat', link: 'https://space.bilibili.com/22219285' }
+    - { icon: 'Chat', link: 'https://jq.qq.com/?_wv=1027&k=54xnf9b' }
     # - { icon: 'BrandTelegram', link: 'https://t.me/vlssu' }
-    - { icon: 'BrandDiscord', link: 'https://discord.gg/wt7DmfY' }
-    - { icon: 'Donate', link: 'https://afdian.net/a/Vlssu' }
+    - { icon: 'LogoDiscord', link: 'https://discord.gg/wt7DmfY' }
+    - { icon: 'Need', link: 'https://afdian.net/a/Vlssu' }
 bannerBrand:
   bgImage: '/WechatIMG3.jpg'
   title: 师叔の小窝
