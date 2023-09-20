@@ -8,7 +8,8 @@ tags:
  - VuePress
 categories:
  - node
-sticky: 1
+# sticky: 1
+publish: false
 ---
 
 ::: tip 前言

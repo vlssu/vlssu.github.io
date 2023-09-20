@@ -8,6 +8,7 @@ tags:
  - 汉化
 categories: 
  - 教程
+sticky: 1
 ---
 
 ::: theorem
