@@ -3,6 +3,7 @@ import type { DefaultThemeOptions } from 'vuepress'
 import { recoTheme } from 'vuepress-theme-reco'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
+import { feedPlugin } from "vuepress-plugin-feed2";
 import { themeConfig } from './config/index'
 
 export default defineUserConfig({
@@ -34,6 +35,12 @@ export default defineUserConfig({
           buttonText: '刷新',
         },
       },
+    }),
+    feedPlugin({
+      hostname: "https://vlssu.github.io",
+      atom: true,
+      json: true,
+      rss: true,
     }),
   ]
   // debug: true,

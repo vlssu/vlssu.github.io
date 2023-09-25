@@ -1,7 +1,7 @@
 export const navbar = [
     { text: '时间线', link: '/timeline', icon: 'Time' },
     { text: '友情链接', link: '/friendship-link', icon: 'Friendship' },
-    { text: '订阅', link: '/rss.xml', icon: 'Rss' },
+    { text: '订阅', link: 'https://vlssu.github.io/rss.xml', icon: 'Rss' },
     // { text: '分类', link: '/categories/reco/1/' },
     // { text: '标签', link: '/tags/tag1/1/' },
     // { text: '个人主页', 
