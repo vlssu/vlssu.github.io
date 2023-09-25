@@ -3,7 +3,6 @@ import type { DefaultThemeOptions } from 'vuepress'
 import { recoTheme } from 'vuepress-theme-reco'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
-import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { themeConfig } from './config/index'
 
 export default defineUserConfig({
@@ -35,15 +34,6 @@ export default defineUserConfig({
           buttonText: '刷新',
         },
       },
-    }),
-    // 图片缩放 https://v2.vuepress.vuejs.org/zh/reference/plugin/medium-zoom.html
-    mediumZoomPlugin({
-      selector: '.page-container img',
-      zoomOptions: {
-        margin: 16,
-        background: '#616161cc',
-        scrollOffset: 0
-      }
     }),
   ]
   // debug: true,
