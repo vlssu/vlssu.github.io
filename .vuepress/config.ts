@@ -27,9 +27,7 @@ export default defineUserConfig({
   ],
   theme: recoTheme(themeConfig),
   plugins: [
-    pwaPlugin({
-      skipWaiting: true,
-    }),
+    pwaPlugin(),
     pwaPopupPlugin({
       locales: {
         '/': {
