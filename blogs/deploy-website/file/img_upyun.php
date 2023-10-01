@@ -23,20 +23,20 @@ require_once('vendor/autoload.php');
 use Upyun\Upyun;
 use Upyun\Config;
 
-// 配置Upyun服务
+/**************配置Upyun服务**************/
 $serviceConfig = new Config(
     '服务名称',         // 服务名称
     '操作员名称',       // 操作员名称
     '操作员密码'        // 操作员密码
 );
 
-// 读取路径和加速域名及优化参数
-$path = '/path/';
-$domain = 'https://domain.example.com';
-$value = '!/webp';
+$path = '/path/';    // 读取路径
+$domain = 'https://domain.example.com';    // 加速域名
+$value = '!/webp';    // 优化参数
 
 // 防盗链参数,没有可不写
 $token = '';
+/**************以下内容请不要动**************/
 
 // 连接Upyun服务获取文件夹内的文件名
 $up = new Upyun($serviceConfig);
