@@ -1,7 +1,6 @@
 ---
 title: 如何关闭Linux里面的SElinux
 date: 2020-03-05
-cover: https://api.vlssu.com/img/?200305
 tags:
  - Linux
 categories: 

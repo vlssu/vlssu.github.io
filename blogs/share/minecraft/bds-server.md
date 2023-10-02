@@ -1,7 +1,6 @@
 ---
 title: 如何开官方bds服务器
 date: 2020-04-05
-cover: https://api.vlssu.com/img/?200405
 tags:
  - Linux
  - Centos

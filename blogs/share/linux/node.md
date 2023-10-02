@@ -1,7 +1,6 @@
 ---
 title: Linux系统如何安装node管理器
 date: 2020-05-03
-cover: https://api.vlssu.com/img/?200503
 tags:
  - Centos
  - Ubuntu

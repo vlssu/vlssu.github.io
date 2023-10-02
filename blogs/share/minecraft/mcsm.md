@@ -1,7 +1,6 @@
 ---
 title: 我的世界MCSM8面板搭建
 date: 2019-12-12
-cover: https://api.vlssu.com/img/?1912121
 tags:
  - Minecraft
  - MCSM

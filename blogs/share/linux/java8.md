@@ -1,7 +1,6 @@
 ---
 title: 如何在Linux系统中安装Java8
 date: 2020-04-21
-cover: https://api.vlssu.com/img/?200421
 tags:
  - Linux
  - Centos

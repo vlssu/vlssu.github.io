@@ -1,7 +1,6 @@
 ---
 title: 我的世界新版MCSM9面板搭建
 date: 2022-02-01
-cover: https://api.vlssu.com/img/?220201
 tags:
  - Minecraft
  - MCSM

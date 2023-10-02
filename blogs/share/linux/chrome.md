@@ -1,7 +1,6 @@
 ---
 title: Centos7上yum安装chrome
 date: 2022-04-24
-cover: https://api.vlssu.com/img/?20220424
 tags:
  - Chrome
 categories: 

@@ -1,7 +1,6 @@
 ---
 title: 制作我的世界纯净/插件/模组服务端
 date: 2020-02-14
-cover: https://api.vlssu.com/img/?200214
 tags:
  - Minecraft
  - Server

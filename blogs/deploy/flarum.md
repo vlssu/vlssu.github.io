@@ -1,7 +1,6 @@
 ---
 title: Flarum的搭建与部署
 date: 2019-12-12
-cover: https://api.vlssu.com/img/?1912122
 tags:
  - Flarum
  - Centos

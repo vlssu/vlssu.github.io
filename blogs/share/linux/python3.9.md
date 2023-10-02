@@ -1,7 +1,6 @@
 ---
 title: 在Ubuntu如何安装Python3.9（Ubuntu 20.04）
 date: 2021-08-21
-cover: https://api.vlssu.com/img/?210821
 tags:
  - Ubuntu
  - Python

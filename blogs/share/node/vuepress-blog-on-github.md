@@ -1,7 +1,6 @@
 ---
 title: 使用 vuepress 搭建我的博客
 date: 2021-08-11
-cover: https://api.vlssu.com/img/?210811
 tags:
  - Liunx
  - Node.js

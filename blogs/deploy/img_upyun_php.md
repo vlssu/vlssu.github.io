@@ -1,7 +1,6 @@
 ---
 title: 纯PHP使用又拍云做随机图API
 date: 2023-03-17
-cover: https://api.vlssu.com/img/?230317
 tags:
  - UPYUM
  - PHP

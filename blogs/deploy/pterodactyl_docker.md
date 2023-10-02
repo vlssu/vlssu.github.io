@@ -1,7 +1,6 @@
 ---
 title: 翼龙面板汉化版docker一键部署
 date: 2023-10-03
-cover: https://api.vlssu.com/img/?231003
 tags:
  - Pterodactyl
  - 翼龙

@@ -1,7 +1,6 @@
 ---
 title: 翼龙面板汉化版(宝塔)搭建教程
 date: 2022-07-07
-cover: https://api.vlssu.com/img/?2207071
 tags:
  - Pterodactyl
  - 翼龙

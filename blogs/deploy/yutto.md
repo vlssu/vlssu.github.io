@@ -1,7 +1,6 @@
 ---
 title: 如果yutto搭建下载bilibili视频
 date: 2021-08-23
-cover: https://api.vlssu.com/img/?210823
 tags:
  - Ubuntu
  - Python

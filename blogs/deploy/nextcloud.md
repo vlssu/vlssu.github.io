@@ -1,7 +1,6 @@
 ---
 title: 搭建自己私人网盘-Nextcloud
 date: 2020-02-27
-cover: https://api.vlssu.com/img/?200227
 tags:
  - 宝塔
  - nextcloud

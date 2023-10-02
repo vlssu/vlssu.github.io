@@ -1,7 +1,6 @@
 ---
 title: Frp搭建与使用
 date: 2020-10-28
-cover: https://api.vlssu.com/img/?201028
 tags:
  - Linux
  - Centos

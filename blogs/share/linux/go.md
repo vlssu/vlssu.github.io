@@ -1,7 +1,6 @@
 ---
 title: 在Linux上安装 Go
 date: 2022-04-03
-cover: https://api.vlssu.com/img/?220403
 tags:
  - Go
  - Ubuntu

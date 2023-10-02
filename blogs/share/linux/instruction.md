@@ -1,7 +1,6 @@
 ---
 title: Linux常用指令指令
 date: 2020-05-06
-cover: https://api.vlssu.com/img/?200506
 tags:
  - Liunx
  - CentOs

@@ -1,7 +1,6 @@
 ---
 title: Markdown基本语法
 date: 2020-12-15
-cover: https://api.vlssu.com/img/?201215
 tags:
  - Markdown
  - VuePress

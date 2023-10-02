@@ -1,7 +1,6 @@
 ---
 title: 自建图片api
 date: 2021-08-10
-cover: https://api.vlssu.com/img/?210810
 tags:
  - UPYUM
 categories:

@@ -1,7 +1,6 @@
 ---
 title: 在Linux中安装Docker及Docker Compose
 date: 2020-03-03
-cover: https://api.vlssu.com/img/?200303
 tags:
  - Docker
  - Docker Compose

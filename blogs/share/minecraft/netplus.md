@@ -1,7 +1,6 @@
 ---
 title: 我的世界离线用户联机
 date: 2020-02-25
-cover: https://api.vlssu.com/img/ver/?200225
 tags:
  - VlssuSkin
  - Minecraft
