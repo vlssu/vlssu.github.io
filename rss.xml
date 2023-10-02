@@ -6,8 +6,8 @@
     <link>https://vlssu.github.io/</link>
     <description>Share knowledge and stay happy</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 02 Oct 2023 17:18:31 GMT</pubDate>
-    <lastBuildDate>Mon, 02 Oct 2023 17:18:31 GMT</lastBuildDate>
+    <pubDate>Mon, 02 Oct 2023 17:21:19 GMT</pubDate>
+    <lastBuildDate>Mon, 02 Oct 2023 17:21:19 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -276,10 +276,11 @@
       <link>https://vlssu.github.io/blogs/deploy/img_upyun_php.html</link>
       <guid>https://vlssu.github.io/blogs/deploy/img_upyun_php.html</guid>
       <source url="https://vlssu.github.io/rss.xml">纯PHP使用又拍云做随机图API</source>
-      <description>创建又拍云存储会的吧？不会？看看我上一篇点击这里 (./imgapi.md) 清单列表 Nginx 或 Apache; PHP 7.4+ (https://www.php.net/manual/zh/install.php); Composer (https://getcomposer.org/); 安装依赖 通过 shell 执行以下命令。（记得到你...</description>
+      <description>创建又拍云存储会的吧？不会？看看我上一篇点击这里 (./imgapi.md) *上一篇中会生成txt文件，然后读取txt文件内的url，而这篇是拼接后直接输出展示，访问一次随机一次。 清单列表 Nginx 或 Apache; PHP 7.4+ (https://www.php.net/manual/zh/install.php); Composer (...</description>
       <category>教程</category>
       <pubDate>Fri, 17 Mar 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">TIP</p><p>创建又拍云存储会的吧？不会？看看我上一篇<a href="/blogs/deploy/imgapi.html" target="blank">点击这里</a></p>
+      <content:encoded><![CDATA[<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">TIP</p><p>创建又拍云存储会的吧？不会？看看我上一篇<a href="/blogs/deploy/imgapi.html" target="blank">点击这里</a><br>
+*上一篇中会生成<code>txt</code>文件，然后读取<code>txt</code>文件内的<code>url</code>，而这篇是拼接后直接输出展示，访问一次随机一次。</p>
 </div><h2> 清单列表</h2>
 <ul>
 <li>Nginx 或 Apache</li>
