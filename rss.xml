@@ -6,8 +6,8 @@
     <link>https://vlssu.github.io/</link>
     <description>Share knowledge and stay happy</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 02 Oct 2023 17:11:35 GMT</pubDate>
-    <lastBuildDate>Mon, 02 Oct 2023 17:11:35 GMT</lastBuildDate>
+    <pubDate>Mon, 02 Oct 2023 17:18:31 GMT</pubDate>
+    <lastBuildDate>Mon, 02 Oct 2023 17:18:31 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -105,7 +105,6 @@
 <p>修改<code>mysql.cnf</code>，加入：</p>
 <div class="language-cnf line-numbers-mode" data-ext="cnf"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>修改后需要重建FULLTEXT 索引</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?1912122" type="image/"/>
     </item>
     <item>
       <title>Frp搭建与使用</title>
@@ -271,7 +270,6 @@
 <li>将他们复制到你要映射的服务器和被映射的服务器、电脑。执行相应的指令</li>
 </ol>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?201028" type="image/"/>
     </item>
     <item>
       <title>纯PHP使用又拍云做随机图API</title>
@@ -292,7 +290,6 @@
 <p>通过 shell 执行以下命令。（记得到你网址的目录下）</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>
 ]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?230317" type="image/"/>
     </item>
     <item>
       <title>自建图片api</title>
@@ -399,7 +396,6 @@
 <p>脚本内容</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>脚本借鉴 <a href="https://ioalzx.site/ioalzx/tech/12/%E4%BD%BF%E7%94%A8%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E5%92%8Ccdn%E5%8A%A0%E9%80%9F%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87api/" target="_blank" rel="noopener noreferrer">ioalzx</a> 并加以修改</p>
 ]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?210810" type="image/"/>
     </item>
     <item>
       <title>搭建自己私人网盘-Nextcloud</title>
@@ -549,7 +545,6 @@
 <li>你知道替换为<code>/bin/bash</code></li>
 </ul>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?200227" type="image/"/>
     </item>
     <item>
       <title>翼龙面板汉化版(宝塔)搭建教程</title>
@@ -680,7 +675,6 @@
 </div><p>如果您在系统中使用 redis，则需要确保启用它会在引导时启动。您可以通过运行以下命令来执行此操作：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>最后，启动队列监听服务并设置开启自动启动</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?2207071" type="image/"/>
     </item>
     <item>
       <title>翼龙面板汉化版docker一键部署</title>
@@ -729,7 +723,6 @@
 <p>您需要为面板创建一个管理用户，以便您可以登录面板。 为此，请运行以下命令。 并保证账户密码满足以下要求：8 个字符，大小写混合，至少一个数字。(此指令需在上文中含有 <code>docker-compose.yml</code> 的同级目录中执行）</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>现在，你已经全部设置完毕，直接输入你的网站地址，即可访问翼龙面板</p>
 ]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?231003" type="image/"/>
     </item>
     <item>
       <title>如果yutto搭建下载bilibili视频</title>
@@ -998,7 +991,6 @@
 <li>默认值 <code>False</code></li>
 </ul>
 </details>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?210823" type="image/"/>
     </item>
     <item>
       <title>android stadio Gradle 编译报错</title>
@@ -1012,7 +1004,6 @@
 <p>原因是需要翻墙(可惜我试过了，没用)。剩下的方法就是改镜像源了，在主要编译文件，如<code>build.gradle</code>，找到主代码组里头将镜像源改了。</p>
 <p>我一改完就好了，不仅不用挂梯子，甚至速度贼快</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?210209" type="image/"/>
     </item>
     <item>
       <title>数控编程中常用的指令（G代码、M代码）</title>
@@ -1181,7 +1172,6 @@
 </tbody>
 </table>
 ]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?210913" type="image/"/>
     </item>
     <item>
       <title>使用CDN后 Apache 获取访问用户的真实 IP</title>
@@ -1223,7 +1213,6 @@
 参考 <a href="https://www.hostarr.com/apache-mod_remoteip/" target="_blank" rel="noopener noreferrer">主机指南</a>
 :::</p>
 ]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?220301" type="image/"/>
     </item>
     <item>
       <title>使用CDN后 NGINX 获取访问用户的真实 IP</title>
@@ -1238,7 +1227,6 @@
 <div class="language-conf line-numbers-mode" data-ext="conf"><div class="highlight-lines"><br><br><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-conf line-numbers-mode" data-ext="conf"><div class="highlight-lines"><br><br><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--
 https://cloud.tencent.com/developer/article/1050223
 -->]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?220505" type="image/"/>
     </item>
     <item>
       <title>MySQL 8.0数据导入5.7及以下版本</title>
@@ -1286,7 +1274,6 @@ https://cloud.tencent.com/developer/article/1050223
 </ol>
 <p>如果字段类型有<code>Json</code> 可以将<code>Json</code>改为<code>Varchar</code> 或者<code>text</code>,后台暂时没有出类型报错问题 , 有待观察</p>
 ]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?220601" type="image/"/>
     </item>
     <item>
       <title>修复 BTpanel(宝塔) Python 环境（SSL续订错误）</title>
@@ -1300,7 +1287,6 @@ https://cloud.tencent.com/developer/article/1050223
 <div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">TIP</p><p>在运行以下命令并不会导致数据重置等现象。但为了保险起见，建议您先备份后在执行。</p>
 </div><div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">小提示</p><p>当然，可以再运行一遍安装命令，放心，数据并不会覆盖，唯一覆盖的就是<strong>面板密码</strong>和<strong>面板首页的应用快捷入口</strong>变了。这些倒是小问题，但面板修复了倒是真的呀</p>
 </div><div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?220925" type="image/"/>
     </item>
     <item>
       <title>Docker 软链接及迁移数据</title>
@@ -1336,7 +1322,6 @@ https://cloud.tencent.com/developer/article/1050223
 </ol>
 <p>如果迁移成功，可以删除备份的目录</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?230831" type="image/"/>
     </item>
     <item>
       <title>Centos7上yum安装chrome</title>
@@ -1358,7 +1343,6 @@ https://cloud.tencent.com/developer/article/1050223
 </ol>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><a href="https://download-chromium.appspot.com/?platform=Linux_x64&amp;type=snapshots" target="_blank" rel="noopener noreferrer">https://download-chromium.appspot.com/?platform=Linux_x64&amp;type=snapshots</a></p>
 ]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?20220424" type="image/"/>
     </item>
     <item>
       <title>在Linux中安装Docker及Docker Compose</title>
@@ -1397,7 +1381,6 @@ https://cloud.tencent.com/developer/article/1050223
 <li>再次check docker是否已经卸载成功</li>
 </ol>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?200303" type="image/"/>
     </item>
     <item>
       <title>在Linux上安装 Go</title>
@@ -1416,7 +1399,6 @@ https://cloud.tencent.com/developer/article/1050223
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 验证 Go 安装过程</h3>
 <p>通过打印 Go 版本号，验证安装过程。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?220403" type="image/"/>
     </item>
     <item>
       <title>Linux常用指令指令</title>
@@ -1429,7 +1411,6 @@ https://cloud.tencent.com/developer/article/1050223
       <content:encoded><![CDATA[<p>我会尽量将linux相关、实用的指令放在这里(算作笔记吧)，让我以后记不得指令时来着看看，如果有什么补充指令也可以评论告诉我哦，我会添加在正文里的</p>
 <h2> 复制指令</h2>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?200506" type="image/"/>
     </item>
     <item>
       <title>如何在Linux系统中安装Java8</title>
@@ -1504,7 +1485,6 @@ https://cloud.tencent.com/developer/article/1050223
 </ol>
 <div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">重要！</p><p>请退出终端重新进入终端即可生效/查看<code>java</code>，或者你重启服务器是一个操作</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?200421" type="image/"/>
     </item>
     <item>
       <title>Linux系统如何安装node管理器</title>
@@ -1528,7 +1508,6 @@ https://cloud.tencent.com/developer/article/1050223
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> npm 国内镜像</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> npm WIN 国内镜像源</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?200503" type="image/"/>
     </item>
     <item>
       <title>在Ubuntu如何安装Python3.9（Ubuntu 20.04）</title>
@@ -1567,7 +1546,6 @@ https://cloud.tencent.com/developer/article/1050223
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> 二、下载最新python软件包</h3>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> 三、编译安装</h3>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?210821" type="image/"/>
     </item>
     <item>
       <title>如何关闭Linux里面的SElinux</title>
@@ -1584,7 +1562,6 @@ https://cloud.tencent.com/developer/article/1050223
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 永久关闭</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>更改好后重启服务器</strong></p>
 ]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?200305" type="image/"/>
     </item>
     <item>
       <title>如何开官方bds服务器</title>
@@ -1666,7 +1643,6 @@ https://cloud.tencent.com/developer/article/1050223
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 保持后台运行</h3>
 <p>先<code>stop</code>关闭服务器，我们使用screen软件来让服务器保持后台运行。</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?200405" type="image/"/>
     </item>
     <item>
       <title>制作我的世界纯净/插件/模组服务端</title>
@@ -1847,7 +1823,6 @@ https://cloud.tencent.com/developer/article/1050223
 <li>下载你需要的插件放入<code>mods</code>，就可以了，对于怎么配置<strong>MOD</strong>呢，在<code>config</code>文件夹中，会有与MOD相同名字的文件或文件夹，当然你也可以不用配置默认即可，这里不过多讲述了，毕竟这个帮不了什么。</li>
 </ol>
 ]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?200214" type="image/"/>
     </item>
     <item>
       <title>我的世界MCSM8面板搭建</title>
@@ -1984,7 +1959,6 @@ https://cloud.tencent.com/developer/article/1050223
 <h3> 写在最后</h3>
 <p>Docker 相关命令：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?1912121" type="image/"/>
     </item>
     <item>
       <title>我的世界新版MCSM9面板搭建</title>
@@ -2159,7 +2133,6 @@ docker images # 查看当前 Docker 有哪些镜像（包括运行和未运行�
 docker kill mcsd # 强制杀死当前 Docker ，包括你的 Minecraft 服务端（失去控制时使用）
 ```
 -->]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?220201" type="image/"/>
     </item>
     <item>
       <title>我的世界离线用户联机</title>
@@ -2292,7 +2265,6 @@ docker kill mcsd # 强制杀死当前 Docker ，包括你的 Minecraft 服务端
 </ul>
 <p></p>
 ]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/ver/?200225" type="image/"/>
     </item>
     <item>
       <title>使用 vuepress 搭建我的博客</title>
@@ -2429,7 +2401,6 @@ controls="controls"></video>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 在 package.json 中添加 scripts 命令</h3>
 <p><strong>运行 <code>yarn auto</code>来运行指令</strong></p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?210811" type="image/"/>
     </item>
     <item>
       <title>Markdown基本语法</title>
@@ -2682,7 +2653,6 @@ controls="controls"></video>
 </tbody>
 </table>
 ]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?201215" type="image/"/>
     </item>
   </channel>
 </rss>
