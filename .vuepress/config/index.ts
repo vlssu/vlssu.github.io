@@ -12,6 +12,15 @@ export const themeConfig = {
     docsDir: '',
     lastUpdatedText: '最后更新时间',
     primaryColor: '#42b983',
+    locales: {
+      // 键名是该语言所属的子路径
+      // 作为特例，默认语言可以使用 '/' 作为其路径。
+      '/': {
+        lang: 'zh-CN',
+        title: '师叔の小窝',
+        description: 'Share knowledge and stay happy',
+      },
+    },
     // series 为原 sidebar
     // series: {
     //   '/docs/theme-reco/': [
