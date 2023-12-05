@@ -3,7 +3,7 @@
   <id>https://vlssu.github.io/</id>
   <title>师叔の小窝</title>
   <subtitle>Share knowledge and stay happy</subtitle>
-  <updated>2023-12-05T02:09:42.874Z</updated>
+  <updated>2023-12-05T02:13:37.363Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://vlssu.github.io/atom.xml"/>
   <link rel="alternate" href="https://vlssu.github.io/"/>
@@ -16,7 +16,7 @@
     <title type="text">Flarum的搭建与部署</title>
     <id>https://vlssu.github.io/blogs/deploy/flarum.html</id>
     <link href="https://vlssu.github.io/blogs/deploy/flarum.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<ul>
 <li>Flarum论坛相对于其他论坛UI更简洁，也相对简单</li>
 </ul>
@@ -45,8 +45,15 @@
 <blockquote>
 <p>因为网站文件不在根目录，就需要你URL重写</p>
 </blockquote>
-
-<h3> 文件夹所有权</h3>
+<h4> Apache</h4>
+<p>Flarum在公共目录中包含<code>.htaccess</code>文件 - 确保已正确上载。 如果您正在使用共享主机，请与您的提供商确认已启用<code>mod_rewrite</code>且允许<code>.htaccess</code>文件。 如果您要管理自己的服务器，则可能需要将以下内容添加到站点配置中：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这确保了允许 htaccess 覆盖，因此 Flarum 可以正确地重写 URL。</p>
+<p>启用方法<code>mod_rewrite</code>因您的操作系统而异。您可以通过<code>sudo a2enmod rewrite</code>在 Ubuntu 上运行来启用它。<code>mod_rewrite</code>在 CentOS 上默认启用。修改后不要忘记重启 Apache！</p>
+<h4> Nginx</h4>
+<p>Flarum包含<code>.nginx.conf</code>文件 – 确保它已正确上载。 然后，假设您在Nginx中设置了PHP站点，请将以下内容添加到服务器的配置块中：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h4> Caddy</h4>
+<p>Caddy需要非常简单的配置才能使Flarum正常工作。请注意，您应该使用自己的URL替换URL，并使用自己的public文件夹的路径替换path 。如果您使用的是其他版本的PHP，则还需要更改fastcgi路径以指向正确的PHP安装套接字或URL。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 文件夹所有权</h3>
 <p>在安装期间，Flarum 可能会要求您将某些目录设为可写。现代操作系统通常是多用户的，这意味着您登录的用户与运行 FLarum 的用户不同。运行 Flarum 的用户必须具有以下权限：</p>
 <ul>
 <li>根安装目录，因此 Flarum 可以编辑<code>config.php</code>。</li>
@@ -103,7 +110,7 @@
     <title type="text">Frp搭建与使用</title>
     <id>https://vlssu.github.io/blogs/deploy/frp.html</id>
     <link href="https://vlssu.github.io/blogs/deploy/frp.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<h2> 前期需要软件</h2>
 <ol>
 <li>远程SSH控制台软件（本教程使用 Remote Terminal 此为win10商店软件）<a href="https://www.lanzoui.com/i88wyvi" target="_blank" rel="noopener noreferrer">[点我下载(此软件为Xshell)]</a></li>
@@ -274,7 +281,7 @@
     <title type="text">纯PHP使用又拍云做随机图API</title>
     <id>https://vlssu.github.io/blogs/deploy/img_upyun_php.html</id>
     <link href="https://vlssu.github.io/blogs/deploy/img_upyun_php.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">TIP</p><p>创建又拍云存储会的吧？不会？看看我上一篇<a href="/blogs/deploy/imgapi.html" target="blank">点击这里</a><br>
 *上一篇中会生成<code>txt</code>文件，然后读取<code>txt</code>文件内的<code>url</code>，而这篇是拼接后直接输出展示，访问一次随机一次。</p>
 </div>]]></summary>
@@ -297,7 +304,7 @@
     <title type="text">自建图片api</title>
     <id>https://vlssu.github.io/blogs/deploy/imgapi.html</id>
     <link href="https://vlssu.github.io/blogs/deploy/imgapi.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<p>我们都希望有个自己的随机图源，但是不会咋办呢，今天我就来教你们</p>
 <p>这里我们以宝塔搭建为例</p>
 <h2> 建立对象存储桶</h2>
@@ -406,7 +413,7 @@
     <title type="text">搭建自己私人网盘-Nextcloud</title>
     <id>https://vlssu.github.io/blogs/deploy/nextcloud.html</id>
     <link href="https://vlssu.github.io/blogs/deploy/nextcloud.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<h2> 前期需要软件</h2>
 <ol>
 <li>远程SSH控制台软件（本教程使用 Remote Terminal 此为win10商店软件）<a href="https://www.lanzoui.com/i88wyvi" target="_blank" rel="noopener noreferrer">[点我下载(此软件为Xshell)]</a></li>
@@ -560,7 +567,7 @@
     <title type="text">翼龙面板汉化版(宝塔)搭建教程</title>
     <id>https://vlssu.github.io/blogs/deploy/pterodactyl.html</id>
     <link href="https://vlssu.github.io/blogs/deploy/pterodactyl.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<p>::: theorem
 我参与了此项目的汉化，而我是负责面板的开发版汉化（此开发版非比开发版），如果上游仓库更新，这里会同步更新，当然，我在使用过程中出现问题我也会第一时间去修复这些。现阶段更新频率降低（毕竟能汉化的基本汉化完了）。
 ::: right
@@ -699,7 +706,7 @@
     <title type="text">翼龙面板汉化版docker一键部署</title>
     <id>https://vlssu.github.io/blogs/deploy/pterodactyl_docker.html</id>
     <link href="https://vlssu.github.io/blogs/deploy/pterodactyl_docker.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<p>翼龙面板运行在您自己的 Web 服务器上。为了运行和使用这个面板，您需要对您的服务器具有 root 访问权限。</p>
 <p>您需要了解如何阅读文档以使用此面板。我们花了很多时间详细介绍如何安装或升级我们的软件；
 所以你也要花点时间去阅读而不是复制粘贴，然后在事情不起作用时候而抱怨。
@@ -752,7 +759,7 @@
     <title type="text">如果yutto搭建下载bilibili视频</title>
     <id>https://vlssu.github.io/blogs/deploy/yutto.html</id>
     <link href="https://vlssu.github.io/blogs/deploy/yutto.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">TIP</p><p>我看到一个下载的bilibili视频的程序，贼好用但是需要Python3.9，就是我上一篇文章不是写了Python3.9的安装教程吗。其实最主要是Python安装有点反人类，至少在win上面，所以我只能在我习惯的linux上部署了。</p>
 </div>]]></summary>
     <content type="html"><![CDATA[<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">TIP</p><p>我看到一个下载的bilibili视频的程序，贼好用但是需要Python3.9，就是我上一篇文章不是写了Python3.9的安装教程吗。其实最主要是Python安装有点反人类，至少在win上面，所以我只能在我习惯的linux上部署了。</p>
@@ -1021,7 +1028,7 @@
     <title type="text">android stadio Gradle 编译报错</title>
     <id>https://vlssu.github.io/blogs/notes/210209.html</id>
     <link href="https://vlssu.github.io/blogs/notes/210209.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<p>我在编译插件时一直在下载<code>fastutil-xxx.jar</code></p>
 <p>原因是需要翻墙(可惜我试过了，没用)。剩下的方法就是改镜像源了，在主要编译文件，如<code>build.gradle</code>，找到主代码组里头将镜像源改了。</p>
 <p>我一改完就好了，不仅不用挂梯子，甚至速度贼快</p>
@@ -1060,7 +1067,7 @@ allprojects {
     <title type="text">数控编程中常用的指令（G代码、M代码）</title>
     <id>https://vlssu.github.io/blogs/notes/210913.html</id>
     <link href="https://vlssu.github.io/blogs/notes/210913.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<p>在数控编程中，有的编程指令是不常用的，有的只适用于某些特殊的数控机床。这里只要介绍一些常用的编程指令，对于不常用的编程指令，请参考使用的数控机床编程手册。</p>
 <h2> 准备功能指令（G指令）</h2>
 <p>准备功能指令由字符G和其后的1~3位数字组成，其主要功能是指定机床的运动方式，为数控系统的插补运算作准备。G指令的有关规定和含义见表1。</p>
@@ -1316,7 +1323,7 @@ allprojects {
     <title type="text">使用CDN后 Apache 获取访问用户的真实 IP</title>
     <id>https://vlssu.github.io/blogs/notes/220301.html</id>
     <link href="https://vlssu.github.io/blogs/notes/220301.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<p>当网站启用 CDN 会给获取访客 IP 带来障碍，由于多了个代理流程，故日志记录 IP 变为 CDN 的 IP。基于 Apache 的网站要解决这个问题，需要使用以下模块通过 HTTP 标头里的 <code>X_FORWARDED_FOR</code> 字段获取访客 IP</p>
 <ul>
 <li>mod_remoteip</li>
@@ -1376,7 +1383,7 @@ allprojects {
     <title type="text">使用CDN后 NGINX 获取访问用户的真实 IP</title>
     <id>https://vlssu.github.io/blogs/notes/220505.html</id>
     <link href="https://vlssu.github.io/blogs/notes/220505.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<p>当网站启用 CDN 会给获取访客 IP 带来障碍，由于多了个代理流程，故日志记录 IP 变为 CDN 的 IP。基于 NGINX 的网站要解决这个问题，需要使用以下模块通过 HTTP 标头里的 <code>X_FORWARDED_FOR</code> 字段获取访客 IP</p>
 <p>修改nginx.conf配置文件</p>
 <div class="language-conf line-numbers-mode" data-ext="conf"><pre class="language-conf"><code>http
@@ -1399,7 +1406,7 @@ https://cloud.tencent.com/developer/article/1050223
     <title type="text">MySQL 8.0数据导入5.7及以下版本</title>
     <id>https://vlssu.github.io/blogs/notes/220601.html</id>
     <link href="https://vlssu.github.io/blogs/notes/220601.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<p>前段时间我为了尝鲜 MySQL 8.0，谁知道占内存特别多，一些低内存的想用作备用的，但是 5.7 相对于 8.0 改了字符，导致不兼容了，所以我只能去网上找了些方法</p>
 <ol>
 <li>8.0 于 5.7 之间的改动变化
@@ -1478,7 +1485,7 @@ https://cloud.tencent.com/developer/article/1050223
     <title type="text">修复 BTpanel(宝塔) Python 环境（SSL续订错误）</title>
     <id>https://vlssu.github.io/blogs/notes/220925.html</id>
     <link href="https://vlssu.github.io/blogs/notes/220925.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<p>在使用宝塔的时候，Python 很容易炸，在续签ssl证书的时候尤为明显，而这些问题基本都是 Python 惹的祸</p>
 <div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">TIP</p><p>在运行以下命令并不会导致数据重置等现象。但为了保险起见，建议您先备份后在执行。</p>
 </div>]]></summary>
@@ -1493,7 +1500,7 @@ https://cloud.tencent.com/developer/article/1050223
     <title type="text">Docker 软链接及迁移数据</title>
     <id>https://vlssu.github.io/blogs/notes/230831.html</id>
     <link href="https://vlssu.github.io/blogs/notes/230831.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<h2> 首次部署时</h2>
 <div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /data/docker /var/lib/docker
 <span class="token function">ln</span> <span class="token parameter variable">-s</span> /data/docker /var/lib/docker
@@ -1528,10 +1535,287 @@ https://cloud.tencent.com/developer/article/1050223
     <published>2023-08-31T00:00:00.000Z</published>
   </entry>
   <entry>
+    <title type="text">Centos7上yum安装chrome</title>
+    <id>https://vlssu.github.io/blogs/share/linux/chrome.html</id>
+    <link href="https://vlssu.github.io/blogs/share/linux/chrome.html"/>
+    <updated>2023-12-05T01:24:14.000Z</updated>
+    <summary type="html"><![CDATA[<ol>
+<li>配置yum源（root用户）
+在目录 <code>/etc/yum.repos.d/</code> 下新建文件 <code>google-chrome.repo</code></li>
+</ol>
+<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>vim /etc/yum.repos.d/google-chrome.repo
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<ol>
+<li>配置yum源（root用户）
+在目录 <code>/etc/yum.repos.d/</code> 下新建文件 <code>google-chrome.repo</code></li>
+</ol>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>写入如下内容:</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">TIP</p><p>1、按ESC退出编辑模式（回到命令模式）
+2、输入 :wq!后按回车退出</p>
+</div><ol start="2">
+<li>安装chrome浏览器</li>
+</ol>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><a href="https://download-chromium.appspot.com/?platform=Linux_x64&amp;type=snapshots" target="_blank" rel="noopener noreferrer">https://download-chromium.appspot.com/?platform=Linux_x64&amp;type=snapshots</a></p>
+]]></content>
+    <category term="Linux小知识"/>
+    <published>2022-04-24T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">在Linux中安装Docker及Docker Compose</title>
+    <id>https://vlssu.github.io/blogs/share/linux/docker.html</id>
+    <link href="https://vlssu.github.io/blogs/share/linux/docker.html"/>
+    <updated>2023-12-05T01:24:14.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 安装 Docker</h2>
+<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">官方的一键脚本安装法</p>
+</div>]]></summary>
+    <content type="html"><![CDATA[<h2> 安装 Docker</h2>
+<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">官方的一键脚本安装法</p>
+</div><h3> Ubuntu</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>启动 Docker 服务（重要）</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><br>
+<h3> Centos</h3>
+<p>Docker 要求 CentOS 系统的内核版本高于 3.10 ，通过 <code>uname -r</code> 命令查看你当前的内核版本。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>启动 Docker 服务（重要）</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><br>
+<h3> Arch Linux</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><br><br></p>
+<h3> 给予当前用户Docker权限 （强烈建议）</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可能需要重新登陆后生效。</p>
+<h3> 检查 Docker 环境是否正确（可选）</h3>
+<p>查看是否已经安装，配好PATH路径，一般而言自动配好了。MCSManager 需要 Docker 命令必须能够执行，否则无法正确使用。</p>
+<p>输出版本号即为正确。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 检查 Docker 是否能够运行（可选）</h3>
+<p>运行 Hello world 程序（需要联网下载）。输出内容包含有 "Hello from Docker!" 则代表运行成功代表无问题。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 配置国内镜像源（可选，强烈建议做）</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>重启服务。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 开机自启docker</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 卸载 Docker</h2>
+<ol>
+<li>卸载docker</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>再次check docker是否已经卸载成功</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></content>
+    <category term="Linux小知识"/>
+    <published>2020-03-03T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">在Linux上安装 Go</title>
+    <id>https://vlssu.github.io/blogs/share/linux/go.html</id>
+    <link href="https://vlssu.github.io/blogs/share/linux/go.html"/>
+    <updated>2023-12-05T01:24:14.000Z</updated>
+    <summary type="html"><![CDATA[<h3> 下载 Go 压缩包</h3>
+<p>在写这篇文章的时候，Go 的最新版为 1.18。在我们下载安装包时，请浏览<a href="https://yq.aliyun.com/go/articleRenderRedirect?url=https%3A%2F%2Fgolang.org%2Fdl%2F" target="_blank" rel="noopener noreferrer">Go 官方下载页面</a>,并且检查一下是否有新的版本可用。</p>
+<p>以 root 或者其他 sudo 用户身份运行下面的命令，下载并且解压 Go 二进制文件到<code>/usr/local</code>目录：</p>]]></summary>
+    <content type="html"><![CDATA[<h3> 下载 Go 压缩包</h3>
+<p>在写这篇文章的时候，Go 的最新版为 1.18。在我们下载安装包时，请浏览<a href="https://yq.aliyun.com/go/articleRenderRedirect?url=https%3A%2F%2Fgolang.org%2Fdl%2F" target="_blank" rel="noopener noreferrer">Go 官方下载页面</a>,并且检查一下是否有新的版本可用。</p>
+<p>以 root 或者其他 sudo 用户身份运行下面的命令，下载并且解压 Go 二进制文件到<code>/usr/local</code>目录：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 调整环境变量</h3>
+<p>通过将 Go 目录添加到<code>$PATH</code>环境变量，系统将会知道在哪里可以找到 Go 可执行文件。</p>
+<p>这个可以通过添加下面的行到<code>/etc/profile</code>文件（系统范围内安装）或者<code>$HOME/.profile</code>文件（当前用户安装）：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 验证 Go 安装过程</h3>
+<p>通过打印 Go 版本号，验证安装过程。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
+    <category term="Linux小知识"/>
+    <published>2022-04-03T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Linux常用指令指令</title>
+    <id>https://vlssu.github.io/blogs/share/linux/instruction.html</id>
+    <link href="https://vlssu.github.io/blogs/share/linux/instruction.html"/>
+    <updated>2023-12-05T01:24:14.000Z</updated>
+    <summary type="html"><![CDATA[<p>我会尽量将linux相关、实用的指令放在这里(算作笔记吧)，让我以后记不得指令时来着看看，如果有什么补充指令也可以评论告诉我哦，我会添加在正文里的</p>
+<h2> 复制指令</h2>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">cp</span> <span class="token punctuation">[</span>options….<span class="token punctuation">]</span> source<span class="token punctuation">(</span>s<span class="token punctuation">)</span> destination
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<p>我会尽量将linux相关、实用的指令放在这里(算作笔记吧)，让我以后记不得指令时来着看看，如果有什么补充指令也可以评论告诉我哦，我会添加在正文里的</p>
+<h2> 复制指令</h2>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></content>
+    <category term="Linux小知识"/>
+    <published>2020-05-06T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">如何在Linux系统中安装Java8</title>
+    <id>https://vlssu.github.io/blogs/share/linux/java8.html</id>
+    <link href="https://vlssu.github.io/blogs/share/linux/java8.html"/>
+    <updated>2023-12-05T01:24:14.000Z</updated>
+    <summary type="html"><![CDATA[<h2> Centos</h2>
+<p>使用<code>yum</code>安装<code>java8</code>。</p>
+<ol>
+<li>查看<code>java</code>版本库</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>yum search <span class="token function">java</span> <span class="token operator">|</span> <span class="token function">grep</span> jdk
+<span class="token comment"># 这里选择Java8</span>
+yum <span class="token function">install</span> java-1.8.0-openjdk java-1.8.0-openjdk-devel
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<h2> Centos</h2>
+<p>使用<code>yum</code>安装<code>java8</code>。</p>
+<ol>
+<li>查看<code>java</code>版本库</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><details class="custom-container details"><summary class="custom-container-title">在新的编译版本可以不用配置了，但旧版可能还是需要配置</summary><p>安装完毕后如下图，需复制图中箭头指向的名称，<code>java8</code>完整版本名称。后面设置环境变量会用到。</p>
+<p></p>
+<ol start="2">
+<li>查看<code>java8</code>安装位置 # (Centos)</li>
+</ol>
+<p>通过此方法安装的java放在固定位置</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p></p>
+<ol start="3">
+<li>设置环境变量 # (Centos)</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>编辑该文件，在末尾加上如下内容：（jdk版本需自行填写，上面复制的版本）</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="highlight-lines"><br><div class="highlight-line">&nbsp;</div><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>按“i”键进行编辑，退出先按“ESC”然后“:”</p>
+<ul>
+<li>:q 是直接退出</li>
+<li>:wq 保存后退出</li>
+<li>:q! – 不保存内容， 强制退出</li>
+</ul>
+<ol start="4">
+<li>刷新配置，使其生效 # (Centos)</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></details><ol start="5">
+<li>查看<code>java</code>版本</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>如下图则安装成功。</p>
+<p></p>
+<h2> Ubuntu</h2>
+<ol>
+<li>安装<code>java8</code></li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ol start="2">
+<li>如果我们在服务器上安装了多个Java版本，我们可以使用<b>update-alternatives</b>系统更改默认版本</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>要维持当前值[*]请按&lt;回车键&gt;，或者键入选择的编号：<br>
+在出现提示时输入号码并按Enter键。</p>
+<ol start="3">
+<li>查看<code>java</code>版本</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> Debian</h2>
+<ol>
+<li>首先去官网去下载所需要的jdk包 <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener noreferrer">点击我跳转</a></li>
+</ol>
+<p></p>
+<p>没有的注册一个就好了，下载过程可能有些缓慢，慢慢等待就好</p>
+<details class="custom-container details"><summary class="custom-container-title">博主的一些小提示</summary><ul>
+<li>上面的方法是下载到本地再上传到服务器，这个方法速度很慢且中间需要你再手动上传到服务器</li>
+<li>在你点击登录时会直接帮你跳转进行下载，他会给你一个链接，你只要把链接复制下来使用wget即可</li>
+</ul>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details><ol start="2">
+<li>解压并放置所需目录中</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="3">
+<li>设置环境变量</li>
+</ol>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>编辑该文件，在末尾加上如下内容：（jdk版本需自行填写，上面我所说的地方）</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="highlight-lines"><div class="highlight-line">&nbsp;</div><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>直接就可以编辑，<code>Ctrl+X</code>退出，它会提示是否需要保存，按<code>Y</code>即可，再按回车即可完成</p>
+<ol start="4">
+<li>查看<code>java</code>版本</li>
+</ol>
+<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">重要！</p><p>请退出终端重新进入终端即可生效/查看<code>java</code>，或者你重启服务器是一个操作</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>]]></content>
+    <category term="Linux小知识"/>
+    <published>2020-04-21T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Linux系统如何安装node管理器</title>
+    <id>https://vlssu.github.io/blogs/share/linux/node.html</id>
+    <link href="https://vlssu.github.io/blogs/share/linux/node.html"/>
+    <updated>2023-12-05T01:24:14.000Z</updated>
+    <summary type="html"><![CDATA[<ol>
+<li>安装github</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>yum <span class="token function">install</span> <span class="token function">git</span> <span class="token parameter variable">-y</span> <span class="token comment"># (Centos)</span>
+<span class="token function">apt</span> <span class="token function">install</span> <span class="token function">git</span> <span class="token comment"># (Ubuntu)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<ol>
+<li>安装github</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>安装node.js管理器等组件</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 使用国内镜像</h2>
+<ul>
+<li>对于国内而言，访问外网是很困难的，这会导致访问速度很慢，而国内镜像就很重要了</li>
+</ul>
+<h3> node 国内镜像</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> npm 国内镜像</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> npm WIN 国内镜像源</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
+    <category term="Linux小知识"/>
+    <published>2020-05-03T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">在Ubuntu如何安装Python3.9（Ubuntu 20.04）</title>
+    <id>https://vlssu.github.io/blogs/share/linux/python3.9.html</id>
+    <link href="https://vlssu.github.io/blogs/share/linux/python3.9.html"/>
+    <updated>2023-12-05T01:24:14.000Z</updated>
+    <summary type="html"><![CDATA[<p>由于现在新项目都需要3.9，3.8及一下都不支持，然后我由想在win上直接弄，方便，所以需要在Ubuntu 20.04单独安装Python3.9环境教程。</p>
+<blockquote>
+<p>这玩意比win环境的<code>Python</code>好使多了</p>
+</blockquote>
+<h2> 简洁安装</h2>
+<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>sudo apt update
+sudo apt install software-properties-common
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<p>由于现在新项目都需要3.9，3.8及一下都不支持，然后我由想在win上直接弄，方便，所以需要在Ubuntu 20.04单独安装Python3.9环境教程。</p>
+<blockquote>
+<p>这玩意比win环境的<code>Python</code>好使多了</p>
+</blockquote>
+<h2> 简洁安装</h2>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>安装需要的源，然后我们添加到列表包。</p>
+</blockquote>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>中途会提示你要按键盘上的回车键，然后你需要等会一会，他可能会卡一下</p>
+</blockquote>
+<blockquote>
+<p>然后我们直接安装</p>
+</blockquote>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>然后我们检查版本</p>
+</blockquote>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>注意，之后所有指令都是按照这个后面带3.9的</p>
+</blockquote>
+<h3> 安装pip</h3>
+<blockquote>
+<p>记得root一下</p>
+</blockquote>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2> 下载源码编译安装</h2>
+<h3> 一、安装环境编译包</h3>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> 二、下载最新python软件包</h3>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> 三、编译安装</h3>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
+    <category term="Linux小知识"/>
+    <published>2021-08-21T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">如何关闭Linux里面的SElinux</title>
+    <id>https://vlssu.github.io/blogs/share/linux/selinux.html</id>
+    <link href="https://vlssu.github.io/blogs/share/linux/selinux.html"/>
+    <updated>2023-12-05T01:24:14.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 临时生效</h2>
+<p>命令临时生效：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>setenforce <span class="token number">0</span> <span class="token punctuation">(</span>临时生效可以直接用setenforce <span class="token number">0</span> <span class="token punctuation">)</span>
+            <span class="token number">1</span> 启用
+            <span class="token number">0</span> 告警，不启用
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<h2> 临时生效</h2>
+<p>命令临时生效：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 永久生效</h2>
+<h3> 查看SElinux状态</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 永久关闭</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>更改好后重启服务器</strong></p>
+]]></content>
+    <category term="Linux小知识"/>
+    <published>2020-03-05T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="text">如何开官方bds服务器</title>
     <id>https://vlssu.github.io/blogs/share/minecraft/bds-server.html</id>
     <link href="https://vlssu.github.io/blogs/share/minecraft/bds-server.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<h2> 前期需要软件</h2>
 <ol>
 <li>远程SSH控制台软件（本教程使用 Remote Terminal 此为win10商店软件）<a href="https://www.lanzoui.com/i88wyvi" target="_blank" rel="noopener noreferrer">[点我下载(此软件为Xshell)]</a></li>
@@ -1618,7 +1902,7 @@ https://cloud.tencent.com/developer/article/1050223
     <title type="text">制作我的世界纯净/插件/模组服务端</title>
     <id>https://vlssu.github.io/blogs/share/minecraft/java-server.html</id>
     <link href="https://vlssu.github.io/blogs/share/minecraft/java-server.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<h2> 本教程所需条件</h2>
 <h3> 下载对应的服务端核心</h3>
 <ul>
@@ -1804,7 +2088,7 @@ https://cloud.tencent.com/developer/article/1050223
     <title type="text">我的世界MCSM8面板搭建</title>
     <id>https://vlssu.github.io/blogs/share/minecraft/mcsm.html</id>
     <link href="https://vlssu.github.io/blogs/share/minecraft/mcsm.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">TIP</p><ol>
 <li>windows虽然图形UI很不错但性能优化不理想</li>
 <li>Centos、Ubuntu操作方面会指令话，大大节省时间</li>
@@ -1944,7 +2228,7 @@ https://cloud.tencent.com/developer/article/1050223
     <title type="text">我的世界新版MCSM9面板搭建</title>
     <id>https://vlssu.github.io/blogs/share/minecraft/mcsm9.html</id>
     <link href="https://vlssu.github.io/blogs/share/minecraft/mcsm9.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">TIP</p><ul>
 <li>一个终端控制多台服务器</li>
 <li>站点服务器不再占用过高</li>
@@ -2122,7 +2406,7 @@ docker kill mcsd # 强制杀死当前 Docker ，包括你的 Minecraft 服务端
     <title type="text">我的世界离线用户联机</title>
     <id>https://vlssu.github.io/blogs/share/minecraft/netplus.html</id>
     <link href="https://vlssu.github.io/blogs/share/minecraft/netplus.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<ul>
 <li>VlssuSkin皮肤站一开始本用于我服后来公开化，也希望大家来使用我的皮肤站</li>
 <li>NetPlus是我接触的内网穿透项目，他可以让玩家在没有公网的基础上与朋友联机</li>
@@ -2256,287 +2540,10 @@ docker kill mcsd # 强制杀死当前 Docker ，包括你的 Minecraft 服务端
     <published>2020-02-25T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">Centos7上yum安装chrome</title>
-    <id>https://vlssu.github.io/blogs/share/linux/chrome.html</id>
-    <link href="https://vlssu.github.io/blogs/share/linux/chrome.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
-    <summary type="html"><![CDATA[<ol>
-<li>配置yum源（root用户）
-在目录 <code>/etc/yum.repos.d/</code> 下新建文件 <code>google-chrome.repo</code></li>
-</ol>
-<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>vim /etc/yum.repos.d/google-chrome.repo
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></summary>
-    <content type="html"><![CDATA[<ol>
-<li>配置yum源（root用户）
-在目录 <code>/etc/yum.repos.d/</code> 下新建文件 <code>google-chrome.repo</code></li>
-</ol>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>写入如下内容:</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">TIP</p><p>1、按ESC退出编辑模式（回到命令模式）
-2、输入 :wq!后按回车退出</p>
-</div><ol start="2">
-<li>安装chrome浏览器</li>
-</ol>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><a href="https://download-chromium.appspot.com/?platform=Linux_x64&amp;type=snapshots" target="_blank" rel="noopener noreferrer">https://download-chromium.appspot.com/?platform=Linux_x64&amp;type=snapshots</a></p>
-]]></content>
-    <category term="Linux小知识"/>
-    <published>2022-04-24T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">在Linux中安装Docker及Docker Compose</title>
-    <id>https://vlssu.github.io/blogs/share/linux/docker.html</id>
-    <link href="https://vlssu.github.io/blogs/share/linux/docker.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 安装 Docker</h2>
-<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">官方的一键脚本安装法</p>
-</div>]]></summary>
-    <content type="html"><![CDATA[<h2> 安装 Docker</h2>
-<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">官方的一键脚本安装法</p>
-</div><h3> Ubuntu</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>启动 Docker 服务（重要）</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><br>
-<h3> Centos</h3>
-<p>Docker 要求 CentOS 系统的内核版本高于 3.10 ，通过 <code>uname -r</code> 命令查看你当前的内核版本。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>启动 Docker 服务（重要）</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><br>
-<h3> Arch Linux</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><br><br></p>
-<h3> 给予当前用户Docker权限 （强烈建议）</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可能需要重新登陆后生效。</p>
-<h3> 检查 Docker 环境是否正确（可选）</h3>
-<p>查看是否已经安装，配好PATH路径，一般而言自动配好了。MCSManager 需要 Docker 命令必须能够执行，否则无法正确使用。</p>
-<p>输出版本号即为正确。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 检查 Docker 是否能够运行（可选）</h3>
-<p>运行 Hello world 程序（需要联网下载）。输出内容包含有 "Hello from Docker!" 则代表运行成功代表无问题。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 配置国内镜像源（可选，强烈建议做）</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>重启服务。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 开机自启docker</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 卸载 Docker</h2>
-<ol>
-<li>卸载docker</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
-<li>再次check docker是否已经卸载成功</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></content>
-    <category term="Linux小知识"/>
-    <published>2020-03-03T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">在Linux上安装 Go</title>
-    <id>https://vlssu.github.io/blogs/share/linux/go.html</id>
-    <link href="https://vlssu.github.io/blogs/share/linux/go.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
-    <summary type="html"><![CDATA[<h3> 下载 Go 压缩包</h3>
-<p>在写这篇文章的时候，Go 的最新版为 1.18。在我们下载安装包时，请浏览<a href="https://yq.aliyun.com/go/articleRenderRedirect?url=https%3A%2F%2Fgolang.org%2Fdl%2F" target="_blank" rel="noopener noreferrer">Go 官方下载页面</a>,并且检查一下是否有新的版本可用。</p>
-<p>以 root 或者其他 sudo 用户身份运行下面的命令，下载并且解压 Go 二进制文件到<code>/usr/local</code>目录：</p>]]></summary>
-    <content type="html"><![CDATA[<h3> 下载 Go 压缩包</h3>
-<p>在写这篇文章的时候，Go 的最新版为 1.18。在我们下载安装包时，请浏览<a href="https://yq.aliyun.com/go/articleRenderRedirect?url=https%3A%2F%2Fgolang.org%2Fdl%2F" target="_blank" rel="noopener noreferrer">Go 官方下载页面</a>,并且检查一下是否有新的版本可用。</p>
-<p>以 root 或者其他 sudo 用户身份运行下面的命令，下载并且解压 Go 二进制文件到<code>/usr/local</code>目录：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 调整环境变量</h3>
-<p>通过将 Go 目录添加到<code>$PATH</code>环境变量，系统将会知道在哪里可以找到 Go 可执行文件。</p>
-<p>这个可以通过添加下面的行到<code>/etc/profile</code>文件（系统范围内安装）或者<code>$HOME/.profile</code>文件（当前用户安装）：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 验证 Go 安装过程</h3>
-<p>通过打印 Go 版本号，验证安装过程。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
-    <category term="Linux小知识"/>
-    <published>2022-04-03T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">Linux常用指令指令</title>
-    <id>https://vlssu.github.io/blogs/share/linux/instruction.html</id>
-    <link href="https://vlssu.github.io/blogs/share/linux/instruction.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
-    <summary type="html"><![CDATA[<p>我会尽量将linux相关、实用的指令放在这里(算作笔记吧)，让我以后记不得指令时来着看看，如果有什么补充指令也可以评论告诉我哦，我会添加在正文里的</p>
-<h2> 复制指令</h2>
-<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">cp</span> <span class="token punctuation">[</span>options….<span class="token punctuation">]</span> source<span class="token punctuation">(</span>s<span class="token punctuation">)</span> destination
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></summary>
-    <content type="html"><![CDATA[<p>我会尽量将linux相关、实用的指令放在这里(算作笔记吧)，让我以后记不得指令时来着看看，如果有什么补充指令也可以评论告诉我哦，我会添加在正文里的</p>
-<h2> 复制指令</h2>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></content>
-    <category term="Linux小知识"/>
-    <published>2020-05-06T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">如何在Linux系统中安装Java8</title>
-    <id>https://vlssu.github.io/blogs/share/linux/java8.html</id>
-    <link href="https://vlssu.github.io/blogs/share/linux/java8.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
-    <summary type="html"><![CDATA[<h2> Centos</h2>
-<p>使用<code>yum</code>安装<code>java8</code>。</p>
-<ol>
-<li>查看<code>java</code>版本库</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>yum search <span class="token function">java</span> <span class="token operator">|</span> <span class="token function">grep</span> jdk
-<span class="token comment"># 这里选择Java8</span>
-yum <span class="token function">install</span> java-1.8.0-openjdk java-1.8.0-openjdk-devel
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
-    <content type="html"><![CDATA[<h2> Centos</h2>
-<p>使用<code>yum</code>安装<code>java8</code>。</p>
-<ol>
-<li>查看<code>java</code>版本库</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><details class="custom-container details"><summary class="custom-container-title">在新的编译版本可以不用配置了，但旧版可能还是需要配置</summary><p>安装完毕后如下图，需复制图中箭头指向的名称，<code>java8</code>完整版本名称。后面设置环境变量会用到。</p>
-<p></p>
-<ol start="2">
-<li>查看<code>java8</code>安装位置 # (Centos)</li>
-</ol>
-<p>通过此方法安装的java放在固定位置</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p></p>
-<ol start="3">
-<li>设置环境变量 # (Centos)</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>编辑该文件，在末尾加上如下内容：（jdk版本需自行填写，上面复制的版本）</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="highlight-lines"><br><div class="highlight-line">&nbsp;</div><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>按“i”键进行编辑，退出先按“ESC”然后“:”</p>
-<ul>
-<li>:q 是直接退出</li>
-<li>:wq 保存后退出</li>
-<li>:q! – 不保存内容， 强制退出</li>
-</ul>
-<ol start="4">
-<li>刷新配置，使其生效 # (Centos)</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></details><ol start="5">
-<li>查看<code>java</code>版本</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>如下图则安装成功。</p>
-<p></p>
-<h2> Ubuntu</h2>
-<ol>
-<li>安装<code>java8</code></li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ol start="2">
-<li>如果我们在服务器上安装了多个Java版本，我们可以使用<b>update-alternatives</b>系统更改默认版本</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>要维持当前值[*]请按&lt;回车键&gt;，或者键入选择的编号：<br>
-在出现提示时输入号码并按Enter键。</p>
-<ol start="3">
-<li>查看<code>java</code>版本</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> Debian</h2>
-<ol>
-<li>首先去官网去下载所需要的jdk包 <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener noreferrer">点击我跳转</a></li>
-</ol>
-<p></p>
-<p>没有的注册一个就好了，下载过程可能有些缓慢，慢慢等待就好</p>
-<details class="custom-container details"><summary class="custom-container-title">博主的一些小提示</summary><ul>
-<li>上面的方法是下载到本地再上传到服务器，这个方法速度很慢且中间需要你再手动上传到服务器</li>
-<li>在你点击登录时会直接帮你跳转进行下载，他会给你一个链接，你只要把链接复制下来使用wget即可</li>
-</ul>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details><ol start="2">
-<li>解压并放置所需目录中</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="3">
-<li>设置环境变量</li>
-</ol>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>编辑该文件，在末尾加上如下内容：（jdk版本需自行填写，上面我所说的地方）</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="highlight-lines"><div class="highlight-line">&nbsp;</div><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>直接就可以编辑，<code>Ctrl+X</code>退出，它会提示是否需要保存，按<code>Y</code>即可，再按回车即可完成</p>
-<ol start="4">
-<li>查看<code>java</code>版本</li>
-</ol>
-<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">重要！</p><p>请退出终端重新进入终端即可生效/查看<code>java</code>，或者你重启服务器是一个操作</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>]]></content>
-    <category term="Linux小知识"/>
-    <published>2020-04-21T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">Linux系统如何安装node管理器</title>
-    <id>https://vlssu.github.io/blogs/share/linux/node.html</id>
-    <link href="https://vlssu.github.io/blogs/share/linux/node.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
-    <summary type="html"><![CDATA[<ol>
-<li>安装github</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>yum <span class="token function">install</span> <span class="token function">git</span> <span class="token parameter variable">-y</span> <span class="token comment"># (Centos)</span>
-<span class="token function">apt</span> <span class="token function">install</span> <span class="token function">git</span> <span class="token comment"># (Ubuntu)</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
-    <content type="html"><![CDATA[<ol>
-<li>安装github</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
-<li>安装node.js管理器等组件</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 使用国内镜像</h2>
-<ul>
-<li>对于国内而言，访问外网是很困难的，这会导致访问速度很慢，而国内镜像就很重要了</li>
-</ul>
-<h3> node 国内镜像</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> npm 国内镜像</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> npm WIN 国内镜像源</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
-    <category term="Linux小知识"/>
-    <published>2020-05-03T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">在Ubuntu如何安装Python3.9（Ubuntu 20.04）</title>
-    <id>https://vlssu.github.io/blogs/share/linux/python3.9.html</id>
-    <link href="https://vlssu.github.io/blogs/share/linux/python3.9.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
-    <summary type="html"><![CDATA[<p>由于现在新项目都需要3.9，3.8及一下都不支持，然后我由想在win上直接弄，方便，所以需要在Ubuntu 20.04单独安装Python3.9环境教程。</p>
-<blockquote>
-<p>这玩意比win环境的<code>Python</code>好使多了</p>
-</blockquote>
-<h2> 简洁安装</h2>
-<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>sudo apt update
-sudo apt install software-properties-common
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
-    <content type="html"><![CDATA[<p>由于现在新项目都需要3.9，3.8及一下都不支持，然后我由想在win上直接弄，方便，所以需要在Ubuntu 20.04单独安装Python3.9环境教程。</p>
-<blockquote>
-<p>这玩意比win环境的<code>Python</code>好使多了</p>
-</blockquote>
-<h2> 简洁安装</h2>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
-<p>安装需要的源，然后我们添加到列表包。</p>
-</blockquote>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
-<p>中途会提示你要按键盘上的回车键，然后你需要等会一会，他可能会卡一下</p>
-</blockquote>
-<blockquote>
-<p>然后我们直接安装</p>
-</blockquote>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
-<p>然后我们检查版本</p>
-</blockquote>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
-<p>注意，之后所有指令都是按照这个后面带3.9的</p>
-</blockquote>
-<h3> 安装pip</h3>
-<blockquote>
-<p>记得root一下</p>
-</blockquote>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2> 下载源码编译安装</h2>
-<h3> 一、安装环境编译包</h3>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> 二、下载最新python软件包</h3>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> 三、编译安装</h3>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
-    <category term="Linux小知识"/>
-    <published>2021-08-21T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">如何关闭Linux里面的SElinux</title>
-    <id>https://vlssu.github.io/blogs/share/linux/selinux.html</id>
-    <link href="https://vlssu.github.io/blogs/share/linux/selinux.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 临时生效</h2>
-<p>命令临时生效：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>setenforce <span class="token number">0</span> <span class="token punctuation">(</span>临时生效可以直接用setenforce <span class="token number">0</span> <span class="token punctuation">)</span>
-            <span class="token number">1</span> 启用
-            <span class="token number">0</span> 告警，不启用
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
-    <content type="html"><![CDATA[<h2> 临时生效</h2>
-<p>命令临时生效：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 永久生效</h2>
-<h3> 查看SElinux状态</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 永久关闭</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>更改好后重启服务器</strong></p>
-]]></content>
-    <category term="Linux小知识"/>
-    <published>2020-03-05T00:00:00.000Z</published>
-  </entry>
-  <entry>
     <title type="text">使用 vuepress 搭建我的博客</title>
     <id>https://vlssu.github.io/blogs/share/node/vuepress-blog-on-github.html</id>
     <link href="https://vlssu.github.io/blogs/share/node/vuepress-blog-on-github.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">前言</p><p>嗯～, 没错, 博客又迎来一次重大的更新, 采用 vuepress 这一静态博客解决方案，并使用魔改主题。这篇会从搭建博客到部署上线进行较详细的介绍</p>
 </div>]]></summary>
     <content type="html"><![CDATA[<div class="custom-container tip"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01"></path><path d="M11 12h1v4h1"></path></g></svg><p class="custom-container-title">前言</p><p>嗯～, 没错, 博客又迎来一次重大的更新, 采用 vuepress 这一静态博客解决方案，并使用魔改主题。这篇会从搭建博客到部署上线进行较详细的介绍</p>
@@ -2673,7 +2680,7 @@ controls="controls"></video>
     <title type="text">Markdown基本语法</title>
     <id>https://vlssu.github.io/blogs/share/vuepress/markdown.html</id>
     <link href="https://vlssu.github.io/blogs/share/vuepress/markdown.html"/>
-    <updated>2023-12-05T02:08:47.000Z</updated>
+    <updated>2023-12-05T01:24:14.000Z</updated>
     <summary type="html"><![CDATA[<h2> 一、标题</h2>
 <p>在想要设置为标题的文字前面加<code>#</code>来表示</p>
 <p>一个<code>#</code>是一级标题，二个<code>#</code>是二级标题，以此类推。支持六级标题。</p>
