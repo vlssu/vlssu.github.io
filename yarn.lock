@@ -10875,7 +10875,7 @@ __metadata:
     "@vuepress/plugin-pwa": "npm:^2.0.0-rc.0"
     "@vuepress/plugin-pwa-popup": "npm:^2.0.0-rc.0"
     vuepress: "npm:^2.0.0-rc.0"
-    vuepress-plugin-feed2: "npm:^2.0.0-rc.1"
+    vuepress-plugin-feed2: "npm:^2.0.0-rc.2"
     vuepress-theme-reco: "npm:^2.0.0-rc.1"
   languageName: unknown
   linkType: soft
@@ -10956,14 +10956,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuepress-plugin-feed2@npm:^2.0.0-rc.1":
-  version: 2.0.0-rc.1
-  resolution: "vuepress-plugin-feed2@npm:2.0.0-rc.1"
+"vuepress-plugin-feed2@npm:^2.0.0-rc.2":
+  version: 2.0.0-rc.2
+  resolution: "vuepress-plugin-feed2@npm:2.0.0-rc.2"
   dependencies:
     "@vuepress/shared": "npm:2.0.0-rc.0"
     "@vuepress/utils": "npm:2.0.0-rc.0"
     cheerio: "npm:1.0.0-rc.12"
-    vuepress-shared: "npm:2.0.0-rc.1"
+    vuepress-shared: "npm:2.0.0-rc.2"
     xml-js: "npm:^1.6.11"
   peerDependencies:
     vuepress: 2.0.0-rc.0
@@ -10976,13 +10976,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 32db9155465238dc30db884ba88e99694bb5238448b8403ec40f57bb79530f45fddfcbbf4d52a542a9c4118bda11b7c51cbcd368b2eae330e1ce5436faa1e2b1
+  checksum: e3b8ad8d515b959c545f03dd7022daed110fabce60383606f940ad639a4b82b6c651e42f64b1ead3fe36bd75f6162a55c4f5a0d6692f665fc7e5a76f237d4d3f
   languageName: node
   linkType: hard
 
-"vuepress-shared@npm:2.0.0-rc.1":
-  version: 2.0.0-rc.1
-  resolution: "vuepress-shared@npm:2.0.0-rc.1"
+"vuepress-shared@npm:2.0.0-rc.2":
+  version: 2.0.0-rc.2
+  resolution: "vuepress-shared@npm:2.0.0-rc.2"
   dependencies:
     "@vuepress/client": "npm:2.0.0-rc.0"
     "@vuepress/shared": "npm:2.0.0-rc.0"
@@ -11008,7 +11008,7 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 6866b51203587be87df78c0ec998b8e4a5fc28783026a44c77a095458070eaaa7db3e31f7c3eb037f0737a96fa4a4a6205dbd023656bdbeb81087c646441c9f2
+  checksum: b1e9a1521806573836f879cb6a37f2eef154038d7f8a64f7a5cf7ebf67d736953ef2e81b9785fedc823d2ecc0f657a245d9499dd80eb0f930f267138531275a8
   languageName: node
   linkType: hard
 
