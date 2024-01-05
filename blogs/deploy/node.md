@@ -11,7 +11,7 @@ categories:
 
 操作之前，请将电脑中的 **Node** 卸载干净！！！
 
-前往 [Github：nvm-windows](https://github.com/coreybutler/nvm-windows/releases) 下载最新版本的 `nvm-setup.exe`
+前往 [Github：nvm-windows](https://github.com/coreybutler/nvm-windows/releases) 下载最新版本的 [`nvm-setup.exe`](https://github.com/coreybutler/nvm-windows/releases/latest/download/nvm-setup.exe)
 
 然后直接无脑下一步即可
 
@@ -24,6 +24,13 @@ categories:
 | nvm uninstall 18.19.0 | 卸载指定版本Node       |
 
 ### 更换国内镜像源
+
+```
+nvm node_mirror https://npmmirror.com/mirrors/node/
+nvm npm_mirror https://npmmirror.com/mirrors/npm/
+```
+
+::: details 如果命令不管用可以用这个方法
 
 如果你想切换为国内镜像源，首先得找到nvm的文件位置，如果你不知道他在哪可以通过以下步骤找到
 
@@ -38,3 +45,5 @@ $ which nvm
 node_mirror: https://npmmirror.com/mirrors/node/
 npm_mirror: https://npmmirror.com/mirrors/npm/
 ```
+
+:::
