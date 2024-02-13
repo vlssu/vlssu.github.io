@@ -24,15 +24,14 @@ categories:
 不过翼龙面板前端就没那么需求了，只要阁下前端服务器能装 `BT-Panel`，和 `LNMP` 或者 `LAMP`，就可以用来搭建翼龙面板前端了。一般服务器均能满足前端的搭建要求。
 :::
 
-| 操作系统   | 版本  |      支持状况      | 注意事项                           |
-|:-----------|:------|:------------------:|:-----------------------------------|
-| **Ubuntu** | 18.04 | :white_check_mark: | 文档基于 Ubuntu 18.04 作为操作系统所编写的。 |
-|            | 20.04 | :white_check_mark: |                                    |
-|            | 22.04 | :white_check_mark: | MariaDB 无需 repo 安装脚本即可安装。 |
-| **CentOS** | 7     | :white_check_mark: | 需要额外的 repos。                 |
-|            | 8     | :white_check_mark: | 请注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux。 |
-| **Debian** | 10    | :white_check_mark: |                                    |
-|            | 11    | :white_check_mark: |                                    |
+| 操作系统 | 版本 |     支持状况      | 注意事项                                                       |
+|------------------|---------|:------------------:|-------------------------------------------------------------|
+| **Ubuntu**       | 20.04   | :white_check_mark: | 文档以 Ubuntu 20.04 操作系统为基本所编写的。 |
+|                  | 22.04   | :white_check_mark: |     MariaDB 无需 repo 安装脚本即可安装。 |
+| **CentOS**       | 7       | :white_check_mark: | 需要额外的 repos。                                   |
+|                  | 8       | :white_check_mark: | 注意，CentOS 8 已停运。使用 Rocky 或 Alma Linux。         |
+| **Debian**       | 10      | :white_check_mark: |                                                             |
+|                  | 11      | :white_check_mark: |  
 
 ## 安装宝塔面板
 此界面提供的安装脚本具有时间局限性，可能落后于官方最新版本，有条件的话请去宝塔官网查看
@@ -40,13 +39,13 @@ categories:
 
 ``` bash
 # Centos安装脚本
-yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh ed8484bec
+yum install -y wget && wget -O install.sh https://download.bt.cn/install/install_6.0.sh && sh install.sh ed8484bec
 
 # Ubuntu/Deepin安装脚本
-wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh ed8484bec
+wget -O install.sh https://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh ed8484bec
 
 # Debian安装脚本
-wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh ed8484bec
+wget -O install.sh https://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh ed8484bec
 
 # 万能安装脚本
 if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_panel.sh;else wget -O install_panel.sh https://download.bt.cn/install/install_panel.sh;fi;bash install_panel.sh ed8484bec
@@ -204,24 +203,16 @@ RestartSec=5s
 WantedBy=multi-user.target
 ```
 
-::: tip CentOS 上的 Redis
-如果您使用的是 CentOS，则需要在 `After=` 一行将 `redis-server.service` 替换为 `redis.service`，以确保 `redis` 在工作队列之前启动。
-:::
-
 ::: tip
-如果你没有使用 `redis` 做任何事情，你应该删除 `After=` 一行，否则服务启动时会遇到错误。      
+你在 `PHP` 安装 `redis` 拓展时应该自动安装了 `redis` 并启动了，但如果发现 应用商店中没有或未启动 `redis` ，你应该启动它。      
 如果你的面板路径并不是 `/www/wwwroot/pterodactyl/`，请替换为你面板的绝对路径，否则邮件服务将无法使用。      
 如果你宝塔默认命令行使用的并不是 `8.1`PHP 可以尝试使用绝对路径，将 `/usr/bin/php` 改为 `/www/server/php/81/bin/php`
 :::
-
-如果您在系统中使用 redis，则需要确保启用它会在引导时启动。您可以通过运行以下命令来执行此操作：
-
-```bash
-sudo systemctl enable --now redis-server
-```
 
 最后，启动队列监听服务并设置开启自动启动
 
 ``` bash
 sudo systemctl enable --now pteroq.service
 ```
+
+#### 下一步：[Wings (后端) 安装](https://pterodactyl.top/wings/1.0/installing.html)
