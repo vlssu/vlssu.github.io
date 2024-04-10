@@ -24,6 +24,8 @@ categories:
 ## 安装yutto
 ```bash
 pip install --pre yutto
+# 一半系统预装python都是3.8，所以想要调用3.9（更高版本以此类推）需要使用以下命令
+# pip3.9 install --pre yutto
 # 用于加速的
 pip install uvloop
 ```
