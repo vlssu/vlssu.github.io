@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-rc.9">
+    <script>
+      (function() {
+        const userMode = localStorage.getItem('vuepress-reco-color-scheme') || 'auto';
+        const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (userMode === 'dark' || (userMode === 'auto' && systemDarkMode)) {
+          document.documentElement.classList.toggle('dark', true);
+        }
+      })();
+    </script>
+    <meta property="og:url" content="https://vlssu.github.io/blogs/notes/220601.html"><meta property="og:site_name" content="师叔の小窝"><meta property="og:title" content="MySQL 8.0数据导入5.7及以下版本"><meta property="og:description" content="前段时间我为了尝鲜 MySQL 8.0，谁知道占内存特别多，一些低内存的想用作备用的，但是 5.7 相对于 8.0 改了字符，导致不兼容了，所以我只能去网上找了些方法 8.0 于 5.7 之间的改动变化 表编码为 utf8mb4_0900_ai_ci 排序规则为 utf8mb4 因此打开.sql文件 使用notpad++或者txt都可以，进行全局替换就..."><meta property="og:type" content="article"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2023-10-02T17:17:23.000Z"><meta property="article:tag" content="MySQL"><meta property="article:published_time" content="2022-06-01T00:00:00.000Z"><meta property="article:modified_time" content="2023-10-02T17:17:23.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"MySQL 8.0数据导入5.7及以下版本","image":[""],"datePublished":"2022-06-01T00:00:00.000Z","dateModified":"2023-10-02T17:17:23.000Z","author":[]}</script><link rel="icon" href="/favicon.ico"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="飒爽师叔"><meta name="keywords" content="vuepress,飒爽师叔,ValiantShishu,vlssu,vuepress-theme-reco,theme,blog,博客"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#42b983"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/logo.png"><link rel="mask-icon" href="/icon_vuepress_vlssu.svg" color="#42b983"><meta name="msapplication-TileImage" content="/icon_vuepress_vlssu.png"><meta name="msapplication-TileColor" content="#000000"><link rel="alternate" type="application/atom+xml" href="https://vlssu.github.io/atom.xml" title="师叔の小窝 Atom Feed"><link rel="alternate" type="application/json" href="https://vlssu.github.io/feed.json" title="师叔の小窝 JSON Feed"><link rel="alternate" type="application/rss+xml" href="https://vlssu.github.io/rss.xml" title="师叔の小窝 RSS Feed"><title>MySQL 8.0数据导入5.7及以下版本 | 师叔の小窝</title><meta name="description" content="前段时间我为了尝鲜 MySQL 8.0，谁知道占内存特别多，一些低内存的想用作备用的，但是 5.7 相对于 8.0 改了字符，导致不兼容了，所以我只能去网上找了些方法 8.0 于 5.7 之间的改动变化 表编码为 utf8mb4_0900_ai_ci 排序规则为 utf8mb4 因此打开.sql文件 使用notpad++或者txt都可以，进行全局替换就...">
+    <link rel="preload" href="/assets/style-BSS7DbJX.css" as="style"><link rel="stylesheet" href="/assets/style-BSS7DbJX.css">
+    <link rel="modulepreload" href="/assets/app-CHmId3RF.js"><link rel="modulepreload" href="/assets/220601.html-CdPzhs76.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-CHmId3RF.js" defer></script>
+  </body>
+</html>

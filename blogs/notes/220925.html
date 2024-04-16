@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-rc.9">
+    <script>
+      (function() {
+        const userMode = localStorage.getItem('vuepress-reco-color-scheme') || 'auto';
+        const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (userMode === 'dark' || (userMode === 'auto' && systemDarkMode)) {
+          document.documentElement.classList.toggle('dark', true);
+        }
+      })();
+    </script>
+    <meta property="og:url" content="https://vlssu.github.io/blogs/notes/220925.html"><meta property="og:site_name" content="师叔の小窝"><meta property="og:title" content="修复 BTpanel(宝塔) Python 环境（SSL续订错误）"><meta property="og:description" content="在使用宝塔的时候，Python 很容易炸，在续签ssl证书的时候尤为明显，而这些问题基本都是 Python 惹的祸 TIP在运行以下命令并不会导致数据重置等现象。但为了保险起见，建议您先备份后在执行。 小提示当然，可以再运行一遍安装命令，放心，数据并不会覆盖，唯一覆盖的就是面板密码和面板首页的应用快捷入口变了。这些倒是小问题，但面板修复了倒是真的呀"><meta property="og:type" content="article"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2023-10-02T17:17:23.000Z"><meta property="article:tag" content="宝塔"><meta property="article:tag" content="Python"><meta property="article:published_time" content="2022-09-25T00:00:00.000Z"><meta property="article:modified_time" content="2023-10-02T17:17:23.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"修复 BTpanel(宝塔) Python 环境（SSL续订错误）","image":[""],"datePublished":"2022-09-25T00:00:00.000Z","dateModified":"2023-10-02T17:17:23.000Z","author":[]}</script><link rel="icon" href="/favicon.ico"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="飒爽师叔"><meta name="keywords" content="vuepress,飒爽师叔,ValiantShishu,vlssu,vuepress-theme-reco,theme,blog,博客"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#42b983"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/logo.png"><link rel="mask-icon" href="/icon_vuepress_vlssu.svg" color="#42b983"><meta name="msapplication-TileImage" content="/icon_vuepress_vlssu.png"><meta name="msapplication-TileColor" content="#000000"><link rel="alternate" type="application/atom+xml" href="https://vlssu.github.io/atom.xml" title="师叔の小窝 Atom Feed"><link rel="alternate" type="application/json" href="https://vlssu.github.io/feed.json" title="师叔の小窝 JSON Feed"><link rel="alternate" type="application/rss+xml" href="https://vlssu.github.io/rss.xml" title="师叔の小窝 RSS Feed"><title>修复 BTpanel(宝塔) Python 环境（SSL续订错误） | 师叔の小窝</title><meta name="description" content="在使用宝塔的时候，Python 很容易炸，在续签ssl证书的时候尤为明显，而这些问题基本都是 Python 惹的祸 TIP在运行以下命令并不会导致数据重置等现象。但为了保险起见，建议您先备份后在执行。 小提示当然，可以再运行一遍安装命令，放心，数据并不会覆盖，唯一覆盖的就是面板密码和面板首页的应用快捷入口变了。这些倒是小问题，但面板修复了倒是真的呀">
+    <link rel="preload" href="/assets/style-BSS7DbJX.css" as="style"><link rel="stylesheet" href="/assets/style-BSS7DbJX.css">
+    <link rel="modulepreload" href="/assets/app-CHmId3RF.js"><link rel="modulepreload" href="/assets/220925.html-CUGkV6M6.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-CHmId3RF.js" defer></script>
+  </body>
+</html>
