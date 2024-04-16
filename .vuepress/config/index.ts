@@ -7,9 +7,9 @@ export const themeConfig = {
     logo: '/logo.png',
     author: '飒爽师叔',
     authorAvatar: '/head.png',
-    docsRepo: 'https://github.com/vlssu/vlssu.github.io',
-    docsBranch: 'master',
-    docsDir: '',
+    gitRepo: 'vlssu/vlssu.github.io',
+    gitBranch: 'master',
+    sourceDir: '',
     lastUpdatedText: '最后更新时间',
     primaryColor: '#42b983',
     locales: {

@@ -1,12 +1,18 @@
 import { defineUserConfig } from 'vuepress'
-import type { DefaultThemeOptions } from 'vuepress'
+import { viteBundler } from '@vuepress/bundler-vite'
 import { recoTheme } from 'vuepress-theme-reco'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
-import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
-import { feedPlugin } from "vuepress-plugin-feed2";
+import { feedPlugin } from '@vuepress/plugin-feed'
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { sitemapPlugin } from '@vuepress/plugin-sitemap'
+import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
+import { seoPlugin } from '@vuepress/plugin-seo'
+import { tocPlugin } from '@vuepress/plugin-toc'
 import { themeConfig } from './config/index'
 
 export default defineUserConfig({
+  bundler: viteBundler(),
+  shouldPrefetch: false,
   lang: 'zh-CN',
   title: '师叔の小窝',
   description: 'Share knowledge and stay happy',
@@ -27,14 +33,10 @@ export default defineUserConfig({
   ],
   theme: recoTheme(themeConfig),
   plugins: [
-    pwaPlugin(),
-    pwaPopupPlugin({
-      locales: {
-        '/': {
-          message: '发现新内容可用',
-          buttonText: '刷新',
-        },
-      },
+    pwaPlugin({
+      showInstall: true,
+      cacheImage: true,
+      update: "hint",
     }),
     feedPlugin({
       hostname: "https://vlssu.github.io",
@@ -42,6 +44,17 @@ export default defineUserConfig({
       json: true,
       rss: true,
     }),
+    googleAnalyticsPlugin({
+      id: 'G-PCD2Q5QRXT',
+    }),
+    sitemapPlugin({
+      hostname: "https://vlssu.github.io",
+    }),
+    backToTopPlugin(),
+    seoPlugin({
+      hostname: "https://vlssu.github.io",
+    }),
+    tocPlugin(),
   ]
   // debug: true,
 })
