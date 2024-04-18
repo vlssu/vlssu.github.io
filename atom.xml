@@ -3,7 +3,7 @@
   <id>https://vlssu.github.io/</id>
   <title>师叔の小窝</title>
   <subtitle>Share knowledge and stay happy</subtitle>
-  <updated>2024-04-16T06:37:02.420Z</updated>
+  <updated>2024-04-18T00:48:00.014Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://vlssu.github.io/atom.xml"/>
   <link rel="alternate" href="https://vlssu.github.io/"/>
@@ -490,7 +490,7 @@ www:x:1001:1001::/home/www:/bin/bash
     <title type="text">翼龙面板汉化版docker一键部署</title>
     <id>https://vlssu.github.io/blogs/deploy/pterodactyl_docker.html</id>
     <link href="https://vlssu.github.io/blogs/deploy/pterodactyl_docker.html"/>
-    <updated>2023-11-21T09:52:34.000Z</updated>
+    <updated>2024-04-18T00:46:39.000Z</updated>
     <summary type="html"><![CDATA[<p>翼龙面板运行在您自己的 Web 服务器上。为了运行和使用这个面板，您需要对您的服务器具有 root 访问权限。</p>
 <p>您需要了解如何阅读文档以使用此面板。我们花了很多时间详细介绍如何安装或升级我们的软件；
 所以你也要花点时间去阅读而不是复制粘贴，然后在事情不起作用时候而抱怨。
@@ -504,7 +504,7 @@ www:x:1001:1001::/home/www:/bin/bash
 这是一个高度复杂的系统，需要多个依赖项，并且使用搭建他的网站管理人员需要付出一些时间学习如何使用它。<strong>如果您希望能够在不了解基本 linux 系统管理的情况下安装它，您现在应该停下来然后出门左拐。</strong></p>
 <h2>选择服务器操作系统</h2>
 <p>翼龙可在多种操作系统上运行，因此请选择最适合您使用的操作系统。</p>
-<div class="custom-container warning"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4"></path><path d="M12 16h.01"></path></g></svg><p class="custom-container-title">WARNING</p><p>由于与 Docker 不兼容，翼龙不支持大多数 OpenVZ 系统。如果您计划在基于 OpenVZ 的系统上运行此软件，您将很大概率不会成功。<br>
+<div class="custom-container warning"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4"></path><path d="M12 16h.01"></path></g></svg><p class="custom-container-title">WARNING</p><p>Pterodactyl 不支持大多数 OpenVZ 系统，因为它与 Docker 不兼容。如果你计划在基于 OpenVZ 的系统上运行这个软件，你很可能不会成功。
 不过本页的教程并不会有太多的限制，只要阁下前端服务器能装 <code>Docker</code> 和 <code>Docker Compose</code>，就可以采用本页教程来搭建翼龙面板前端了。一般服务器均能满足前端的搭建要求。
 只要能装 <strong>Docker Compose</strong> 并运行，就没有系统的限制。</p>
 </div><h2>安装 Docker</h2>
