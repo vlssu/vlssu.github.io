@@ -3290,14 +3290,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-seo@npm:2.0.0-rc.24":
-  version: 2.0.0-rc.24
-  resolution: "@vuepress/plugin-seo@npm:2.0.0-rc.24"
+"@vuepress/plugin-seo@npm:2.0.0-rc.26":
+  version: 2.0.0-rc.26
+  resolution: "@vuepress/plugin-seo@npm:2.0.0-rc.26"
   dependencies:
-    "@vuepress/helper": "npm:~2.0.0-rc.24"
+    "@vuepress/helper": "npm:~2.0.0-rc.26"
   peerDependencies:
     vuepress: 2.0.0-rc.9
-  checksum: 10c0/ba39c3b8dc0cd5822c703d39cc892e7eefd2423a3f4e02e0982d300eb7488a6f64e142db62313e89cc83b2031dbc9ab383264116831bdc916b6baab48750241f
+  checksum: 10c0/72c3a17bd36c84bf248321eef01fe3a6724c3cd3e8fcdfbadde6cbd2462db5ace5975fb7d234fa49b0a41efde6cefa519bb0021ffd8dfd3f4a0fd178273d3026
   languageName: node
   linkType: hard
 
@@ -10163,7 +10163,7 @@ __metadata:
     "@vuepress/plugin-feed": "npm:2.0.0-rc.26"
     "@vuepress/plugin-google-analytics": "npm:2.0.0-rc.21"
     "@vuepress/plugin-pwa": "npm:2.0.0-rc.26"
-    "@vuepress/plugin-seo": "npm:2.0.0-rc.24"
+    "@vuepress/plugin-seo": "npm:2.0.0-rc.26"
     "@vuepress/plugin-sitemap": "npm:2.0.0-rc.24"
     "@vuepress/plugin-toc": "npm:2.0.0-rc.21"
     vuepress: "npm:2.0.0-rc.9"
