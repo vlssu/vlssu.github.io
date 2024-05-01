@@ -3251,19 +3251,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-pwa@npm:2.0.0-rc.24":
-  version: 2.0.0-rc.24
-  resolution: "@vuepress/plugin-pwa@npm:2.0.0-rc.24"
+"@vuepress/plugin-pwa@npm:2.0.0-rc.26":
+  version: 2.0.0-rc.26
+  resolution: "@vuepress/plugin-pwa@npm:2.0.0-rc.26"
   dependencies:
-    "@vuepress/helper": "npm:~2.0.0-rc.24"
+    "@vuepress/helper": "npm:~2.0.0-rc.26"
     "@vueuse/core": "npm:^10.9.0"
     mitt: "npm:^3.0.1"
     register-service-worker: "npm:^1.7.2"
-    vue: "npm:^3.4.21"
+    vue: "npm:^3.4.23"
     workbox-build: "npm:^7.0.0"
   peerDependencies:
     vuepress: 2.0.0-rc.9
-  checksum: 10c0/ed6a7b7de8e452a5d55cc8c3771e11318bddd35075f553b5e0b00a82ffed4bf3fc5a3f6d9a95279ffc0819363e87a9ca8a75594801f619e68183bbb64f6ea6e8
+  checksum: 10c0/8e28f9f880ba62901ef1c1795254d432644f25025b06c4957601f492b6d610993a5dd29eaaac02a10e76683a45721571074bf861f3e7f88c837a44e812c6c6a7
   languageName: node
   linkType: hard
 
@@ -10162,7 +10162,7 @@ __metadata:
   dependencies:
     "@vuepress/plugin-feed": "npm:2.0.0-rc.26"
     "@vuepress/plugin-google-analytics": "npm:2.0.0-rc.21"
-    "@vuepress/plugin-pwa": "npm:2.0.0-rc.24"
+    "@vuepress/plugin-pwa": "npm:2.0.0-rc.26"
     "@vuepress/plugin-seo": "npm:2.0.0-rc.24"
     "@vuepress/plugin-sitemap": "npm:2.0.0-rc.24"
     "@vuepress/plugin-toc": "npm:2.0.0-rc.21"
