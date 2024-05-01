@@ -3325,15 +3325,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-toc@npm:2.0.0-rc.21":
-  version: 2.0.0-rc.21
-  resolution: "@vuepress/plugin-toc@npm:2.0.0-rc.21"
+"@vuepress/plugin-toc@npm:2.0.0-rc.26":
+  version: 2.0.0-rc.26
+  resolution: "@vuepress/plugin-toc@npm:2.0.0-rc.26"
   dependencies:
-    vue: "npm:^3.4.21"
-    vue-router: "npm:^4.3.0"
+    vue: "npm:^3.4.23"
+    vue-router: "npm:^4.3.2"
   peerDependencies:
     vuepress: 2.0.0-rc.9
-  checksum: 10c0/ee375645be7962615f0a4f58a9b2b56967a6c830556b277ba4c2739dca425a9455faa457476c442574fc42b80e8d2efea6136c764aba7a720564c55bf00b36cf
+  checksum: 10c0/0317792ef4de89e368ea815c9256dc2e8eaca8728cdfc87435a3b37a388e248d148cd21ca3f8f29144f9d3cbca657cb45635becad56e3ba8c3d6e0166992f9e4
   languageName: node
   linkType: hard
 
@@ -10165,7 +10165,7 @@ __metadata:
     "@vuepress/plugin-pwa": "npm:2.0.0-rc.26"
     "@vuepress/plugin-seo": "npm:2.0.0-rc.26"
     "@vuepress/plugin-sitemap": "npm:2.0.0-rc.24"
-    "@vuepress/plugin-toc": "npm:2.0.0-rc.21"
+    "@vuepress/plugin-toc": "npm:2.0.0-rc.26"
     vuepress: "npm:2.0.0-rc.9"
     vuepress-theme-reco: "npm:2.0.0-rc.9"
   languageName: unknown
@@ -10213,6 +10213,17 @@ __metadata:
   peerDependencies:
     vue: ^3.2.0
   checksum: 10c0/f8c148f365c7298511fe2b0273bb62b07fe87620d44a037f41ca0be5e84ef87015b13e1a614ad000b22e304ac527b5b04e03e7d317c09a59e74e3fa90f2fc64e
+  languageName: node
+  linkType: hard
+
+"vue-router@npm:^4.3.2":
+  version: 4.3.2
+  resolution: "vue-router@npm:4.3.2"
+  dependencies:
+    "@vue/devtools-api": "npm:^6.5.1"
+  peerDependencies:
+    vue: ^3.2.0
+  checksum: 10c0/63d5be4a983622e130c1ebe6e26dd17dee2346d77b35ef3f09ee0d8693fd38ad2387551c2db87a5cb258348dbc24dd815f48b4a55cc3ccb680c81aa4837ca88e
   languageName: node
   linkType: hard
 
