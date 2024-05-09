@@ -22,5 +22,5 @@
     "@vuepress/plugin-sitemap": "2.0.0-rc.26",
     "@vuepress/plugin-toc": "2.0.0-rc.26"
   },
-  "packageManager": "yarn@4.2.1"
+  "packageManager": "yarn@4.2.2"
 }
