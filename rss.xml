@@ -6,8 +6,8 @@
     <link>https://vlssu.github.io/</link>
     <description>Share knowledge and stay happy</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 13 May 2024 05:16:13 GMT</pubDate>
-    <lastBuildDate>Mon, 13 May 2024 05:16:13 GMT</lastBuildDate>
+    <pubDate>Fri, 17 May 2024 13:16:32 GMT</pubDate>
+    <lastBuildDate>Fri, 17 May 2024 13:16:32 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -1407,7 +1407,7 @@ screen -S bds
 <li>并新建「记事本」，在记事本中输入以下内容并改名为<code>.bat</code>后缀后启动。</li>
 <li><strong>安装过程中会下载一些依赖库，由于某些原因可能会下载失败，多安装几次就行</strong></li>
 </ul>
-<div class="language-bat" data-ext="bat" data-title="bat"><pre class="language-bat"><code>java -jar forge安装包文件名.jar --install
+<div class="language-bat" data-ext="bat" data-title="bat"><pre class="language-bat"><code>java -jar forge安装包文件名.jar --installServer
 </code></pre></div><p>
 </p>
 <p>但他可能直接关闭窗口，查看<code>forge-xxx-installer.jar.log</code>文件日志的最后一行是否是<code>The server installed successfully, you should now be able to run the file forge</code>,是的话，就证明你安装成功了。</p>
