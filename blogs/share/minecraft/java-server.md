@@ -79,7 +79,7 @@ minecraft_server.xxx.jar   //xxx为版本号
 - **安装过程中会下载一些依赖库，由于某些原因可能会下载失败，多安装几次就行**
 
 ```bat
-java -jar forge安装包文件名.jar --install
+java -jar forge安装包文件名.jar --installServer
 ```
 ![image.png](./images/java-server_8.png)
 ![image.png](./images/java-server_9.png)
