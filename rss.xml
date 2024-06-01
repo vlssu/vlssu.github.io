@@ -6,8 +6,8 @@
     <link>https://vlssu.github.io/</link>
     <description>Share knowledge and stay happy</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 20 May 2024 00:49:35 GMT</pubDate>
-    <lastBuildDate>Mon, 20 May 2024 00:49:35 GMT</lastBuildDate>
+    <pubDate>Sat, 01 Jun 2024 07:49:43 GMT</pubDate>
+    <lastBuildDate>Sat, 01 Jun 2024 07:49:43 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -1078,7 +1078,7 @@ yum <span class="token function">install</span> java-1.8.0-openjdk java-1.8.0-op
       <link>https://vlssu.github.io/blogs/share/linux/node.html</link>
       <guid>https://vlssu.github.io/blogs/share/linux/node.html</guid>
       <source url="https://vlssu.github.io/rss.xml">Linux系统如何安装node管理器</source>
-      <description>安装github 安装node.js管理器等组件 使用国内镜像 对于国内而言，访问外网是很困难的，这会导致访问速度很慢，而国内镜像就很重要了 node 国内镜像 npm 国内镜像 npm WIN 国内镜像源</description>
+      <description>安装github 安装node.js管理器等组件 使用国内镜像 对于国内而言，访问外网是很困难的，这会导致访问速度很慢，而国内镜像就很重要了 node 国内镜像 npm 国内镜像 npm WIN 国内镜像源 yarn 安装 启用yarn Node.js &amp;gt;=16.10 Node.js &amp;lt;16.10 安装 yarn</description>
       <category>Linux小知识</category>
       <pubDate>Sun, 03 May 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ol>
@@ -1110,6 +1110,16 @@ nvm use stable
 </code></pre></div><h3>npm WIN 国内镜像源</h3>
 <div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry https://registry.npmmirror.com <span class="token parameter variable">--global</span>
 <span class="token function">npm</span> config <span class="token builtin class-name">set</span> disturl https://npmmirror.com/mirrors/node <span class="token parameter variable">--global</span>
+</code></pre></div><h2>yarn 安装</h2>
+<h3>启用yarn</h3>
+<p>Node.js &gt;=16.10</p>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code>corepack <span class="token builtin class-name">enable</span>
+</code></pre></div><p>Node.js &lt;16.10</p>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token function">npm</span> i <span class="token parameter variable">-g</span> corepack
+</code></pre></div><h3>安装 yarn</h3>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code>corepack prepare yarn@stable <span class="token parameter variable">--activate</span>
+<span class="token comment"># 指定版本安装yarn</span>
+corepack prepare yarn@<span class="token operator">&lt;</span>version<span class="token operator">&gt;</span> <span class="token parameter variable">--activate</span>
 </code></pre></div>]]></content:encoded>
     </item>
     <item>

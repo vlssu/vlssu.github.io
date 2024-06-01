@@ -3,7 +3,7 @@
   <id>https://vlssu.github.io/</id>
   <title>师叔の小窝</title>
   <subtitle>Share knowledge and stay happy</subtitle>
-  <updated>2024-05-20T00:49:35.317Z</updated>
+  <updated>2024-06-01T07:49:43.066Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://vlssu.github.io/atom.xml"/>
   <link rel="alternate" href="https://vlssu.github.io/"/>
@@ -1136,7 +1136,7 @@ yum <span class="token function">install</span> java-1.8.0-openjdk java-1.8.0-op
     <title type="text">Linux系统如何安装node管理器</title>
     <id>https://vlssu.github.io/blogs/share/linux/node.html</id>
     <link href="https://vlssu.github.io/blogs/share/linux/node.html"/>
-    <updated>2023-10-02T17:17:23.000Z</updated>
+    <updated>2024-06-01T07:48:32.000Z</updated>
     <summary type="html"><![CDATA[<ol>
 <li>安装github</li>
 </ol>
@@ -1172,6 +1172,16 @@ nvm use stable
 </code></pre></div><h3>npm WIN 国内镜像源</h3>
 <div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry https://registry.npmmirror.com <span class="token parameter variable">--global</span>
 <span class="token function">npm</span> config <span class="token builtin class-name">set</span> disturl https://npmmirror.com/mirrors/node <span class="token parameter variable">--global</span>
+</code></pre></div><h2>yarn 安装</h2>
+<h3>启用yarn</h3>
+<p>Node.js &gt;=16.10</p>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code>corepack <span class="token builtin class-name">enable</span>
+</code></pre></div><p>Node.js &lt;16.10</p>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token function">npm</span> i <span class="token parameter variable">-g</span> corepack
+</code></pre></div><h3>安装 yarn</h3>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code>corepack prepare yarn@stable <span class="token parameter variable">--activate</span>
+<span class="token comment"># 指定版本安装yarn</span>
+corepack prepare yarn@<span class="token operator">&lt;</span>version<span class="token operator">&gt;</span> <span class="token parameter variable">--activate</span>
 </code></pre></div>]]></content>
     <category term="Linux小知识"/>
     <published>2020-05-03T00:00:00.000Z</published>
