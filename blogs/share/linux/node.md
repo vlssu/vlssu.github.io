@@ -48,3 +48,26 @@ npm config set registry https://registry.npmmirror.com
 npm config set registry https://registry.npmmirror.com --global
 npm config set disturl https://npmmirror.com/mirrors/node --global
 ```
+
+## yarn 安装
+### 启用yarn
+
+Node.js >=16.10
+
+```bash
+corepack enable
+```
+
+Node.js <16.10
+
+```bash
+npm i -g corepack
+```
+
+### 安装 yarn
+
+```bash
+corepack prepare yarn@stable --activate
+# 指定版本安装yarn
+corepack prepare yarn@<version> --activate
+```
