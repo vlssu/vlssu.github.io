@@ -3225,6 +3225,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuepress/helper@npm:2.0.0-rc.34":
+  version: 2.0.0-rc.34
+  resolution: "@vuepress/helper@npm:2.0.0-rc.34"
+  dependencies:
+    "@vue/shared": "npm:^3.4.27"
+    cheerio: "npm:1.0.0-rc.12"
+    fflate: "npm:^0.8.2"
+    gray-matter: "npm:^4.0.3"
+    vue: "npm:^3.4.27"
+  peerDependencies:
+    vuepress: 2.0.0-rc.13
+  checksum: 10c0/de6a73c34e304ac8029afadce3d5175139ed296e7980e13df8d975a00adb763f5c48577d3c1203bc47078c2d257fc2dc22862f02aa7e8f92f656dfcb400b5def
+  languageName: node
+  linkType: hard
+
 "@vuepress/helper@npm:~2.0.0-rc.17":
   version: 2.0.0-rc.24
   resolution: "@vuepress/helper@npm:2.0.0-rc.24"
@@ -3329,16 +3344,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-feed@npm:2.0.0-rc.28":
-  version: 2.0.0-rc.28
-  resolution: "@vuepress/plugin-feed@npm:2.0.0-rc.28"
+"@vuepress/plugin-feed@npm:2.0.0-rc.34":
+  version: 2.0.0-rc.34
+  resolution: "@vuepress/plugin-feed@npm:2.0.0-rc.34"
   dependencies:
-    "@vuepress/helper": "npm:~2.0.0-rc.28"
+    "@vuepress/helper": "npm:2.0.0-rc.34"
     cheerio: "npm:1.0.0-rc.12"
     xml-js: "npm:^1.6.11"
   peerDependencies:
-    vuepress: 2.0.0-rc.9
-  checksum: 10c0/8611c911a6835129fb58880baee40a06ced14e23e1a98f46b938972fde3af439beb0c1a4766fc084840e4a933dfa20987ed52d751c510b44723b76f69d53ee8f
+    vuepress: 2.0.0-rc.13
+  checksum: 10c0/16828ed66a494e7104792ae2345e92db084f42ef232cb0b1c89b5b4aabdf8e7e48166d1a04c1a926c50750a9afb391ccf936ed597ba833a903b544ab8987a2ee
   languageName: node
   linkType: hard
 
@@ -10313,7 +10328,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vlssu_blog@workspace:."
   dependencies:
-    "@vuepress/plugin-feed": "npm:2.0.0-rc.28"
+    "@vuepress/plugin-feed": "npm:2.0.0-rc.34"
     "@vuepress/plugin-google-analytics": "npm:2.0.0-rc.21"
     "@vuepress/plugin-pwa": "npm:2.0.0-rc.28"
     "@vuepress/plugin-seo": "npm:2.0.0-rc.28"
