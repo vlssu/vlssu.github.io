@@ -20,7 +20,7 @@
     "@vuepress/plugin-pwa": "2.0.0-rc.28",
     "@vuepress/plugin-seo": "2.0.0-rc.28",
     "@vuepress/plugin-sitemap": "2.0.0-rc.28",
-    "@vuepress/plugin-toc": "2.0.0-rc.28"
+    "@vuepress/plugin-toc": "2.0.0-rc.34"
   },
   "packageManager": "yarn@4.2.2"
 }
