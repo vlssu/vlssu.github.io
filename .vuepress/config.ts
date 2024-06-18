@@ -2,12 +2,8 @@ import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { recoTheme } from 'vuepress-theme-reco'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
-import { feedPlugin } from '@vuepress/plugin-feed'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { sitemapPlugin } from '@vuepress/plugin-sitemap'
-import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
-import { seoPlugin } from '@vuepress/plugin-seo'
-import { tocPlugin } from '@vuepress/plugin-toc'
 import { themeConfig } from './config/index'
 
 export default defineUserConfig({
@@ -38,23 +34,12 @@ export default defineUserConfig({
       cacheImage: true,
       update: "hint",
     }),
-    feedPlugin({
-      hostname: "https://vlssu.github.io",
-      atom: true,
-      json: true,
-      rss: true,
-    }),
     googleAnalyticsPlugin({
       id: 'G-PCD2Q5QRXT',
     }),
     sitemapPlugin({
       hostname: "https://vlssu.github.io",
     }),
-    backToTopPlugin(),
-    seoPlugin({
-      hostname: "https://vlssu.github.io",
-    }),
-    tocPlugin(),
   ]
   // debug: true,
 })
