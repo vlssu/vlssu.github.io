@@ -19,5 +19,5 @@
     "@vuepress/plugin-pwa": "2.0.0-rc.34",
     "@vuepress/plugin-sitemap": "2.0.0-rc.34"
   },
-  "packageManager": "yarn@4.3.1"
+  "packageManager": "yarn@4.9.1"
 }
