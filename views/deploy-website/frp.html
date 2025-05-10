@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.22" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.87" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Frp搭建与使用","image":["https://api.vlssu.com/img/?201028"],"datePublished":"2020-10-28T00:00:00.000Z","dateModified":"2025-05-10T13:49:10.000Z","author":[{"@type":"Person","name":"飒爽师叔","url":"https://blog.vlssu.com"}]}</script><meta property="og:url" content="https://blog.vlssu.com/views/deploy-website/frp.html"><meta property="og:site_name" content="师叔の小窝"><meta property="og:title" content="Frp搭建与使用"><meta property="og:description" content="前期需要软件 远程SSH控制台软件（本教程使用 Remote Terminal 此为win10商店软件）[点我下载(此软件为Xshell)] 支持Sftp的FTP软件（本教程使用 FileZilla）[点我下载] 公网IP必须要有 Windows、Centos或Ubuntu等主机一台 frp项目地址 ==> [点击跳转] 项目后缀含义 使用方法 版本我..."><meta property="og:type" content="article"><meta property="og:image" content="https://api.vlssu.com/img/?201028"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2025-05-10T13:49:10.000Z"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image:src" content="https://api.vlssu.com/img/?201028"><meta name="twitter:image:alt" content="Frp搭建与使用"><meta property="article:tag" content="Frp"><meta property="article:tag" content="Windows"><meta property="article:tag" content="Ubuntu"><meta property="article:tag" content="Centos"><meta property="article:tag" content="Linux"><meta property="article:published_time" content="2020-10-28T00:00:00.000Z"><meta property="article:modified_time" content="2025-05-10T13:49:10.000Z"><title>Frp搭建与使用 | 师叔の小窝</title><meta name="description" content="前期需要软件 远程SSH控制台软件（本教程使用 Remote Terminal 此为win10商店软件）[点我下载(此软件为Xshell)] 支持Sftp的FTP软件（本教程使用 FileZilla）[点我下载] 公网IP必须要有 Windows、Centos或Ubuntu等主机一台 frp项目地址 ==> [点击跳转] 项目后缀含义 使用方法 版本我...">
+    <link rel="preload" href="/assets/style-DFc1U2-H.css" as="style"><link rel="stylesheet" href="/assets/style-DFc1U2-H.css">
+    <link rel="modulepreload" href="/assets/app-CA5ZiEuZ.js"><link rel="modulepreload" href="/assets/frp.html-DELaGBvE.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper-DlAUqK2U.js">
+    <link rel="prefetch" href="/assets/index.html-5Tu35lMy.js" as="script"><link rel="prefetch" href="/assets/intro.html-N9UC62PW.js" as="script"><link rel="prefetch" href="/assets/flarum.html-BpqOMveP.js" as="script"><link rel="prefetch" href="/assets/img_upyun_php.html-8dIMxKLh.js" as="script"><link rel="prefetch" href="/assets/imgapi.html-CQi3Oc2y.js" as="script"><link rel="prefetch" href="/assets/nextcloud.html-BV9FSWei.js" as="script"><link rel="prefetch" href="/assets/node.html-D5BYNrFL.js" as="script"><link rel="prefetch" href="/assets/pterodactyl.html-_1zW40wO.js" as="script"><link rel="prefetch" href="/assets/pterodactyl_docker.html-CtqH-_DT.js" as="script"><link rel="prefetch" href="/assets/yutto.html-PKudoK2t.js" as="script"><link rel="prefetch" href="/assets/210209.html-CuU_C6AL.js" as="script"><link rel="prefetch" href="/assets/210913.html-BVyFNVcq.js" as="script"><link rel="prefetch" href="/assets/220301.html-DxIlI91V.js" as="script"><link rel="prefetch" href="/assets/220505.html-CwCxnpxh.js" as="script"><link rel="prefetch" href="/assets/220601.html-DzFYWpZ3.js" as="script"><link rel="prefetch" href="/assets/220925.html-Dk0U5EiC.js" as="script"><link rel="prefetch" href="/assets/230831.html-r4GYWrIt.js" as="script"><link rel="prefetch" href="/assets/aliyuncli-ssl.html-BrkE3GMF.js" as="script"><link rel="prefetch" href="/assets/apache-mod_remoteip.html-DNXOLfJg.js" as="script"><link rel="prefetch" href="/assets/chrome.html-BkjuphYj.js" as="script"><link rel="prefetch" href="/assets/docker.html-B5VYHwdV.js" as="script"><link rel="prefetch" href="/assets/go.html-Gv9NoUMH.js" as="script"><link rel="prefetch" href="/assets/instruction.html-Bg5m6qkg.js" as="script"><link rel="prefetch" href="/assets/java8.html-jZi1fCzR.js" as="script"><link rel="prefetch" href="/assets/nginx-cdn-ip.html-CMao5_nG.js" as="script"><link rel="prefetch" href="/assets/node.html-DkOXV0fr.js" as="script"><link rel="prefetch" href="/assets/python3.9.html-eLoXR6ZI.js" as="script"><link rel="prefetch" href="/assets/selinux.html-Dqh4fkaA.js" as="script"><link rel="prefetch" href="/assets/bds-server.html-DHo1mY59.js" as="script"><link rel="prefetch" href="/assets/java-server.html-u5vREoAe.js" as="script"><link rel="prefetch" href="/assets/mcsm.html-CiypebYw.js" as="script"><link rel="prefetch" href="/assets/mcsm9.html-CJAdf7fF.js" as="script"><link rel="prefetch" href="/assets/netplus.html-DIunp5GY.js" as="script"><link rel="prefetch" href="/assets/vuepress-blog-on-github.html-BHeA1wE2.js" as="script"><link rel="prefetch" href="/assets/markdown.html-DaV1RFC5.js" as="script"><link rel="prefetch" href="/assets/404.html-DULKrMGY.js" as="script"><link rel="prefetch" href="/assets/index.html-Y0qDj6sk.js" as="script"><link rel="prefetch" href="/assets/index.html-DGpPehca.js" as="script"><link rel="prefetch" href="/assets/index.html-CwTym-BB.js" as="script"><link rel="prefetch" href="/assets/index.html-CtiYanxv.js" as="script"><link rel="prefetch" href="/assets/index.html-BRJij2n8.js" as="script"><link rel="prefetch" href="/assets/index.html-DLS7j1ak.js" as="script"><link rel="prefetch" href="/assets/index.html-Babt7Qwu.js" as="script"><link rel="prefetch" href="/assets/index.html-Dz2Zw4Te.js" as="script"><link rel="prefetch" href="/assets/index.html-b0_tvKwX.js" as="script"><link rel="prefetch" href="/assets/index.html-ByOEDA56.js" as="script"><link rel="prefetch" href="/assets/index.html-Dblix8A5.js" as="script"><link rel="prefetch" href="/assets/index.html-Dh-Io2aN.js" as="script"><link rel="prefetch" href="/assets/index.html-BPBfHC6X.js" as="script"><link rel="prefetch" href="/assets/index.html-BvPaUi0E.js" as="script"><link rel="prefetch" href="/assets/index.html-DD1ILprJ.js" as="script"><link rel="prefetch" href="/assets/index.html-B2aDnvsP.js" as="script"><link rel="prefetch" href="/assets/index.html-Q1OhDR6Z.js" as="script"><link rel="prefetch" href="/assets/index.html-BUnRyyhs.js" as="script"><link rel="prefetch" href="/assets/index.html-DEV00TCH.js" as="script"><link rel="prefetch" href="/assets/index.html-Clt0Iaaq.js" as="script"><link rel="prefetch" href="/assets/index.html-BErNHv9U.js" as="script"><link rel="prefetch" href="/assets/index.html-BC1vxBZO.js" as="script"><link rel="prefetch" href="/assets/index.html-BkSW4_OK.js" as="script"><link rel="prefetch" href="/assets/index.html-ByA5m5WH.js" as="script"><link rel="prefetch" href="/assets/index.html-D_n3KuOq.js" as="script"><link rel="prefetch" href="/assets/index.html-CBXjqhqw.js" as="script"><link rel="prefetch" href="/assets/index.html-DthsB8Nx.js" as="script"><link rel="prefetch" href="/assets/index.html-CZ31JEpo.js" as="script"><link rel="prefetch" href="/assets/index.html-CZOUKxG7.js" as="script"><link rel="prefetch" href="/assets/index.html-BZDiBzyg.js" as="script"><link rel="prefetch" href="/assets/index.html-lNXt_9_W.js" as="script"><link rel="prefetch" href="/assets/index.html-D2tZnIq_.js" as="script"><link rel="prefetch" href="/assets/index.html-Bc4N6zaB.js" as="script"><link rel="prefetch" href="/assets/index.html-D06wZ4vc.js" as="script"><link rel="prefetch" href="/assets/index.html-BMdgFjfR.js" as="script"><link rel="prefetch" href="/assets/index.html-7xM_0yJq.js" as="script"><link rel="prefetch" href="/assets/index.html-BjFpccfD.js" as="script"><link rel="prefetch" href="/assets/index.html-CBTp6kHV.js" as="script"><link rel="prefetch" href="/assets/index.html-CfOCDqcS.js" as="script"><link rel="prefetch" href="/assets/index.html-NGgQAM9O.js" as="script"><link rel="prefetch" href="/assets/index.html-DYE8n4w8.js" as="script"><link rel="prefetch" href="/assets/index.html-CO9sfU5f.js" as="script"><link rel="prefetch" href="/assets/index.html-CdQPSqpm.js" as="script"><link rel="prefetch" href="/assets/index.html-Q1OhDR6Z.js" as="script"><link rel="prefetch" href="/assets/index.html-Su0l0R3D.js" as="script"><link rel="prefetch" href="/assets/index.html-C8RsjeTx.js" as="script"><link rel="prefetch" href="/assets/index.html-CCoRQGku.js" as="script"><link rel="prefetch" href="/assets/index.html-CfKOQKkh.js" as="script"><link rel="prefetch" href="/assets/index.html-C5ir5Igh.js" as="script"><link rel="prefetch" href="/assets/index.html-yOD5oZjK.js" as="script"><link rel="prefetch" href="/assets/index.html-D0iG1RRd.js" as="script"><link rel="prefetch" href="/assets/index.html-BLW4GW20.js" as="script"><link rel="prefetch" href="/assets/index.html-DrXrppgy.js" as="script"><link rel="prefetch" href="/assets/index.html-DOhlT5g0.js" as="script"><link rel="prefetch" href="/assets/index.html-BYmzuWfj.js" as="script"><link rel="prefetch" href="/assets/photoswipe.esm-DXWKOczD.js" as="script"><link rel="prefetch" href="/assets/SearchResult-B8x8MW2b.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><!--[--><span tabindex="-1"></span><a href="#main-content" class="vp-skip-link sr-only">跳至主要內容</a><!--]--><!--[--><div class="theme-container no-sidebar external-link-icon has-toc" vp-container><!--[--><header id="navbar" class="vp-navbar" vp-navbar><div class="vp-navbar-start"><button type="button" class="vp-toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><!--[--><a class="route-link vp-brand" href="/" aria-label="带我回家"><img class="vp-nav-logo" src="/logo.svg" alt><!----><span class="vp-site-name hide-in-pad">师叔の小窝</span></a><!--]--></div><div class="vp-navbar-center"><!--[--><nav class="vp-nav-links"><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/" aria-label="博客主页"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:house" height="1em" sizing="height"></iconify-icon><!--]-->博客主页<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/timeline/" aria-label="时间轴"><!---->时间轴<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="auto-link external-link" href="https://blog.vlssu.com/rss.xml" aria-label="订阅" rel="noopener noreferrer" target="_blank"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:rss" height="1em" sizing="height"></iconify-icon><!--]-->订阅<!----></a></div></nav><!--]--></div><div class="vp-navbar-end"><!--[--><!----><div class="vp-nav-item vp-action"><a class="vp-action-link" href="https://github.com/vlssu/vlssu.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" class="icon github-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="github icon" name="github" style="width:1.25rem;height:1.25rem;vertical-align:middle;"><path d="M511.957 21.333C241.024 21.333 21.333 240.981 21.333 512c0 216.832 140.544 400.725 335.574 465.664 24.49 4.395 32.256-10.07 32.256-23.083 0-11.69.256-44.245 0-85.205-136.448 29.61-164.736-64.64-164.736-64.64-22.315-56.704-54.4-71.765-54.4-71.765-44.587-30.464 3.285-29.824 3.285-29.824 49.195 3.413 75.179 50.517 75.179 50.517 43.776 75.008 114.816 53.333 142.762 40.79 4.523-31.66 17.152-53.377 31.19-65.537-108.971-12.458-223.488-54.485-223.488-242.602 0-53.547 19.114-97.323 50.517-131.67-5.035-12.33-21.93-62.293 4.779-129.834 0 0 41.258-13.184 134.912 50.346a469.803 469.803 0 0 1 122.88-16.554c41.642.213 83.626 5.632 122.88 16.554 93.653-63.488 134.784-50.346 134.784-50.346 26.752 67.541 9.898 117.504 4.864 129.834 31.402 34.347 50.474 78.123 50.474 131.67 0 188.586-114.73 230.016-224.042 242.09 17.578 15.232 33.578 44.672 33.578 90.454v135.85c0 13.142 7.936 27.606 32.854 22.87C862.25 912.597 1002.667 728.747 1002.667 512c0-271.019-219.648-490.667-490.71-490.667z"></path></svg></a></div><div class="vp-nav-item hide-in-mobile"><button type="button" class="vp-color-mode-switch" id="color-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" class="icon auto-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="auto icon" name="auto" style="display:block;"><path d="M512 992C246.92 992 32 777.08 32 512S246.92 32 512 32s480 214.92 480 480-214.92 480-480 480zm0-840c-198.78 0-360 161.22-360 360 0 198.84 161.22 360 360 360s360-161.16 360-360c0-198.78-161.22-360-360-360zm0 660V212c165.72 0 300 134.34 300 300 0 165.72-134.28 300-300 300z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon dark-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="dark icon" name="dark" style="display:none;"><path d="M524.8 938.667h-4.267a439.893 439.893 0 0 1-313.173-134.4 446.293 446.293 0 0 1-11.093-597.334A432.213 432.213 0 0 1 366.933 90.027a42.667 42.667 0 0 1 45.227 9.386 42.667 42.667 0 0 1 10.24 42.667 358.4 358.4 0 0 0 82.773 375.893 361.387 361.387 0 0 0 376.747 82.774 42.667 42.667 0 0 1 54.187 55.04 433.493 433.493 0 0 1-99.84 154.88 438.613 438.613 0 0 1-311.467 128z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon light-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="light icon" name="light" style="display:none;"><path d="M952 552h-80a40 40 0 0 1 0-80h80a40 40 0 0 1 0 80zM801.88 280.08a41 41 0 0 1-57.96-57.96l57.96-58a41.04 41.04 0 0 1 58 58l-58 57.96zM512 752a240 240 0 1 1 0-480 240 240 0 0 1 0 480zm0-560a40 40 0 0 1-40-40V72a40 40 0 0 1 80 0v80a40 40 0 0 1-40 40zm-289.88 88.08-58-57.96a41.04 41.04 0 0 1 58-58l57.96 58a41 41 0 0 1-57.96 57.96zM192 512a40 40 0 0 1-40 40H72a40 40 0 0 1 0-80h80a40 40 0 0 1 40 40zm30.12 231.92a41 41 0 0 1 57.96 57.96l-57.96 58a41.04 41.04 0 0 1-58-58l58-57.96zM512 832a40 40 0 0 1 40 40v80a40 40 0 0 1-80 0v-80a40 40 0 0 1 40-40zm289.88-88.08 58 57.96a41.04 41.04 0 0 1-58 58l-57.96-58a41 41 0 0 1 57.96-57.96z"></path></svg></button></div><!--[--><button type="button" class="slimsearch-button" aria-label="搜索"><svg xmlns="http://www.w3.org/2000/svg" class="icon search-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="search icon"><path d="M192 480a256 256 0 1 1 512 0 256 256 0 0 1-512 0m631.776 362.496-143.2-143.168A318.464 318.464 0 0 0 768 480c0-176.736-143.264-320-320-320S128 303.264 128 480s143.264 320 320 320a318.016 318.016 0 0 0 184.16-58.592l146.336 146.368c12.512 12.48 32.768 12.48 45.28 0 12.48-12.512 12.48-32.768 0-45.28"></path></svg><div class="slimsearch-placeholder">搜索</div><div class="slimsearch-key-hints"><kbd class="slimsearch-key">Ctrl</kbd><kbd class="slimsearch-key">K</kbd></div></button><!--]--><!--]--><button type="button" class="vp-toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span><span class="vp-top"></span><span class="vp-middle"></span><span class="vp-bottom"></span></span></button></div></header><!----><!--]--><!----><div class="toggle-sidebar-wrapper"><span class="arrow start"></span></div><aside id="sidebar" class="vp-sidebar" vp-sidebar><!----><ul class="vp-sidebar-links"></ul><!----></aside><!--[--><main id="main-content" class="vp-page"><!--[--><!----><div class="page-cover"><img src="https://api.vlssu.com/img/?201028" alt no-view></div><nav class="vp-breadcrumb disable"></nav><div class="vp-page-title"><h1><!---->Frp搭建与使用</h1><div class="page-info"><span class="page-author-info" aria-label="作者🖊" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon author-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="author icon" name="author"><path d="M649.6 633.6c86.4-48 147.2-144 147.2-249.6 0-160-128-288-288-288s-288 128-288 288c0 108.8 57.6 201.6 147.2 249.6-121.6 48-214.4 153.6-240 288-3.2 9.6 0 19.2 6.4 25.6 3.2 9.6 12.8 12.8 22.4 12.8h704c9.6 0 19.2-3.2 25.6-12.8 6.4-6.4 9.6-16 6.4-25.6-25.6-134.4-121.6-240-243.2-288z"></path></svg><span><a class="page-author-item" href="https://blog.vlssu.com" target="_blank" rel="noopener noreferrer">飒爽师叔</a></span><span property="author" content="飒爽师叔"></span></span><!----><span class="page-date-info" aria-label="写作日期📅" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon calendar-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="calendar icon" name="calendar"><path d="M716.4 110.137c0-18.753-14.72-33.473-33.472-33.473-18.753 0-33.473 14.72-33.473 33.473v33.473h66.993v-33.473zm-334.87 0c0-18.753-14.72-33.473-33.473-33.473s-33.52 14.72-33.52 33.473v33.473h66.993v-33.473zm468.81 33.52H716.4v100.465c0 18.753-14.72 33.473-33.472 33.473a33.145 33.145 0 01-33.473-33.473V143.657H381.53v100.465c0 18.753-14.72 33.473-33.473 33.473a33.145 33.145 0 01-33.473-33.473V143.657H180.6A134.314 134.314 0 0046.66 277.595v535.756A134.314 134.314 0 00180.6 947.289h669.74a134.36 134.36 0 00133.94-133.938V277.595a134.314 134.314 0 00-133.94-133.938zm33.473 267.877H147.126a33.145 33.145 0 01-33.473-33.473c0-18.752 14.72-33.473 33.473-33.473h736.687c18.752 0 33.472 14.72 33.472 33.473a33.145 33.145 0 01-33.472 33.473z"></path></svg><span data-allow-mismatch="text">2020/10/28</span><meta property="datePublished" content="2020-10-28T00:00:00.000Z"></span><!----><span class="page-reading-time-info" aria-label="阅读时间⌛" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon timer-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="timer icon" name="timer"><path d="M799.387 122.15c4.402-2.978 7.38-7.897 7.38-13.463v-1.165c0-8.933-7.38-16.312-16.312-16.312H256.33c-8.933 0-16.311 7.38-16.311 16.312v1.165c0 5.825 2.977 10.874 7.637 13.592 4.143 194.44 97.22 354.963 220.201 392.763-122.204 37.542-214.893 196.511-220.2 389.397-4.661 5.049-7.638 11.651-7.638 19.03v5.825h566.49v-5.825c0-7.379-2.849-13.981-7.509-18.9-5.049-193.016-97.867-351.985-220.2-389.527 123.24-37.67 216.446-198.453 220.588-392.892zM531.16 450.445v352.632c117.674 1.553 211.787 40.778 211.787 88.676H304.097c0-48.286 95.149-87.382 213.728-88.676V450.445c-93.077-3.107-167.901-81.297-167.901-177.093 0-8.803 6.99-15.793 15.793-15.793 8.803 0 15.794 6.99 15.794 15.793 0 80.261 63.69 145.635 142.01 145.635s142.011-65.374 142.011-145.635c0-8.803 6.99-15.793 15.794-15.793s15.793 6.99 15.793 15.793c0 95.019-73.789 172.82-165.96 177.093z"></path></svg><span>大约 12 分钟</span><meta property="timeRequired" content="PT12M"></span><span class="page-category-info" aria-label="分类🌈" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon category-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="category icon" name="category"><path d="M148.41 106.992h282.176c22.263 0 40.31 18.048 40.31 40.31V429.48c0 22.263-18.047 40.31-40.31 40.31H148.41c-22.263 0-40.311-18.047-40.311-40.31V147.302c0-22.263 18.048-40.31 40.311-40.31zM147.556 553.478H429.73c22.263 0 40.311 18.048 40.311 40.31v282.176c0 22.263-18.048 40.312-40.31 40.312H147.555c-22.263 0-40.311-18.049-40.311-40.312V593.79c0-22.263 18.048-40.311 40.31-40.311zM593.927 106.992h282.176c22.263 0 40.31 18.048 40.31 40.31V429.48c0 22.263-18.047 40.31-40.31 40.31H593.927c-22.263 0-40.311-18.047-40.311-40.31V147.302c0-22.263 18.048-40.31 40.31-40.31zM730.22 920.502H623.926c-40.925 0-74.22-33.388-74.22-74.425V623.992c0-41.038 33.387-74.424 74.425-74.424h222.085c41.038 0 74.424 33.226 74.424 74.067v114.233c0 10.244-8.304 18.548-18.547 18.548s-18.548-8.304-18.548-18.548V623.635c0-20.388-16.746-36.974-37.33-36.974H624.13c-20.585 0-37.331 16.747-37.331 37.33v222.086c0 20.585 16.654 37.331 37.126 37.331H730.22c10.243 0 18.547 8.304 18.547 18.547 0 10.244-8.304 18.547-18.547 18.547z"></path></svg><!--[--><span class="page-category-item color6 clickable" role="navigation">教程</span><!--]--><meta property="articleSection" content="教程"></span><span class="page-tag-info" aria-label="标签🏷" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon tag-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="tag icon" name="tag"><path d="M939.902 458.563L910.17 144.567c-1.507-16.272-14.465-29.13-30.737-30.737L565.438 84.098h-.402c-3.215 0-5.726 1.005-7.634 2.913l-470.39 470.39a10.004 10.004 0 000 14.164l365.423 365.424c1.909 1.908 4.42 2.913 7.132 2.913s5.223-1.005 7.132-2.913l470.39-470.39c2.01-2.11 3.014-5.023 2.813-8.036zm-240.067-72.121c-35.458 0-64.286-28.828-64.286-64.286s28.828-64.285 64.286-64.285 64.286 28.828 64.286 64.285-28.829 64.286-64.286 64.286z"></path></svg><!--[--><span class="page-tag-item color2 clickable" role="navigation">Linux</span><span class="page-tag-item color7 clickable" role="navigation">Centos</span><span class="page-tag-item color0 clickable" role="navigation">Ubuntu</span><span class="page-tag-item color6 clickable" role="navigation">Windows</span><span class="page-tag-item color1 clickable" role="navigation">Frp</span><!--]--><meta property="keywords" content="Linux,Centos,Ubuntu,Windows,Frp"></span></div><hr></div><!----><div class="" vp-content><!----><div id="markdown-content"><h2 id="前期需要软件" tabindex="-1"><a class="header-anchor" href="#前期需要软件"><span>前期需要软件</span></a></h2><ol><li>远程SSH控制台软件（本教程使用 Remote Terminal 此为win10商店软件）<a href="https://www.lanzoui.com/i88wyvi" target="_blank" rel="noopener noreferrer">[点我下载(此软件为Xshell)]</a></li><li>支持Sftp的FTP软件（本教程使用 FileZilla）<a href="https://www.lanzoui.com/i88wyqd" target="_blank" rel="noopener noreferrer">[点我下载]</a></li><li>公网IP必须要有</li><li>Windows、Centos或Ubuntu等主机一台</li></ol><blockquote><p>frp项目地址 ==&gt; <a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreferrer">[点击跳转]</a></p></blockquote><h2 id="项目后缀含义" tabindex="-1"><a class="header-anchor" href="#项目后缀含义"><span>项目后缀含义</span></a></h2><table><thead><tr><th><strong>下载名</strong></th><th><strong>含义</strong></th></tr></thead><tbody><tr><td>frp_x.x.x_darwin_amd64.tar.gz</td><td>MacOs操作系统</td></tr><tr><td>frp_x.x.x_freebsd_386.tar.gz</td><td>UNIX操作系统x86</td></tr><tr><td>frp_x.x.x_freebsd_amd64.tar.gz</td><td>UNIX操作系统x64</td></tr><tr><td>frp_x.x.x_linux_386.tar.gz</td><td>Linux操作系统x86</td></tr><tr><td>frp_x.x.x_linux_amd64.tar.gz</td><td>Linux操作系统x64</td></tr><tr><td>frp_x.x.x_linux_arm.tar.gz</td><td>ARM架构为硬核的处理器</td></tr><tr><td>frp_x.x.x_linux_arm64.tar.gz</td><td>ARM架构为硬核的处理器</td></tr><tr><td>frp_x.x.x_linux_mips.tar.gz</td><td>mips是big-endian的mips架构</td></tr><tr><td>frp_x.x.x_linux_mips64.tar.gz</td><td>mips是big-endian的mips架构</td></tr><tr><td>frp_x.x.x_linux_mips64le.tar.gz</td><td>mipsel是little-endian的mips架构</td></tr><tr><td>frp_x.x.x_linux_mipsle.tar.gz</td><td>mipsel是little-endian的mips架构</td></tr><tr><td>frp_x.x.x_windows_386.zip</td><td>Windows操作系统x86</td></tr><tr><td>frp_x.x.x_windows_amd64.zip</td><td>Windows操作系统x64</td></tr></tbody></table><h2 id="使用方法" tabindex="-1"><a class="header-anchor" href="#使用方法"><span>使用方法</span></a></h2><h3 id="版本我们只需要知道这几个就行" tabindex="-1"><a class="header-anchor" href="#版本我们只需要知道这几个就行"><span>版本我们只需要知道这几个就行</span></a></h3><table><thead><tr><th><strong>下载名</strong></th><th><strong>含义</strong></th></tr></thead><tbody><tr><td>frp_x.x.x_linux_386.tar.gz</td><td>Linux操作系统x86</td></tr><tr><td>frp_x.x.x_linux_amd64.tar.gz</td><td>Linux操作系统x64</td></tr><tr><td>frp_x.x.x_windows_386.zip</td><td>Windows操作系统x86</td></tr><tr><td>frp_x.x.x_windows_amd64.zip</td><td>Windows操作系统x64</td></tr></tbody></table><ul><li>应用包下载页<a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreferrer">[点击跳转]</a></li></ul><h3 id="客户端配置文件" tabindex="-1"><a class="header-anchor" href="#客户端配置文件"><span>客户端配置文件</span></a></h3><ul><li>程序会使用<code>frpc.ini</code>配置文件</li></ul><details class="hint-container details"><summary>frpc.ini详细说明</summary><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>[common]</span></span>
+<span class="line"><span># 远程服务器IP</span></span>
+<span class="line"><span>server_addr = 127.0.0.1</span></span>
+<span class="line"><span># 远程服务器端口</span></span>
+<span class="line"><span>server_port = 7000</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 映射名称</span></span>
+<span class="line"><span>[ssh]</span></span>
+<span class="line"><span># 映射协议</span></span>
+<span class="line"><span>type = tcp</span></span>
+<span class="line"><span># 被映射目标IP</span></span>
+<span class="line"><span>local_ip = 127.0.0.1</span></span>
+<span class="line"><span># 被映射目标端口</span></span>
+<span class="line"><span>local_port = 22</span></span>
+<span class="line"><span># 远程服务器映射目标端口</span></span>
+<span class="line"><span>remote_port = 6000</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details><details class="hint-container details"><summary>frpc_full.ini详细说明</summary><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># [common] 部分不可缺少</span></span>
+<span class="line"><span>[common]</span></span>
+<span class="line"><span># server_addr 服务器ip，必须包含IP地址 或者 域名 主机名</span></span>
+<span class="line"><span># 用方括号括起来，例如 &quot;[::1]:80&quot;, &quot;[ipv6-host]:http&quot; 或 &quot;[ipv6-host%zone]:80&quot;</span></span>
+<span class="line"><span>server_addr = 0.0.0.0</span></span>
+<span class="line"><span>server_port = 7000</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 如果您想通过 http 代理或 socks5 代理连接frps，则可以在此处或在全局环境变量中设置 http_proxy</span></span>
+<span class="line"><span># 仅在协议为tcp时有效</span></span>
+<span class="line"><span># http_proxy = http://user:passwd@192.168.1.128:8080</span></span>
+<span class="line"><span># http_proxy = socks5://user:passwd@192.168.1.128:1080</span></span>
+<span class="line"><span># http_proxy = ntlm://user:passwd@192.168.1.128:2080</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 日志文件 路径，例如./frpc.log</span></span>
+<span class="line"><span>log_file = ./frpc.log</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 跟踪，调试，信息，警告，错误</span></span>
+<span class="line"><span>log_level = info</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>log_max_days = 3</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 当生成日志文件时，控制台将禁用日志的颜色，默认为false</span></span>
+<span class="line"><span>disable_log_color = false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># FRP 身份验证</span></span>
+<span class="line"><span>token = 12345678</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 通过 http api 设置控制 frpc 管理员地址</span></span>
+<span class="line"><span>admin_addr = 127.0.0.1</span></span>
+<span class="line"><span>admin_port = 7400</span></span>
+<span class="line"><span>admin_user = admin</span></span>
+<span class="line"><span>admin_pwd = admin</span></span>
+<span class="line"><span># 管理依赖目录。 默认情况下，这些依赖与frpc捆绑在一起。</span></span>
+<span class="line"><span># assets_dir = ./static</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 提前建立连接，默认值为零</span></span>
+<span class="line"><span>pool_count = 5</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 如果使用tcp流多路复用，则默认为true，它必须与 frps.ini 相同</span></span>
+<span class="line"><span>tcp_mux = true</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 您的代理名称将更改为 {user}.{proxy}</span></span>
+<span class="line"><span>user = your_name</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 决定首次登录失败时是否退出程序，否则继续重新登录到 frps</span></span>
+<span class="line"><span># 默认为true</span></span>
+<span class="line"><span>login_fail_exit = true</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 用于连接服务器的通信协议</span></span>
+<span class="line"><span># 现在它支持tcp，kcp和websocket，默认为tcp</span></span>
+<span class="line"><span>protocol = tcp</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 如果 tls_enable 为 true，则 frpc 将通过 tls 连接 frps</span></span>
+<span class="line"><span>tls_enable = true</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># tls_cert_file = client.crt</span></span>
+<span class="line"><span># tls_key_file = client.key</span></span>
+<span class="line"><span># tls_trusted_ca_file = ca.crt</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 指定一个dns服务器，因此frpc将使用此服务器代替默认服务器</span></span>
+<span class="line"><span># dns_server = 8.8.8.8</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 您要开始的 # 个代理名称，以 &#39;,&#39; 分隔</span></span>
+<span class="line"><span># 默认为空，表示所有代理</span></span>
+<span class="line"><span># 开始 = ssh,dns</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># heartbeat configure, 不建议修改默认值</span></span>
+<span class="line"><span># heartbeat_interval 的默认值为10，heartbeat_timeout 为90</span></span>
+<span class="line"><span># heartbeat_interval = 30</span></span>
+<span class="line"><span># heartbeat_timeout = 90</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 客户端的其他信息</span></span>
+<span class="line"><span>meta_var1 = 123</span></span>
+<span class="line"><span>meta_var2 = 234</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 指定 UDP 日志的大小，单位为字节。 如果未设置，则默认值为1500。</span></span>
+<span class="line"><span># 客户端和服务器之间的此参数应该相同。</span></span>
+<span class="line"><span># 它会影响udp和sudp代理。</span></span>
+<span class="line"><span>udp_packet_size = 1500</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># &#39;ssh&#39; 是唯一的代理名称</span></span>
+<span class="line"><span># 如果 [common] 部分里面包含了账户等, 则他将更改为 {user}.{proxy} 列如 &#39;your_name.ssh&#39;</span></span>
+<span class="line"><span>[ssh]</span></span>
+<span class="line"><span># tcp | udp | http | https | stcp | xtcp, 默认：tcp</span></span>
+<span class="line"><span>type = tcp</span></span>
+<span class="line"><span>local_ip = 127.0.0.1</span></span>
+<span class="line"><span>local_port = 22</span></span>
+<span class="line"><span># 限制此代理的带宽，单位为KB和MB</span></span>
+<span class="line"><span>bandwidth_limit = 1MB</span></span>
+<span class="line"><span># true 或 false，如果为 true，则将对 frps 和 frpc 之间的消息进行加密，默认为 false</span></span>
+<span class="line"><span>use_encryption = false</span></span>
+<span class="line"><span># 如果为 true，则邮件将被压缩</span></span>
+<span class="line"><span>use_compression = false</span></span>
+<span class="line"><span># 远程端口</span></span>
+<span class="line"><span>remote_port = 6001</span></span>
+<span class="line"><span># frps将负载均衡同一组中代理的连接</span></span>
+<span class="line"><span>group = test_group</span></span>
+<span class="line"><span># 可以将多个相同类型的 proxy 加入到同一个 group 中，从而实现负载均衡的功能。</span></span>
+<span class="line"><span>group_key = 123456</span></span>
+<span class="line"><span># 启用后端服务的运行状况检查，它现在支持&#39;tcp&#39;和&#39;http&#39;</span></span>
+<span class="line"><span># frpc将连接本地服务的端口以检测其健康状态</span></span>
+<span class="line"><span>health_check_type = tcp</span></span>
+<span class="line"><span># 检查连接超时</span></span>
+<span class="line"><span>health_check_timeout_s = 3</span></span>
+<span class="line"><span># 如果连续3次失败，代理将从frps中删除</span></span>
+<span class="line"><span>health_check_max_failed = 3</span></span>
+<span class="line"><span># 每 10 秒将进行一次检查</span></span>
+<span class="line"><span>health_check_interval_s = 10</span></span>
+<span class="line"><span># 每个代理的其他信息</span></span>
+<span class="line"><span>meta_var1 = 123</span></span>
+<span class="line"><span>meta_var2 = 234</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[ssh_random]</span></span>
+<span class="line"><span>type = tcp</span></span>
+<span class="line"><span>local_ip = 127.0.0.1</span></span>
+<span class="line"><span>local_port = 22</span></span>
+<span class="line"><span># 如果 remote_port 为0，则 frps 将为您分配一个随机端口</span></span>
+<span class="line"><span>remote_port = 0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 如果要公开多个端口，请在节名称前添加“ range：”前缀</span></span>
+<span class="line"><span># frpc 将生成多个代理，例如&#39;tcp_port_6010&#39;，&#39;tcp_port_6011&#39;等。</span></span>
+<span class="line"><span>[range:tcp_port]</span></span>
+<span class="line"><span>type = tcp</span></span>
+<span class="line"><span>local_ip = 127.0.0.1</span></span>
+<span class="line"><span>local_port = 6010-6020,6022,6024-6028</span></span>
+<span class="line"><span>remote_port = 6010-6020,6022,6024-6028</span></span>
+<span class="line"><span>use_encryption = false</span></span>
+<span class="line"><span>use_compression = false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[dns]</span></span>
+<span class="line"><span>type = udp</span></span>
+<span class="line"><span>local_ip = 114.114.114.114</span></span>
+<span class="line"><span>local_port = 53</span></span>
+<span class="line"><span>remote_port = 6002</span></span>
+<span class="line"><span>use_encryption = false</span></span>
+<span class="line"><span>use_compression = false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[range:udp_port]</span></span>
+<span class="line"><span>type = udp</span></span>
+<span class="line"><span>local_ip = 127.0.0.1</span></span>
+<span class="line"><span>local_port = 6010-6020</span></span>
+<span class="line"><span>remote_port = 6010-6020</span></span>
+<span class="line"><span>use_encryption = false</span></span>
+<span class="line"><span>use_compression = false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 将您的域名解析为[server_addr]，以便可以使用http://web01.yourdomain.com浏览web01、使用http://web02.yourdomain.com浏览web02</span></span>
+<span class="line"><span>[web01]</span></span>
+<span class="line"><span>type = http</span></span>
+<span class="line"><span>local_ip = 127.0.0.1</span></span>
+<span class="line"><span>local_port = 80</span></span>
+<span class="line"><span>use_encryption = false</span></span>
+<span class="line"><span>use_compression = true</span></span>
+<span class="line"><span># http用户名和密码是http协议的安全认证</span></span>
+<span class="line"><span># 如果未设置，则无需认证即可访问此custom_domains</span></span>
+<span class="line"><span>http_user = admin</span></span>
+<span class="line"><span>http_pwd = admin</span></span>
+<span class="line"><span># 如果frps的域是frps.com，则可以通过URL http://test.frps.com 访问[web01]代理</span></span>
+<span class="line"><span>subdomain = web01</span></span>
+<span class="line"><span># custom_domains域名</span></span>
+<span class="line"><span>custom_domains = web02.yourdomain.com</span></span>
+<span class="line"><span># 位置仅适用于http类型</span></span>
+<span class="line"><span>locations = /,/pic</span></span>
+<span class="line"><span>host_header_rewrite = example.com</span></span>
+<span class="line"><span># 带有前缀“ header_”的参数将用于更新http请求标头</span></span>
+<span class="line"><span>header_X-From-Where = frp</span></span>
+<span class="line"><span>health_check_type = http</span></span>
+<span class="line"><span># frpc 将向本地 http 服务发送 GET http 请求&#39;/ status&#39;</span></span>
+<span class="line"><span># http 服务在返回 2xx http 响应代码时仍处于活动状态</span></span>
+<span class="line"><span>health_check_url = /status</span></span>
+<span class="line"><span>health_check_interval_s = 10</span></span>
+<span class="line"><span>health_check_max_failed = 3</span></span>
+<span class="line"><span>health_check_timeout_s = 3</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[web02]</span></span>
+<span class="line"><span>type = https</span></span>
+<span class="line"><span>local_ip = 127.0.0.1</span></span>
+<span class="line"><span>local_port = 8000</span></span>
+<span class="line"><span>use_encryption = false</span></span>
+<span class="line"><span>use_compression = false</span></span>
+<span class="line"><span>subdomain = web01</span></span>
+<span class="line"><span>custom_domains = web02.yourdomain.com</span></span>
+<span class="line"><span># 如果不为空，则frpc将使用代理协议将连接信息传输到您的本地服务</span></span>
+<span class="line"><span># v1或v2或为空</span></span>
+<span class="line"><span>proxy_protocol_version = v2</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[plugin_unix_domain_socket]</span></span>
+<span class="line"><span>type = tcp</span></span>
+<span class="line"><span>remote_port = 6003</span></span>
+<span class="line"><span># 如果定义了插件，则 local_ip 和 local_port 无效</span></span>
+<span class="line"><span># 插件将处理从 frps 获得的连接</span></span>
+<span class="line"><span>plugin = unix_domain_socket</span></span>
+<span class="line"><span># 插件需要前缀 “ plugin_” 的参数</span></span>
+<span class="line"><span>plugin_unix_path = /var/run/docker.sock</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[plugin_http_proxy]</span></span>
+<span class="line"><span>type = tcp</span></span>
+<span class="line"><span>remote_port = 6004</span></span>
+<span class="line"><span>plugin = http_proxy</span></span>
+<span class="line"><span>plugin_http_user = abc</span></span>
+<span class="line"><span>plugin_http_passwd = abc</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[plugin_socks5]</span></span>
+<span class="line"><span>type = tcp</span></span>
+<span class="line"><span>remote_port = 6005</span></span>
+<span class="line"><span>plugin = socks5</span></span>
+<span class="line"><span>plugin_user = abc</span></span>
+<span class="line"><span>plugin_passwd = abc</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[plugin_static_file]</span></span>
+<span class="line"><span>type = tcp</span></span>
+<span class="line"><span>remote_port = 6006</span></span>
+<span class="line"><span>plugin = static_file</span></span>
+<span class="line"><span>plugin_local_path = /var/www/blog</span></span>
+<span class="line"><span>plugin_strip_prefix = static</span></span>
+<span class="line"><span>plugin_http_user = abc</span></span>
+<span class="line"><span>plugin_http_passwd = abc</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[plugin_https2http]</span></span>
+<span class="line"><span>type = https</span></span>
+<span class="line"><span>custom_domains = test.yourdomain.com</span></span>
+<span class="line"><span>plugin = https2http</span></span>
+<span class="line"><span>plugin_local_addr = 127.0.0.1:80</span></span>
+<span class="line"><span>plugin_crt_path = ./server.crt</span></span>
+<span class="line"><span>plugin_key_path = ./server.key</span></span>
+<span class="line"><span>plugin_host_header_rewrite = 127.0.0.1</span></span>
+<span class="line"><span>plugin_header_X-From-Where = frp</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[plugin_http2https]</span></span>
+<span class="line"><span>type = http</span></span>
+<span class="line"><span>custom_domains = test.yourdomain.com</span></span>
+<span class="line"><span>plugin = http2https</span></span>
+<span class="line"><span>plugin_local_addr = 127.0.0.1:443</span></span>
+<span class="line"><span>plugin_host_header_rewrite = 127.0.0.1</span></span>
+<span class="line"><span>plugin_header_X-From-Where = frp</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[secret_tcp]</span></span>
+<span class="line"><span># 如果类型是 secret tcp ，则 remote_port 是无用的</span></span>
+<span class="line"><span># 想要连接本地端口的用户应使用 stcp 代理部署另一个 frpc，并且角色为 visitor</span></span>
+<span class="line"><span>type = stcp</span></span>
+<span class="line"><span># 用于访客身份验证的sk</span></span>
+<span class="line"><span>sk = abcdefg</span></span>
+<span class="line"><span>local_ip = 127.0.0.1</span></span>
+<span class="line"><span>local_port = 22</span></span>
+<span class="line"><span>use_encryption = false</span></span>
+<span class="line"><span>use_compression = false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 在stcp服务器和stcp访客中，frpc的用户应相同</span></span>
+<span class="line"><span>[secret_tcp_visitor]</span></span>
+<span class="line"><span># frpc角色访问者-&gt; frps-&gt; frpc角色服务器</span></span>
+<span class="line"><span>role = visitor</span></span>
+<span class="line"><span>type = stcp</span></span>
+<span class="line"><span># 您要访问的服务器名称</span></span>
+<span class="line"><span>server_name = secret_tcp</span></span>
+<span class="line"><span>sk = abcdefg</span></span>
+<span class="line"><span># 将此地址连接到访客stcp服务器</span></span>
+<span class="line"><span>bind_addr = 127.0.0.1</span></span>
+<span class="line"><span>bind_port = 9000</span></span>
+<span class="line"><span>use_encryption = false</span></span>
+<span class="line"><span>use_compression = false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[p2p_tcp]</span></span>
+<span class="line"><span>type = xtcp</span></span>
+<span class="line"><span>sk = abcdefg</span></span>
+<span class="line"><span>local_ip = 127.0.0.1</span></span>
+<span class="line"><span>local_port = 22</span></span>
+<span class="line"><span>use_encryption = false</span></span>
+<span class="line"><span>use_compression = false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[p2p_tcp_visitor]</span></span>
+<span class="line"><span>role = visitor</span></span>
+<span class="line"><span>type = xtcp</span></span>
+<span class="line"><span>server_name = p2p_tcp</span></span>
+<span class="line"><span>sk = abcdefg</span></span>
+<span class="line"><span>bind_addr = 127.0.0.1</span></span>
+<span class="line"><span>bind_port = 9001</span></span>
+<span class="line"><span>use_encryption = false</span></span>
+<span class="line"><span>use_compression = false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[tcpmuxhttpconnect]</span></span>
+<span class="line"><span>type = tcpmux</span></span>
+<span class="line"><span>multiplexer = httpconnect</span></span>
+<span class="line"><span>local_ip = 127.0.0.1</span></span>
+<span class="line"><span>local_port = 10701</span></span>
+<span class="line"><span>custom_domains = tunnel1</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details><h3 id="服务端配置文件" tabindex="-1"><a class="header-anchor" href="#服务端配置文件"><span>服务端配置文件</span></a></h3><ul><li>程序会使用frps.ini配置文件</li></ul><details class="hint-container details"><summary>frps.ini详细说明</summary><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>[common]</span></span>
+<span class="line"><span># 映射服务器通信端口</span></span>
+<span class="line"><span>bind_port = 7000</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details><details class="hint-container details"><summary>frps_full.ini详细说明</summary><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># [common] 部分不可缺少</span></span>
+<span class="line"><span>[common]</span></span>
+<span class="line"><span># bind_addr 服务器ip，必须包含IP地址 或者 域名 主机名</span></span>
+<span class="line"><span># 用方括号括起来，例如 &quot;[::1]:80&quot;, &quot;[ipv6-host]:http&quot; 或 &quot;[ipv6-host%zone]:80&quot;:80&quot;</span></span>
+<span class="line"><span>bind_addr = 0.0.0.0</span></span>
+<span class="line"><span>bind_port = 7000</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># udp端口有助于 udp 内网穿透</span></span>
+<span class="line"><span>bind_udp_port = 7001</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 用于 kcp 协议的 udp 端口，可以与&#39;bind_port&#39;相同</span></span>
+<span class="line"><span># 如果未设置，则以 frps 禁用 kcp</span></span>
+<span class="line"><span>kcp_bind_port = 7000</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 指定要侦听的地址代理，默认值与 bind_addr 相同，127.0.0.1仅限本地、0.0.0.0为不限地址</span></span>
+<span class="line"><span># proxy_bind_addr = 127.0.0.1</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 如果要支持虚拟主机，则必须设置用于侦听的http端口（可选）</span></span>
+<span class="line"><span># 注意：http 端口和 https 端口可以与 bind_port 相同</span></span>
+<span class="line"><span>vhost_http_port = 80</span></span>
+<span class="line"><span>vhost_https_port = 443</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># vhost http 服务器的响应标头超时（秒），默认为60s</span></span>
+<span class="line"><span># vhost_http_timeout = 60</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># TcpMuxHttpConnectPort 指定服务器侦听TCP的端口</span></span>
+<span class="line"><span># HTTP 连接请求。如果值为0，则服务器将不会多路传输TCP</span></span>
+<span class="line"><span># 一个端口请求。如果不是，它将在此值上监听</span></span>
+<span class="line"><span># HTTP 连接请求。默认情况下，此值为0。</span></span>
+<span class="line"><span># tcpmux_httpconnect_port = 1337</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 设置 dashboard_addr 和 dashboard_port 以查看frps的仪表板</span></span>
+<span class="line"><span># dashboard_addr 的默认值与 bind_addr 相同</span></span>
+<span class="line"><span># 只有设置了 dashboard_port ，仪表板才可用</span></span>
+<span class="line"><span>dashboard_addr = 0.0.0.0</span></span>
+<span class="line"><span>dashboard_port = 7500</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 指定访问 仪表盘控制界面 Dashboard 的登录用户名、用户密码，如果未设置，则两个默认值均为admin</span></span>
+<span class="line"><span>dashboard_user = admin</span></span>
+<span class="line"><span>dashboard_pwd = admin</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># enable_prometheus 将在 /metrics api 中的 {dashboard_addr}:{dashboard_port} 上导出 prometheus 指标.</span></span>
+<span class="line"><span>enable_prometheus = true</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 仪表板资源目录（仅适用于调试模式）</span></span>
+<span class="line"><span># assets_dir = ./static</span></span>
+<span class="line"><span># 日志文件 路径，例如./frpc.log</span></span>
+<span class="line"><span>log_file = ./frps.log</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 跟踪，调试，信息，警告，错误</span></span>
+<span class="line"><span>log_level = info</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>log_max_days = 3</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 当生成日志文件时，控制台将禁用日志的颜色，默认为false</span></span>
+<span class="line"><span>disable_log_color = false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># DetailedErrorsToClient 定义是否将特定错误（带有调试信息）发送到 frpc。默认情况下，此值为true。</span></span>
+<span class="line"><span>detailed_errors_to_client = true</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># AuthenticationMethod 指定使用哪种身份验证方法对frps进行frpc身份验证。</span></span>
+<span class="line"><span># 如果指定了 &quot;token&quot;- 令牌将被读入登录消息。</span></span>
+<span class="line"><span># 如果指定 &quot;oidc&quot; -将使用OIDC设置发行OIDC（开放ID连接）令牌。默认情况下，此值为 &quot;token&quot;。</span></span>
+<span class="line"><span>authentication_method = token</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># AuthenticateHeartBeats 指定是否在发送给frps的心跳中包括身份验证令牌。默认情况下，此值为false。</span></span>
+<span class="line"><span>authenticate_heartbeats = false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># AuthenticateNewWorkConns 指定是否在发送到frps的新工作连接中包括身份验证令牌。默认情况下，此值为false。</span></span>
+<span class="line"><span>authenticate_new_work_conns = false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># FRP 身份验证</span></span>
+<span class="line"><span>token = 12345678</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 如果 AuthenticationMethod == &quot;oidc&quot;，则 OidcClientId 指定用于在OIDC身份验证中获取令牌的客户端ID。</span></span>
+<span class="line"><span># 默认情况下，此值为 &quot;&quot;.</span></span>
+<span class="line"><span>oidc_client_id =</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 如果 AuthenticationMethod == &quot;oidc&quot;，则 OidcClientSecret 指定用于在OIDC身份验证中获取令牌的客户端密钥。</span></span>
+<span class="line"><span># By default, this value is &quot;&quot;.</span></span>
+<span class="line"><span>oidc_client_secret = </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 如果 AuthenticationMethod == &quot;oidc&quot;，则 OidcAudience 指定OIDC身份验证中令牌的受众。 默认情况下，此值为&quot;&quot;。</span></span>
+<span class="line"><span>oidc_audience = </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># OidcTokenEndpointUrl 指定实现OIDC令牌端点的URL。</span></span>
+<span class="line"><span># 如果 AuthenticationMethod == &quot;oidc&quot;，它将用于获取OIDC令牌。 默认情况下，此值为&quot;&quot;。</span></span>
+<span class="line"><span>oidc_token_endpoint_url = </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 端口白名单</span></span>
+<span class="line"><span># 为了防止端口被滥用，可以手动指定允许哪些端口被使用，在 frps.ini 中通过 allow_ports 来指定：</span></span>
+<span class="line"><span># 只允许 frpc 绑定您列出的端口，如果不进行任何设置，则没有任何限制</span></span>
+<span class="line"><span># allow_ports 可以配置允许使用的某个指定端口或者是一个范围内的所有端口，以 , 分隔，指定的范围以 - 分隔。</span></span>
+<span class="line"><span>allow_ports = 2000-3000,3001,3003,4000-50000</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 每个代理中的 pool_count 超过最大值，最大链接池,每个代理预先与后端服务器建立起指定数量的最大链接数</span></span>
+<span class="line"><span># frps.ini 中设置每个代理可以创建的连接池上限，避免大量资源占用</span></span>
+<span class="line"><span>max_pool_count = 5</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 每个客户端可以使用的最大端口数，默认值为0表示没有限制</span></span>
+<span class="line"><span>max_ports_per_client = 0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># TlsOnly 指定是否仅接受TLS加密的连接。默认情况下，该值为false。</span></span>
+<span class="line"><span>tls_only = false</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># tls_cert_file = server.crt</span></span>
+<span class="line"><span># tls_key_file = server.key</span></span>
+<span class="line"><span># tls_trusted_ca_file = ca.crt</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 如果 subdomain_host 不为空，则可以在frpc的配置文件中将类型设置为http或https时设置子域</span></span>
+<span class="line"><span># subdomain_host 参数来设置  Web 服务增加自定义二级域名</span></span>
+<span class="line"><span># 当子域时，路由使用的主机是 test.frps.com</span></span>
+<span class="line"><span>subdomain_host = frps.com</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 如果使用 tcp 流多路复用，则默认为true</span></span>
+<span class="line"><span>tcp_mux = true</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 定制 HTTP 请求的 404 页面</span></span>
+<span class="line"><span># custom_404_page = /path/to/404.html</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 指定udp数据包大小，单位为字节。如果未设置，则默认值为1500。</span></span>
+<span class="line"><span># 客户端和服务器之间的此参数应该相同。</span></span>
+<span class="line"><span># 它会影响udp和sudp代理。</span></span>
+<span class="line"><span>udp_packet_size = 1500</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[plugin.user-manager]</span></span>
+<span class="line"><span>addr = 127.0.0.1:9000</span></span>
+<span class="line"><span>path = /handler</span></span>
+<span class="line"><span>ops = Login</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[plugin.port-manager]</span></span>
+<span class="line"><span>addr = 127.0.0.1:9001</span></span>
+<span class="line"><span>path = /handler</span></span>
+<span class="line"><span>ops = NewProxy</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details><h2 id="各个系统使用说明" tabindex="-1"><a class="header-anchor" href="#各个系统使用说明"><span>各个系统使用说明</span></a></h2><div class="hint-container caution"><p class="hint-container-title">警告</p><ol><li>虽说是分系统的程序的，但是两者通信可以互通，所以你是可以使用两个不同的系统来进行</li><li>如不会请将配置文件在两者服务器同步更新(都重新写一遍)，但如果你知道咋整。。你可以轻松很多</li></ol></div><h3 id="windows" tabindex="-1"><a class="header-anchor" href="#windows"><span>Windows</span></a></h3><ol><li>下载我们的应用包<a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreferrer">点击跳转</a></li><li>解压后我们会得到他的程序文件，首先我们需要修改他的配置<br><img src="/assets/frp_1-BxhZsG5B.png" alt="" loading="lazy"></li></ol><ul><li>比如我要映射JAVA版我的世界服务器(当然额外设置你可以看我上面的说明)</li></ul><div class="hint-container tip"><p class="hint-container-title">frpc.ini 客户端配置</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>[common]</span></span>
+<span class="line"><span>server_addr = xxxx</span></span>
+<span class="line"><span>server_port = 7000</span></span>
+<span class="line"><span>token = xxxxx</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[我的世界服务器]</span></span>
+<span class="line"><span>type = tcp</span></span>
+<span class="line"><span>local_ip = 127.0.0.1</span></span>
+<span class="line"><span>local_port = 25565</span></span>
+<span class="line"><span>remote_port = 25565</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><div class="hint-container tip"><p class="hint-container-title">frps.ini 服务端配置</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>[common]</span></span>
+<span class="line"><span>bind_port = 7000</span></span>
+<span class="line"><span>token = xxxxx</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><ol start="3"><li>将他们复制到你要映射的服务器和被映射的服务器、电脑。执行相应的指令</li></ol><ul><li>Windows 用户，需要在 <code>cmd</code> 终端中执行命令</li></ul><div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF;">./frps.exe</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66;"> -c</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> ./frps.ini</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># 服务端执行指令</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF;">./frpc.exe</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66;"> -c</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> ./frpc.ini</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># 客户端执行指令</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="centos-ubuntu-debian" tabindex="-1"><a class="header-anchor" href="#centos-ubuntu-debian"><span>Centos Ubuntu Debian</span></a></h3><ol><li>下载我们的应用包<a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreferrer">点击跳转</a></li></ol><ul><li>比如我会直接复制他的链接使用wget下载并解压</li></ul><div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF;">yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> install</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66;"> -y</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> wget</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># Centos</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF;">apt</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> wget</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66;"> -y</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># Ubuntu Debian</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># 安装所需工具</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF;">wget</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> https://github.com/fatedier/frp/releases/download/v0.34.1/frp_0.34.1_linux_amd64.tar.gz</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># 下载你所需的版本，链接请自行获取</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2"><li>解压后我们会得到他的程序文件，首先我们需要修改他的配置</li></ol><div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF;">tar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66;"> -xzvf</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> frp_0.34.1_linux_amd64.tar.gz</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># 解压文件 [文件名请注意，是你上面下载的链接]</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2;">cd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> frp_0.34.1_linux_amd64</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># 注意是你上面解压出来的文件目录</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="3"><li>解压后我们会得到他的程序文件，首先我们需要修改他的配置<br><img src="/assets/frp_2-DXPrcbWL.png" alt="" loading="lazy"><br> 比如我要映射JAVA版我的世界服务器(当然额外设置你可以看我上面的说明)<br> 建议使用 <code>nano</code> 来进行编辑</li></ol><div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF;">yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> nano</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66;"> -y</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># Centos系统使用</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF;">apt</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> nano</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66;"> -y</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># Ubuntu</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF;">apt</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> nano</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66;"> -y</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># Debian貌似自带？</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF;">nano</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> frpc.ini</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF;">nano</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> frps.ini</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># 直接就可以编辑，Ctrl+X 退出，它会提示是否需要保存，按 Y 即可，再按回车即可完成</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip"><p class="hint-container-title">frpc.ini 客户端配置</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>[common]</span></span>
+<span class="line"><span>server_addr = xxxx</span></span>
+<span class="line"><span>server_port = 7000</span></span>
+<span class="line"><span>token = xxxxx</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[我的世界服务器]</span></span>
+<span class="line"><span>type = tcp</span></span>
+<span class="line"><span>local_ip = 127.0.0.1</span></span>
+<span class="line"><span>local_port = 25565</span></span>
+<span class="line"><span>remote_port = 25565</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><div class="hint-container tip"><p class="hint-container-title">frps.ini 服务端配置</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>[common]</span></span>
+<span class="line"><span>bind_port = 7000</span></span>
+<span class="line"><span>token = xxxxx</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><ol start="3"><li>将他们复制到你要映射的服务器和被映射的服务器、电脑。执行相应的指令</li></ol><div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF;">./frps</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66;"> -c</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> ./frps.ini</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># 服务端执行指令</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF;">./frpc</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66;"> -c</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379;"> ./frpc.ini</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic;"># 客户端执行指令</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><!----><!----><!----></div><footer class="vp-page-meta"><div class="vp-meta-item edit-link"><a class="auto-link external-link vp-meta-label" href="https://github.com/vlssu/vlssu.github.io/edit/main/src/views/deploy-website/frp.md" aria-label="在 GitHub 上编辑此页" rel="noopener noreferrer" target="_blank"><!--[--><svg xmlns="http://www.w3.org/2000/svg" class="icon edit-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="edit icon" name="edit"><path d="M430.818 653.65a60.46 60.46 0 0 1-50.96-93.281l71.69-114.012 7.773-10.365L816.038 80.138A60.46 60.46 0 0 1 859.225 62a60.46 60.46 0 0 1 43.186 18.138l43.186 43.186a60.46 60.46 0 0 1 0 86.373L588.879 565.55l-8.637 8.637-117.466 68.234a60.46 60.46 0 0 1-31.958 11.229z"></path><path d="M728.802 962H252.891A190.883 190.883 0 0 1 62.008 771.98V296.934a190.883 190.883 0 0 1 190.883-192.61h267.754a60.46 60.46 0 0 1 0 120.92H252.891a69.962 69.962 0 0 0-69.098 69.099V771.98a69.962 69.962 0 0 0 69.098 69.098h475.911A69.962 69.962 0 0 0 797.9 771.98V503.363a60.46 60.46 0 1 1 120.922 0V771.98A190.883 190.883 0 0 1 728.802 962z"></path></svg><!--]-->在 GitHub 上编辑此页<!----></a></div><div class="vp-meta-item git-info"><div class="update-time"><span class="vp-meta-label">最近更新：</span><time class="vp-meta-info" datetime="2025-05-10T13:49:10.000Z" data-allow-mismatch>2025/5/10 21:49</time></div><div class="contributors"><span class="vp-meta-label">贡献者: </span><!--[--><!--[--><span class="vp-meta-info" title="email: 43847794+vlssu@users.noreply.github.com">vlssu</span><!--]--><!--]--></div></div></footer><!----><!----><!----><!--]--></main><!--]--><footer class="vp-footer-wrapper" vp-footer><div class="vp-footer"><a href="https://beian.miit.gov.cn">沪ICP备2024046839号-21</a></div><div class="vp-copyright">Copyright © 2025 飒爽师叔 </div></footer></div><!--]--><!--]--><!--[--><!----><!----><!--[--><!--]--><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-CA5ZiEuZ.js" defer></script>
+  </body>
+</html>
