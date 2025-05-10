@@ -1,13 +1,5 @@
-.vuepress/.cache
-.vuepress/.temp
-.vuepress/dist
-node_modules
-/public
 
-.yarn/*
-!.yarn/cache
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+node_modules/
+src/.vuepress/.cache/
+src/.vuepress/.temp/
+src/.vuepress/dist/
