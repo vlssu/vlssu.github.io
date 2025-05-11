@@ -9,7 +9,6 @@ tags:
  - Ubuntu
 categories: 
  - 教程
-sticky: 2
 star: true
 ---
 

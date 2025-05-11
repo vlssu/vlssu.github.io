@@ -8,7 +8,7 @@ tags:
  - 汉化
 categories: 
  - 教程
-sticky: 1
+star: true
 ---
 
 翼龙面板运行在您自己的 Web 服务器上。为了运行和使用这个面板，您需要对您的服务器具有 root 访问权限。

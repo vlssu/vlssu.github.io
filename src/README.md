@@ -41,6 +41,7 @@ projects:
 
   - icon: https://blog.iin0.cn/author.png
     name: 音铃的博客
+    desc: 河流终将汇入大海，最后还是回到了平平无奇的样子
     link: https://blog.iin0.cn
 
   - icon: https://www.wapriaily.com/photo/wapriaily.jpg
