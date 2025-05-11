@@ -143,6 +143,7 @@ export default hopeTheme({
     comment: {
       provider: "Waline",
       serverURL: "https://waline-comment.vlssu.com",
+      requiredMeta: ['nick', 'mail'], // 必要值
     },
 
     components: {
