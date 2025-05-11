@@ -17,11 +17,12 @@ categories:
 :::
 
 <!-- more -->
-::: theorem 新的MCSManager 9.0
+:::: note 新的MCSManager 9.0
 分布式，高扩展性，开箱即用，支持 Minecraft 和其他游戏的服务端管理面板
 ::: right
 跳转至MCSManager 9.0文章 [师叔の小窝](./mcsm9.md)
 :::
+::::
 
 ::: tip
 如果你并不想去学习如何自己搭建，可以使用源作者的安装指令（我的脚本没必要了）

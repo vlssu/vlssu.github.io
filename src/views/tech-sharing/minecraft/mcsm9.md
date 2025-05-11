@@ -20,11 +20,12 @@ star: true
 
 <!-- more -->
 
-::: theorem 过时的MCSManager 8.0
+:::: note 过时的MCSManager 8.0
 我们以前常用的独立式MCSM面板
 ::: right
 跳转至MCSManager 8.0文章 [师叔の小窝](./mcsm.md)
 :::
+::::
 
 ## Linux
 

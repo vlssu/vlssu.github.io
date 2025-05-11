@@ -14,11 +14,12 @@ categories:
 我看到一个下载的bilibili视频的程序，贼好用但是需要Python3.9，就是我上一篇文章不是写了Python3.9的安装教程吗。其实最主要是Python安装有点反人类，至少在win上面，所以我只能在我习惯的linux上部署了。
 :::
 
-::: theorem yutto
+:::: note yutto
 一个可爱且任性的 B 站视频下载器（bilili2.x）
 ::: right
 来自 [Github](https://github.com/SigureMo/yutto)
 :::
+::::
 
 [**[在Ubuntu如何安装Python3.9（Ubuntu 20.04）]**](../tech-sharing/linux/python3.9.html)
 
