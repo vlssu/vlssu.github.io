@@ -29,12 +29,7 @@ projects:
     desc: 一款内网穿透服务，轻松搭建属于您自己的个人网站
     link: https://natgo.cn
 
-  - icon: https://i.loli.net/2020/05/04/DRMmXxkYl4sjrL7.png
-    name: 小奏博客
-    desc: 分享是一种快乐，而我喜欢分享。
-    link: https://www.yuuki-asuna.cn
-
-  - icon: https://i.zerodream.net/86b5133c13a7e7109b89f8d24fc0b746.jpg
+  - icon: https://q1.qlogo.cn/g?b=qq&nk=2211717435&s=640
     name: Lazy's Blog
     desc: Share somethings with you
     link: https://blog.imlazy.ink:233
