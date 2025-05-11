@@ -6,8 +6,8 @@
     <link>https://blog.vlssu.com/</link>
     <description>Share knowledge and stay happy</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 11 May 2025 10:35:56 GMT</pubDate>
-    <lastBuildDate>Sun, 11 May 2025 10:35:56 GMT</lastBuildDate>
+    <pubDate>Sun, 11 May 2025 10:59:56 GMT</pubDate>
+    <lastBuildDate>Sun, 11 May 2025 10:59:56 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -792,13 +792,15 @@
       <link>https://blog.vlssu.com/views/deploy-website/pterodactyl.html</link>
       <guid>https://blog.vlssu.com/views/deploy-website/pterodactyl.html</guid>
       <source url="https://blog.vlssu.com/rss.xml">翼龙面板汉化版(宝塔)搭建教程</source>
-      <description>::: theorem 我参与了此项目的汉化，而我是负责面板的开发版汉化（此开发版非比开发版），如果上游仓库更新，这里会同步更新，当然，我在使用过程中出现问题我也会第一时间去修复这些。现阶段更新频率降低（毕竟能汉化的基本汉化完了）。 详情请参阅翼龙中国文档 选择服务器操作系统 翼龙可在多种操作系统上运行，因此请选择最适合您使用的操作系统。 注意 由于与...</description>
+      <description>注 我参与了此项目的汉化，而我是负责面板的开发版汉化（此开发版非比开发版），如果上游仓库更新，这里会同步更新，当然，我在使用过程中出现问题我也会第一时间去修复这些。现阶段更新频率降低（毕竟能汉化的基本汉化完了）。 详情请参阅翼龙中国文档 选择服务器操作系统 翼龙可在多种操作系统上运行，因此请选择最适合您使用的操作系统。 注意 由于与 Docker 不兼...</description>
       <category>教程</category>
       <pubDate>Thu, 07 Jul 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>::: theorem<br>
-我参与了此项目的汉化，而我是负责面板的开发版汉化（此开发版非比开发版），如果上游仓库更新，这里会同步更新，当然，我在使用过程中出现问题我也会第一时间去修复这些。现阶段更新频率降低（毕竟能汉化的基本汉化完了）。</p>
+      <content:encoded><![CDATA[<div class="hint-container note">
+<p class="hint-container-title">注</p>
+<p>我参与了此项目的汉化，而我是负责面板的开发版汉化（此开发版非比开发版），如果上游仓库更新，这里会同步更新，当然，我在使用过程中出现问题我也会第一时间去修复这些。现阶段更新频率降低（毕竟能汉化的基本汉化完了）。</p>
 <div style="text-align:right">
 <p>详情请参阅<a href="https://pterodactyl.top" target="_blank" rel="noopener noreferrer">翼龙中国文档</a></p>
+</div>
 </div>
 <h2>选择服务器操作系统</h2>
 <p>翼龙可在多种操作系统上运行，因此请选择最适合您使用的操作系统。</p>
@@ -817,17 +819,19 @@
       <link>https://blog.vlssu.com/views/deploy-website/yutto.html</link>
       <guid>https://blog.vlssu.com/views/deploy-website/yutto.html</guid>
       <source url="https://blog.vlssu.com/rss.xml">如果yutto搭建下载bilibili视频</source>
-      <description>提示 我看到一个下载的bilibili视频的程序，贼好用但是需要Python3.9，就是我上一篇文章不是写了Python3.9的安装教程吗。其实最主要是Python安装有点反人类，至少在win上面，所以我只能在我习惯的linux上部署了。 ::: theorem yutto 一个可爱且任性的 B 站视频下载器（bilili2.x） 来自 Github ...</description>
+      <description>提示 我看到一个下载的bilibili视频的程序，贼好用但是需要Python3.9，就是我上一篇文章不是写了Python3.9的安装教程吗。其实最主要是Python安装有点反人类，至少在win上面，所以我只能在我习惯的linux上部署了。 yutto 一个可爱且任性的 B 站视频下载器（bilili2.x） 来自 Github 安装yutto 记得安装...</description>
       <category>教程</category>
       <pubDate>Mon, 23 Aug 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>我看到一个下载的bilibili视频的程序，贼好用但是需要Python3.9，就是我上一篇文章不是写了Python3.9的安装教程吗。其实最主要是Python安装有点反人类，至少在win上面，所以我只能在我习惯的linux上部署了。</p>
 </div>
-<p>::: theorem yutto<br>
-一个可爱且任性的 B 站视频下载器（bilili2.x）</p>
+<div class="hint-container note">
+<p class="hint-container-title">yutto</p>
+<p>一个可爱且任性的 B 站视频下载器（bilili2.x）</p>
 <div style="text-align:right">
 <p>来自 <a href="https://github.com/SigureMo/yutto" target="_blank" rel="noopener noreferrer">Github</a></p>
+</div>
 </div>
 <p><a href="/views/tech-sharing/linux/python3.9.html" target="_blank"><strong>[在Ubuntu如何安装Python3.9（Ubuntu 20.04）]</strong></a></p>
 <h2>安装yutto</h2>
@@ -2163,10 +2167,12 @@ https://cloud.tencent.com/developer/article/1050223
 </ol>
 </div>
 <!-- more -->
-<p>::: theorem 新的MCSManager 9.0<br>
-分布式，高扩展性，开箱即用，支持 Minecraft 和其他游戏的服务端管理面板</p>
+<div class="hint-container note">
+<p class="hint-container-title">新的MCSManager 9.0</p>
+<p>分布式，高扩展性，开箱即用，支持 Minecraft 和其他游戏的服务端管理面板</p>
 <div style="text-align:right">
 <p>跳转至MCSManager 9.0文章 <a href="/views/tech-sharing/minecraft/mcsm9.html" target="_blank">师叔の小窝</a></p>
+</div>
 </div>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
@@ -2399,10 +2405,12 @@ https://cloud.tencent.com/developer/article/1050223
 </ul>
 </div>
 <!-- more -->
-<p>::: theorem 过时的MCSManager 8.0<br>
-我们以前常用的独立式MCSM面板</p>
+<div class="hint-container note">
+<p class="hint-container-title">过时的MCSManager 8.0</p>
+<p>我们以前常用的独立式MCSM面板</p>
 <div style="text-align:right">
 <p>跳转至MCSManager 8.0文章 <a href="/views/tech-sharing/minecraft/mcsm.html" target="_blank">师叔の小窝</a></p>
+</div>
 </div>
 <h2>Linux</h2>
 <div class="hint-container tip">
