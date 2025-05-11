@@ -19,7 +19,8 @@ categories:
 ### Apache 2.4
 
 `Apache 2.4` 开始自带此模块，可用下面命令检查。
-```httpd
+
+```lua
 # 查询 Apache 版本
 /etc/init.d/httpd -v
 

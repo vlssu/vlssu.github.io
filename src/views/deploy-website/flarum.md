@@ -167,7 +167,7 @@ MySQL 自5.7 开始支持FULLTEXT中文搜寻，重建索引即可
 
 修改`mysql.cnf`，加入：
 
-```cnf
+```ini
 [mysqld]
 ngram_token_size=2
 ```

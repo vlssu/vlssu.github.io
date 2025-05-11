@@ -13,7 +13,7 @@ categories:
 
 修改nginx.conf配置文件
 
-```conf {4,5,6}
+```lua {4,5,6}
 http
     {
     …
@@ -23,7 +23,7 @@ http
     …        
 ```
 
-```conf {4,5,6}
+```lua {4,5,6}
 server
     {
         …

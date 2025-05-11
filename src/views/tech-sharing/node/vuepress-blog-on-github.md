@@ -80,7 +80,8 @@ https://gitee.com/GodLikeZeal/vuepress_blog
 ```
 
 目录结构，深色重点观察
-```{5,14}
+
+```bash {5,14}
 .
 ├── vuepress_blog
 │   ├── .vuepress 
