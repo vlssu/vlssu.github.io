@@ -29,6 +29,7 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
+    avatar: "head.png",
     description: "一个咸鱼",
     intro: "/intro.html",
     medias: {
