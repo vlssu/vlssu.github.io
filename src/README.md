@@ -24,6 +24,35 @@ projects:
     desc: 我在运营项目的所有文档
     link: https://docs.vlssu.com
 
+  - icon: https://natgo.cn/static/img/logo64.png
+    name: NetGo
+    desc: 一款内网穿透服务，轻松搭建属于您自己的个人网站
+    link: https://natgo.cn
+
+  - icon: https://i.loli.net/2020/05/04/DRMmXxkYl4sjrL7.png
+    name: 小奏博客
+    desc: 分享是一种快乐，而我喜欢分享。
+    link: https://www.yuuki-asuna.cn
+
+  - icon: https://i.zerodream.net/86b5133c13a7e7109b89f8d24fc0b746.jpg
+    name: Lazy's Blog
+    desc: Share somethings with you
+    link: https://blog.imlazy.ink:233
+
+  - icon: https://cos-shanghai-01-1301223281.cos.ap-shanghai.myqcloud.com/box/imgs/youmu-header.webp
+    name: 上杉夏相の小窝
+    desc: 干啥啥不行，摸鱼第一名
+    link: https://blog.konpaku.cn
+
+  - icon: https://blog.iin0.cn/author.png
+    name: 音铃的博客
+    link: https://blog.iin0.cn
+
+  - icon: https://www.wapriaily.com/photo/wapriaily.jpg
+    name: Wapriaily
+    desc: 目之所及皆是回忆，心之所想皆是过往，眼之所看皆是遗憾。
+    link: https://www.wapriaily.com
+
   # - icon: user-group
   #   name: 伙伴名称
   #   desc: 伙伴详细介绍

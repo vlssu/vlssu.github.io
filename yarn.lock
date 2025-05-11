@@ -1957,6 +1957,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@waline/api@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@waline/api@npm:1.0.0"
+  checksum: 10c0/7064dcb49717e4da669cc86a2c43aa0b50d9e8b7afa6d767ed217d5dd365cb8c1ed94018cba699e97eb910b58e00b9fa94a6d761743d97cccb00f5dcef33f873
+  languageName: node
+  linkType: hard
+
+"@waline/client@npm:^3.5.7":
+  version: 3.5.7
+  resolution: "@waline/client@npm:3.5.7"
+  dependencies:
+    "@vueuse/core": "npm:^13.1.0"
+    "@waline/api": "npm:1.0.0"
+    autosize: "npm:^6.0.1"
+    marked: "npm:^15.0.11"
+    marked-highlight: "npm:^2.2.1"
+    recaptcha-v3: "npm:^1.11.3"
+    vue: "npm:^3.5.13"
+  checksum: 10c0/8922862a4438644c49a73bb7c701f30593a39f40d81bd95028fb889ac47ac195cb19c5d6f890a1f0be8d3a56049f35006a3686f06b0e42bedfcceffab4119195
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:^3.0.0":
   version: 3.0.1
   resolution: "abbrev@npm:3.0.1"
@@ -2049,6 +2071,13 @@ __metadata:
   bin:
     autoprefixer: bin/autoprefixer
   checksum: 10c0/de5b71d26d0baff4bbfb3d59f7cf7114a6030c9eeb66167acf49a32c5b61c68e308f1e0f869d92334436a221035d08b51cd1b2f2c4689b8d955149423c16d4d4
+  languageName: node
+  linkType: hard
+
+"autosize@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "autosize@npm:6.0.1"
+  checksum: 10c0/7d1b9823443c2cc3fc962a7c20ec60d62db6a98c889a39f71495b48decbfda2463e6561fb7a748f069d6778e419f2fa1a7ecd09baa02dc33c4a209f777da9ac8
   languageName: node
   linkType: hard
 
@@ -3393,6 +3422,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"marked-highlight@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "marked-highlight@npm:2.2.1"
+  peerDependencies:
+    marked: ">=4 <16"
+  checksum: 10c0/cc3240750e05a184576a991b3b23e5a84c90356d70b850a51f08a2144e2febce7332f957813d42645698ef24356d37c42825bb178a417d4ae9c8cc5ca37c6b45
+  languageName: node
+  linkType: hard
+
+"marked@npm:^15.0.11":
+  version: 15.0.11
+  resolution: "marked@npm:15.0.11"
+  bin:
+    marked: bin/marked.js
+  checksum: 10c0/d532db4955c1f2ac6efc65a644725e9e12e7944cb6af40c7148baecfd3b3c2f3564229b3daf12d2125635466448fb9b367ce52357be3aea0273e3d152efdbdcf
+  languageName: node
+  linkType: hard
+
 "mdast-util-to-hast@npm:^13.0.0":
   version: 13.2.0
   resolution: "mdast-util-to-hast@npm:13.2.0"
@@ -3966,6 +4013,13 @@ __metadata:
   dependencies:
     picomatch: "npm:^2.2.1"
   checksum: 10c0/6fa848cf63d1b82ab4e985f4cf72bd55b7dcfd8e0a376905804e48c3634b7e749170940ba77b32804d5fe93b3cc521aa95a8d7e7d725f830da6d93f3669ce66b
+  languageName: node
+  linkType: hard
+
+"recaptcha-v3@npm:^1.11.3":
+  version: 1.11.3
+  resolution: "recaptcha-v3@npm:1.11.3"
+  checksum: 10c0/074e10c33ac64f12d0c7903be0940040c7fe8c1fb96704a8e5e863feb617849a84ec44c038c9139b8d515015778e49a1cf421324c3f52811c2e8fd9ffb66aa16
   languageName: node
   linkType: hard
 
@@ -4970,6 +5024,7 @@ __metadata:
   dependencies:
     "@vuepress/bundler-vite": "npm:2.0.0-rc.22"
     "@vuepress/plugin-slimsearch": "npm:^2.0.0-rc.103"
+    "@waline/client": "npm:^3.5.7"
     sass-embedded: "npm:^1.87.0"
     vue: "npm:^3.5.13"
     vuepress: "npm:2.0.0-rc.22"
