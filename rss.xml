@@ -6,8 +6,8 @@
     <link>https://blog.vlssu.com/</link>
     <description>Share knowledge and stay happy</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 11 May 2025 12:01:47 GMT</pubDate>
-    <lastBuildDate>Sun, 11 May 2025 12:01:47 GMT</lastBuildDate>
+    <pubDate>Sun, 11 May 2025 12:05:26 GMT</pubDate>
+    <lastBuildDate>Sun, 11 May 2025 12:05:26 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -2468,7 +2468,7 @@ https://cloud.tencent.com/developer/article/1050223
 </ul>
 <figure><figcaption>设置映射信息</figcaption></figure>
 ]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/ver/?200225" type="image/"/>
+      <enclosure url="https://api.vlssu.com/img/?200225" type="image/"/>
     </item>
     <item>
       <title>Markdown基本语法</title>
