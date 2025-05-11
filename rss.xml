@@ -6,13 +6,13 @@
     <link>https://blog.vlssu.com/</link>
     <description>Share knowledge and stay happy</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 11 May 2025 01:35:24 GMT</pubDate>
-    <lastBuildDate>Sun, 11 May 2025 01:35:24 GMT</lastBuildDate>
+    <pubDate>Sun, 11 May 2025 03:01:40 GMT</pubDate>
+    <lastBuildDate>Sun, 11 May 2025 03:01:40 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
-    <category>Linux使用小知识</category>
     <category>笔记</category>
+    <category>Linux使用小知识</category>
     <category>VuePress</category>
     <item>
       <title>Frp搭建与使用</title>
@@ -37,6 +37,25 @@
 |</p>
 ]]></content:encoded>
       <enclosure url="https://api.vlssu.com/img/?201028" type="image/"/>
+    </item>
+    <item>
+      <title>修复 BTpanel(宝塔) Python 环境（SSL续订错误）</title>
+      <link>https://blog.vlssu.com/views/notes/220925.html</link>
+      <guid>https://blog.vlssu.com/views/notes/220925.html</guid>
+      <source url="https://blog.vlssu.com/rss.xml">修复 BTpanel(宝塔) Python 环境（SSL续订错误）</source>
+      <description>在使用宝塔的时候，Python 很容易炸，在续签ssl证书的时候尤为明显，而这些问题基本都是 Python 惹的祸 提示 在运行以下命令并不会导致数据重置等现象。但为了保险起见，建议您先备份后在执行。</description>
+      <category>笔记</category>
+      <pubDate>Sun, 25 Sep 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>在使用宝塔的时候，Python 很容易炸，在续签ssl证书的时候尤为明显，而这些问题基本都是 Python 惹的祸</p>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>在运行以下命令并不会导致数据重置等现象。但为了保险起见，建议您先备份后在执行。</p>
+</div>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>rm -rf /www/server/panel/pyenv</span></span>
+<span class="line"><span>rm -rf /www/server/panel/class</span></span>
+<span class="line"><span>curl http://download.bt.cn/install/update_panel.sh|bash</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+      <enclosure url="https://api.vlssu.com/img/?220925" type="image/"/>
     </item>
     <item>
       <title>使用阿里云CLI在1panel申请证书后自动上传阿里云DCDN</title>
@@ -88,25 +107,6 @@
 <span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  --endpoint</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> dcdn.aliyuncs.com</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
       <enclosure url="https://api.vlssu.com/img/?250509" type="image/"/>
-    </item>
-    <item>
-      <title>修复 BTpanel(宝塔) Python 环境（SSL续订错误）</title>
-      <link>https://blog.vlssu.com/views/notes/220925.html</link>
-      <guid>https://blog.vlssu.com/views/notes/220925.html</guid>
-      <source url="https://blog.vlssu.com/rss.xml">修复 BTpanel(宝塔) Python 环境（SSL续订错误）</source>
-      <description>在使用宝塔的时候，Python 很容易炸，在续签ssl证书的时候尤为明显，而这些问题基本都是 Python 惹的祸 提示 在运行以下命令并不会导致数据重置等现象。但为了保险起见，建议您先备份后在执行。</description>
-      <category>笔记</category>
-      <pubDate>Sun, 25 Sep 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>在使用宝塔的时候，Python 很容易炸，在续签ssl证书的时候尤为明显，而这些问题基本都是 Python 惹的祸</p>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>在运行以下命令并不会导致数据重置等现象。但为了保险起见，建议您先备份后在执行。</p>
-</div>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>rm -rf /www/server/panel/pyenv</span></span>
-<span class="line"><span>rm -rf /www/server/panel/class</span></span>
-<span class="line"><span>curl http://download.bt.cn/install/update_panel.sh|bash</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?220925" type="image/"/>
     </item>
     <item>
       <title>Windows安装node管理器</title>
@@ -485,8 +485,8 @@
 <h2>让Flarum支持中文搜索</h2>
 <p>MySQL 自5.7 开始支持FULLTEXT中文搜寻，重建索引即可</p>
 <p>修改<code>mysql.cnf</code>，加入：</p>
-<div class="language-cnf line-numbers-mode" data-highlighter="shiki" data-ext="cnf" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>[mysqld]</span></span>
-<span class="line"><span>ngram_token_size=2</span></span></code></pre>
+<div class="language-ini line-numbers-mode" data-highlighter="shiki" data-ext="ini" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[mysqld]</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">ngram_token_size</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">2</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>修改后需要重建FULLTEXT 索引</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>ALTER TABLE flarum_posts DROP INDEX content;</span></span>
 <span class="line"><span>CREATE FULLTEXT INDEX content ON `flarum_posts` (`content`) WITH PARSER ngram;</span></span>
@@ -1121,6 +1121,196 @@
       <enclosure url="https://api.vlssu.com/img/?210823" type="image/"/>
     </item>
     <item>
+      <title>android stadio Gradle 编译报错</title>
+      <link>https://blog.vlssu.com/views/notes/210209.html</link>
+      <guid>https://blog.vlssu.com/views/notes/210209.html</guid>
+      <source url="https://blog.vlssu.com/rss.xml">android stadio Gradle 编译报错</source>
+      <description>我在编译插件时一直在下载fastutil-xxx.jar 原因是需要翻墙(可惜我试过了，没用)。剩下的方法就是改镜像源了，在主要编译文件，如build.gradle，找到主代码组里头将镜像源改了。 我一改完就好了，不仅不用挂梯子，甚至速度贼快</description>
+      <category>笔记</category>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>我在编译插件时一直在下载<code>fastutil-xxx.jar</code></p>
+<p>原因是需要翻墙(可惜我试过了，没用)。剩下的方法就是改镜像源了，在主要编译文件，如<code>build.gradle</code>，找到主代码组里头将镜像源改了。</p>
+<p>我一改完就好了，不仅不用挂梯子，甚至速度贼快</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>buildscript {</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    repositories {</span></span>
+<span class="line"><span>        maven{ url = "http://maven.aliyun.com/nexus/content/groups/public/" }</span></span>
+<span class="line"><span>        google()</span></span>
+<span class="line"><span>        jcenter()</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    dependencies {</span></span>
+<span class="line"><span>        classpath 'com.android.tools.build:gradle:3.1.2'</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        // NOTE: Do not place your application dependencies here; they belong</span></span>
+<span class="line"><span>        // in the individual module build.gradle files</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>allprojects {</span></span>
+<span class="line"><span>    repositories {</span></span>
+<span class="line"><span>        maven{ url = "http://maven.aliyun.com/nexus/content/groups/public/" }</span></span>
+<span class="line"><span>        google()</span></span>
+<span class="line"><span>        jcenter()</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+      <enclosure url="https://api.vlssu.com/img/?210209" type="image/"/>
+    </item>
+    <item>
+      <title>数控编程中常用的指令（G代码、M代码）</title>
+      <link>https://blog.vlssu.com/views/notes/210913.html</link>
+      <guid>https://blog.vlssu.com/views/notes/210913.html</guid>
+      <source url="https://blog.vlssu.com/rss.xml">数控编程中常用的指令（G代码、M代码）</source>
+      <description>在数控编程中，有的编程指令是不常用的，有的只适用于某些特殊的数控机床。这里只要介绍一些常用的编程指令，对于不常用的编程指令，请参考使用的数控机床编程手册。 准备功能指令（G指令） 准备功能指令由字符G和其后的1~3位数字组成，其主要功能是指定机床的运动方式，为数控系统的插补运算作准备。G指令的有关规定和含义见表1。 注： 以上G代码均为模态指令（或续效...</description>
+      <category>笔记</category>
+      <pubDate>Mon, 13 Sep 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>在数控编程中，有的编程指令是不常用的，有的只适用于某些特殊的数控机床。这里只要介绍一些常用的编程指令，对于不常用的编程指令，请参考使用的数控机床编程手册。</p>
+<h2>准备功能指令（G指令）</h2>
+<p>准备功能指令由字符G和其后的1~3位数字组成，其主要功能是指定机床的运动方式，为数控系统的插补运算作准备。G指令的有关规定和含义见表1。</p>
+<p>|	G代码	|	功能	|<br>
+|	:</p>
+]]></content:encoded>
+      <enclosure url="https://api.vlssu.com/img/?210913" type="image/"/>
+    </item>
+    <item>
+      <title>使用CDN后 Apache 获取访问用户的真实 IP</title>
+      <link>https://blog.vlssu.com/views/notes/220301.html</link>
+      <guid>https://blog.vlssu.com/views/notes/220301.html</guid>
+      <source url="https://blog.vlssu.com/rss.xml">使用CDN后 Apache 获取访问用户的真实 IP</source>
+      <description>当网站启用 CDN 会给获取访客 IP 带来障碍，由于多了个代理流程，故日志记录 IP 变为 CDN 的 IP。基于 Apache 的网站要解决这个问题，需要使用以下模块通过 HTTP 标头里的 X_FORWARDED_FOR 字段获取访客 IP mod_remoteip mod_rpaf mod_remoteip 模块 Apache 2.4 Apac...</description>
+      <category>笔记</category>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>当网站启用 CDN 会给获取访客 IP 带来障碍，由于多了个代理流程，故日志记录 IP 变为 CDN 的 IP。基于 Apache 的网站要解决这个问题，需要使用以下模块通过 HTTP 标头里的 <code>X_FORWARDED_FOR</code> 字段获取访客 IP</p>
+<ul>
+<li>mod_remoteip</li>
+<li>mod_rpaf</li>
+</ul>
+<h2>mod_remoteip 模块</h2>
+<h3>Apache 2.4</h3>
+<p><code>Apache 2.4</code> 开始自带此模块，可用下面命令检查。</p>
+<div class="language-lua line-numbers-mode" data-highlighter="shiki" data-ext="lua" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 查询 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Apache</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 版本</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">etc</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">init</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.d/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">httpd</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> -</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">v</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 查询 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Apache</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 编译信息（可查看 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">httpd</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.conf 配置文件等路径，之后修改要知道）</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">etc</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">init</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.d/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">httpd</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> -</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">V</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 列出 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Apache</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 加载模块（里面有 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">remoteip_module</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 就说明已启用 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">mod_remoteip</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 模块）</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">etc</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">init</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.d/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">httpd</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> -</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">t</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> -</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">D</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> DUMP_MODULES</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 查看 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Apache</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 选项帮助</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">etc</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">init</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.d/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">httpd</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> -</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>有些情况可能是安装了模块，但默认没有启用。这样可以通过查看 <code>httpd.conf</code> 配置文件确认，里面有下面这行则表示已安装 <code>mod_remoteip</code> 模块，取消行注释即可使之启用。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>#LoadModule remoteip_module modules/mod_remoteip.so</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></div>
+<h3>Apache 2.2.x</h3>
+<p><code>Apache 2.2.x</code> 版本没有自带该模块，需要手动安装。首先下载这个基于 <code>Apache 2.4.1</code> 移植的 <code>mod_remoteip</code> 模块文件。如果是 <code>Apache</code> 高版本安装则下载对应版本（版本不同安装可能会报错）。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>wget &lt;https://raw.githubusercontent.com/ttkzw/mod_remoteip-httpd22/master/mod_remoteip.c&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>安装 <code>httpd-devel</code> 和 <code>gcc</code> 编译器以便稍后可以通过 <code>apxs</code> 扩展工具安装 <code>Apache</code> 模块。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>yum -y install httpd-devel gcc gcc-c++</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>运行下面命令安装 <code>mod_remoteip</code> 模块（其中参数选项含义可查阅此文档）。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>apxs -i -a -c mod_remoteip.c</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>创建 httpd-remoteip.conf 配置文件</h2>
+<p>在 <code>Apache</code> 扩展目录下创建 <code>remoteip</code> 配置文件。之前有介绍如何查看 <code>Apache</code> 目录路径。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>vi /www/server/apache/conf/extra/httpd-remoteip.conf</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>使用 <code>RemoteIPProxiesHeader</code> 从指定字段获取信任 CDN IP，这样不用设置指定代理 IP。更多 <code>Apache mod_remoteip</code> 选项参数介绍可参考<a href="https://httpd.apache.org/docs/2.4/mod/mod_remoteip.html" target="_blank" rel="noopener noreferrer">[这个文档]</a></p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>RemoteIPHeader X-Forwarded-For</span></span>
+<span class="line"><span>RemoteIPProxiesHeader X-Forwarded-By</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>编辑 httpd.conf 配置文件</h3>
+<p>先确认 <code>httpd.conf</code> 里已设置加载 <code>mod_remoteip</code> 模块，参数如下。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>LoadModule remoteip_module modules/mod_remoteip.so</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>在其下面添加一句，以链接上步创建的 <code>mod_remoteip</code> 配置文件。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Include conf/extra/httpd-remoteip.conf</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>再在文件里修改记录日志格式，使之记录访客 IP。搜索下面两行内容。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>LogFormat "%h %l %u %t \"%r\" %&gt;s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined</span></span>
+<span class="line"><span>LogFormat "%h %l %u %t \"%r\" %&gt;s %b" common</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>将里面的 %h 改为 %a（完整格式选项可查看此文档），修改后的内容如下。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>LogFormat "%a %l %u %t \"%r\" %&gt;s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined</span></span>
+<span class="line"><span>LogFormat "%a %l %u %t \"%r\" %&gt;s %b" common</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>保存文件修改，<code>/etc/init.d/httpd restart</code> 重启服务生效。</p>
+<h2>CloudFlare</h2>
+<p>在 <code>Apache</code> 扩展目录下创建 <code>remoteip</code> 配置文件。之前有介绍如何查看 <code>Apache</code> 目录路径。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>vi /www/server/apache/conf/extra/httpd-remoteip.conf</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>内容如下。首行指定代理 IP <code>Header</code>名，次行设置信任的 IP 地址和范围（多个用空格隔开。CloudFlare CDN IP 列表可<a href="https://www.cloudflare.com/ips/" target="_blank" rel="noopener noreferrer">在这获取</a>）</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>RemoteIPHeader X-Forwarded-For</span></span>
+<span class="line"><span>RemoteIPInternalProxy 173.245.48.0/20 103.21.244.0/22 ...</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>如果要添加的 CDN IP 太多，可用 <code>RemoteIPInternalProxyList</code> 指向一个 IP 列表文件（里面用空格或换行分隔）。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>RemoteIPHeader X-Forwarded-For</span></span>
+<span class="line"><span>RemoteIPInternalProxyList conf/cloudflare_ip.lst</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>如果用这种方式可以使用下面的脚本</p>
+<details class="hint-container details"><summary>自动更新 CloudFlare CDN IP 脚本</summary>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># !/usr/bin/env bash</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo "# CloudFlare Proxy IP;" &gt; /usr/local/apache/conf/cloudflare_ip.lst;</span></span>
+<span class="line"><span>for i in `curl https://www.cloudflare.com/ips-v4`; do</span></span>
+<span class="line"><span>    echo "$i" &gt;&gt; /usr/local/apache/conf/cloudflare_ip.lst;</span></span>
+<span class="line"><span>done</span></span>
+<span class="line"><span>for i in `curl https://www.cloudflare.com/ips-v6`; do</span></span>
+<span class="line"><span>    echo "$i" &gt;&gt; /usr/local/apache/conf/cloudflare_ip.lst;</span></span>
+<span class="line"><span>done</span></span>
+<span class="line"><span>echo "# End;" &gt;&gt; /usr/local/apache/conf/cloudflare_ip.lst;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>创建后 <code>chmod +x ./update_cloudflare_ip.sh</code> 赋予脚本可执行权限。然后 <code>crontab -e</code> 添加定期任务，例如每月 1 号凌晨 5 点 30 运行更新。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>30 5 1 ** /bin/bash /root/update_cloudflare_ip.sh 2&gt;&amp;1 &gt; /dev/null</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></details>
+<div style="text-align:right">
+<p>参考 <a href="https://www.hostarr.com/apache-mod_remoteip/" target="_blank" rel="noopener noreferrer">主机指南</a></p>
+</div>
+]]></content:encoded>
+      <enclosure url="https://api.vlssu.com/img/?220301" type="image/"/>
+    </item>
+    <item>
+      <title>使用CDN后 NGINX 获取访问用户的真实 IP</title>
+      <link>https://blog.vlssu.com/views/notes/220505.html</link>
+      <guid>https://blog.vlssu.com/views/notes/220505.html</guid>
+      <source url="https://blog.vlssu.com/rss.xml">使用CDN后 NGINX 获取访问用户的真实 IP</source>
+      <description>当网站启用 CDN 会给获取访客 IP 带来障碍，由于多了个代理流程，故日志记录 IP 变为 CDN 的 IP。基于 NGINX 的网站要解决这个问题，需要使用以下模块通过 HTTP 标头里的 X_FORWARDED_FOR 字段获取访客 IP 修改nginx.conf配置文件</description>
+      <category>笔记</category>
+      <pubDate>Thu, 05 May 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>当网站启用 CDN 会给获取访客 IP 带来障碍，由于多了个代理流程，故日志记录 IP 变为 CDN 的 IP。基于 NGINX 的网站要解决这个问题，需要使用以下模块通过 HTTP 标头里的 <code>X_FORWARDED_FOR</code> 字段获取访客 IP</p>
+<p>修改nginx.conf配置文件</p>
+<div class="language-lua line-numbers-mode" data-highlighter="shiki" data-ext="lua" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">http</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    {</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    …</span></span>
+<span class="line highlighted"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    log_format</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">  main</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  '$http_x_forwarded_for - $remote_user [$time_local] "$request" ' </span></span>
+<span class="line highlighted"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">                    '$status $body_bytes_sent "$http_referer" ' </span></span>
+<span class="line highlighted"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">                   '"$http_user_agent" '</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    …</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-lua line-numbers-mode" data-highlighter="shiki" data-ext="lua" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">server</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    {</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        …</span></span>
+<span class="line highlighted"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">        set_real_ip_from</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 127.0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.0.1; #服务器本地</span></span>
+<span class="line highlighted"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">        real_ip_header</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    X</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Forwarded</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">For</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line highlighted"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">        real_ip_recursive</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> on</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        …</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    }</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--
+https://cloud.tencent.com/developer/article/1050223
+-->]]></content:encoded>
+      <enclosure url="https://api.vlssu.com/img/?220505" type="image/"/>
+    </item>
+    <item>
+      <title>MySQL 8.0数据导入5.7及以下版本</title>
+      <link>https://blog.vlssu.com/views/notes/220601.html</link>
+      <guid>https://blog.vlssu.com/views/notes/220601.html</guid>
+      <source url="https://blog.vlssu.com/rss.xml">MySQL 8.0数据导入5.7及以下版本</source>
+      <description>前段时间我为了尝鲜 MySQL 8.0，谁知道占内存特别多，一些低内存的想用作备用的，但是 5.7 相对于 8.0 改了字符，导致不兼容了，所以我只能去网上找了些方法 8.0 于 5.7 之间的改动变化 表编码为 utf8mb4_0900_ai_ci 排序规则为 utf8mb4 因此打开.sql文件 使用notpad++或者txt都可以，进行全局替换就...</description>
+      <category>笔记</category>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>前段时间我为了尝鲜 MySQL 8.0，谁知道占内存特别多，一些低内存的想用作备用的，但是 5.7 相对于 8.0 改了字符，导致不兼容了，所以我只能去网上找了些方法</p>
+<ol>
+<li>8.0 于 5.7 之间的改动变化<br>
+表编码为 <code>utf8mb4_0900_ai_ci</code><br>
+排序规则为 <code>utf8mb4</code></li>
+</ol>
+<p>因此打开<code>.sql</code>文件 使用<code>notpad++</code>或者<code>txt</code>都可以，进行全局替换就好</p>
+<p>|原值|替换为|<br>
+|:</p>
+]]></content:encoded>
+      <enclosure url="https://api.vlssu.com/img/?220601" type="image/"/>
+    </item>
+    <item>
       <title>使用CDN后 Apache 获取访问用户的真实 IP</title>
       <link>https://blog.vlssu.com/views/tech-sharing/linux/apache-mod_remoteip.html</link>
       <guid>https://blog.vlssu.com/views/tech-sharing/linux/apache-mod_remoteip.html</guid>
@@ -1136,17 +1326,17 @@
 <h2>mod_remoteip 模块</h2>
 <h3>Apache 2.4</h3>
 <p><code>Apache 2.4</code> 开始自带此模块，可用下面命令检查。</p>
-<div class="language-httpd line-numbers-mode" data-highlighter="shiki" data-ext="httpd" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># 查询 Apache 版本</span></span>
-<span class="line"><span>/etc/init.d/httpd -v</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span># 查询 Apache 编译信息（可查看 httpd.conf 配置文件等路径，之后修改要知道）</span></span>
-<span class="line"><span>/etc/init.d/httpd -V</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span># 列出 Apache 加载模块（里面有 remoteip_module 就说明已启用 mod_remoteip 模块）</span></span>
-<span class="line"><span>/etc/init.d/httpd -t -D DUMP_MODULES</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span># 查看 Apache 选项帮助</span></span>
-<span class="line"><span>/etc/init.d/httpd -h</span></span></code></pre>
+<div class="language-lua line-numbers-mode" data-highlighter="shiki" data-ext="lua" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 查询 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Apache</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 版本</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">etc</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">init</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.d/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">httpd</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> -</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">v</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 查询 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Apache</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 编译信息（可查看 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">httpd</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.conf 配置文件等路径，之后修改要知道）</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">etc</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">init</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.d/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">httpd</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> -</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">V</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 列出 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Apache</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 加载模块（里面有 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">remoteip_module</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 就说明已启用 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">mod_remoteip</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 模块）</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">etc</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">init</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.d/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">httpd</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> -</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">t</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> -</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">D</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> DUMP_MODULES</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 查看 </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Apache</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 选项帮助</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">etc</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">init</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.d/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">httpd</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> -</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>有些情况可能是安装了模块，但默认没有启用。这样可以通过查看 <code>httpd.conf</code> 配置文件确认，里面有下面这行则表示已安装 <code>mod_remoteip</code> 模块，取消行注释即可使之启用。</p>
@@ -1477,21 +1667,21 @@
       <pubDate>Thu, 05 May 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>当网站启用 CDN 会给获取访客 IP 带来障碍，由于多了个代理流程，故日志记录 IP 变为 CDN 的 IP。基于 NGINX 的网站要解决这个问题，需要使用以下模块通过 HTTP 标头里的 <code>X_FORWARDED_FOR</code> 字段获取访客 IP</p>
 <p>修改nginx.conf配置文件</p>
-<div class="language-conf line-numbers-mode" data-highlighter="shiki" data-ext="conf" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>http</span></span>
-<span class="line"><span>    {</span></span>
-<span class="line"><span>    …</span></span>
-<span class="line highlighted"><span>    log_format  main  '$http_x_forwarded_for - $remote_user [$time_local] "$request" ' </span></span>
-<span class="line highlighted"><span>                    '$status $body_bytes_sent "$http_referer" ' </span></span>
-<span class="line highlighted"><span>                   '"$http_user_agent" ';</span></span>
-<span class="line"><span>    …</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-conf line-numbers-mode" data-highlighter="shiki" data-ext="conf" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>server</span></span>
-<span class="line"><span>    {</span></span>
-<span class="line"><span>        …</span></span>
-<span class="line highlighted"><span>        set_real_ip_from 127.0.0.1; #服务器本地</span></span>
-<span class="line highlighted"><span>        real_ip_header    X-Forwarded-For;</span></span>
-<span class="line highlighted"><span>        real_ip_recursive on;</span></span>
-<span class="line"><span>        …</span></span>
-<span class="line"><span>    }</span></span></code></pre>
+<div class="language-lua line-numbers-mode" data-highlighter="shiki" data-ext="lua" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">http</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    {</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    …</span></span>
+<span class="line highlighted"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    log_format</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">  main</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  '$http_x_forwarded_for - $remote_user [$time_local] "$request" ' </span></span>
+<span class="line highlighted"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">                    '$status $body_bytes_sent "$http_referer" ' </span></span>
+<span class="line highlighted"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">                   '"$http_user_agent" '</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    …</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-lua line-numbers-mode" data-highlighter="shiki" data-ext="lua" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">server</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    {</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        …</span></span>
+<span class="line highlighted"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">        set_real_ip_from</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 127.0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.0.1; #服务器本地</span></span>
+<span class="line highlighted"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">        real_ip_header</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    X</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Forwarded</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">For</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line highlighted"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">        real_ip_recursive</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> on</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        …</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    }</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--
 https://cloud.tencent.com/developer/article/1050223
 -->]]></content:encoded>
@@ -2466,196 +2656,6 @@ https://cloud.tencent.com/developer/article/1050223
 <figure><figcaption>设置映射信息</figcaption></figure>
 ]]></content:encoded>
       <enclosure url="https://api.vlssu.com/img/ver/?200225" type="image/"/>
-    </item>
-    <item>
-      <title>android stadio Gradle 编译报错</title>
-      <link>https://blog.vlssu.com/views/notes/210209.html</link>
-      <guid>https://blog.vlssu.com/views/notes/210209.html</guid>
-      <source url="https://blog.vlssu.com/rss.xml">android stadio Gradle 编译报错</source>
-      <description>我在编译插件时一直在下载fastutil-xxx.jar 原因是需要翻墙(可惜我试过了，没用)。剩下的方法就是改镜像源了，在主要编译文件，如build.gradle，找到主代码组里头将镜像源改了。 我一改完就好了，不仅不用挂梯子，甚至速度贼快</description>
-      <category>笔记</category>
-      <pubDate>Tue, 09 Feb 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>我在编译插件时一直在下载<code>fastutil-xxx.jar</code></p>
-<p>原因是需要翻墙(可惜我试过了，没用)。剩下的方法就是改镜像源了，在主要编译文件，如<code>build.gradle</code>，找到主代码组里头将镜像源改了。</p>
-<p>我一改完就好了，不仅不用挂梯子，甚至速度贼快</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>buildscript {</span></span>
-<span class="line"><span>    </span></span>
-<span class="line"><span>    repositories {</span></span>
-<span class="line"><span>        maven{ url = "http://maven.aliyun.com/nexus/content/groups/public/" }</span></span>
-<span class="line"><span>        google()</span></span>
-<span class="line"><span>        jcenter()</span></span>
-<span class="line"><span>    }</span></span>
-<span class="line"><span>    dependencies {</span></span>
-<span class="line"><span>        classpath 'com.android.tools.build:gradle:3.1.2'</span></span>
-<span class="line"><span>        </span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>        // NOTE: Do not place your application dependencies here; they belong</span></span>
-<span class="line"><span>        // in the individual module build.gradle files</span></span>
-<span class="line"><span>    }</span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>allprojects {</span></span>
-<span class="line"><span>    repositories {</span></span>
-<span class="line"><span>        maven{ url = "http://maven.aliyun.com/nexus/content/groups/public/" }</span></span>
-<span class="line"><span>        google()</span></span>
-<span class="line"><span>        jcenter()</span></span>
-<span class="line"><span>    }</span></span>
-<span class="line"><span>}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?210209" type="image/"/>
-    </item>
-    <item>
-      <title>数控编程中常用的指令（G代码、M代码）</title>
-      <link>https://blog.vlssu.com/views/notes/210913.html</link>
-      <guid>https://blog.vlssu.com/views/notes/210913.html</guid>
-      <source url="https://blog.vlssu.com/rss.xml">数控编程中常用的指令（G代码、M代码）</source>
-      <description>在数控编程中，有的编程指令是不常用的，有的只适用于某些特殊的数控机床。这里只要介绍一些常用的编程指令，对于不常用的编程指令，请参考使用的数控机床编程手册。 准备功能指令（G指令） 准备功能指令由字符G和其后的1~3位数字组成，其主要功能是指定机床的运动方式，为数控系统的插补运算作准备。G指令的有关规定和含义见表1。 注： 以上G代码均为模态指令（或续效...</description>
-      <category>笔记</category>
-      <pubDate>Mon, 13 Sep 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>在数控编程中，有的编程指令是不常用的，有的只适用于某些特殊的数控机床。这里只要介绍一些常用的编程指令，对于不常用的编程指令，请参考使用的数控机床编程手册。</p>
-<h2>准备功能指令（G指令）</h2>
-<p>准备功能指令由字符G和其后的1~3位数字组成，其主要功能是指定机床的运动方式，为数控系统的插补运算作准备。G指令的有关规定和含义见表1。</p>
-<p>|	G代码	|	功能	|<br>
-|	:</p>
-]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?210913" type="image/"/>
-    </item>
-    <item>
-      <title>使用CDN后 Apache 获取访问用户的真实 IP</title>
-      <link>https://blog.vlssu.com/views/notes/220301.html</link>
-      <guid>https://blog.vlssu.com/views/notes/220301.html</guid>
-      <source url="https://blog.vlssu.com/rss.xml">使用CDN后 Apache 获取访问用户的真实 IP</source>
-      <description>当网站启用 CDN 会给获取访客 IP 带来障碍，由于多了个代理流程，故日志记录 IP 变为 CDN 的 IP。基于 Apache 的网站要解决这个问题，需要使用以下模块通过 HTTP 标头里的 X_FORWARDED_FOR 字段获取访客 IP mod_remoteip mod_rpaf mod_remoteip 模块 Apache 2.4 Apac...</description>
-      <category>笔记</category>
-      <pubDate>Tue, 01 Mar 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>当网站启用 CDN 会给获取访客 IP 带来障碍，由于多了个代理流程，故日志记录 IP 变为 CDN 的 IP。基于 Apache 的网站要解决这个问题，需要使用以下模块通过 HTTP 标头里的 <code>X_FORWARDED_FOR</code> 字段获取访客 IP</p>
-<ul>
-<li>mod_remoteip</li>
-<li>mod_rpaf</li>
-</ul>
-<h2>mod_remoteip 模块</h2>
-<h3>Apache 2.4</h3>
-<p><code>Apache 2.4</code> 开始自带此模块，可用下面命令检查。</p>
-<div class="language-httpd line-numbers-mode" data-highlighter="shiki" data-ext="httpd" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># 查询 Apache 版本</span></span>
-<span class="line"><span>/etc/init.d/httpd -v</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span># 查询 Apache 编译信息（可查看 httpd.conf 配置文件等路径，之后修改要知道）</span></span>
-<span class="line"><span>/etc/init.d/httpd -V</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span># 列出 Apache 加载模块（里面有 remoteip_module 就说明已启用 mod_remoteip 模块）</span></span>
-<span class="line"><span>/etc/init.d/httpd -t -D DUMP_MODULES</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span># 查看 Apache 选项帮助</span></span>
-<span class="line"><span>/etc/init.d/httpd -h</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>有些情况可能是安装了模块，但默认没有启用。这样可以通过查看 <code>httpd.conf</code> 配置文件确认，里面有下面这行则表示已安装 <code>mod_remoteip</code> 模块，取消行注释即可使之启用。</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>#LoadModule remoteip_module modules/mod_remoteip.so</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></div>
-<h3>Apache 2.2.x</h3>
-<p><code>Apache 2.2.x</code> 版本没有自带该模块，需要手动安装。首先下载这个基于 <code>Apache 2.4.1</code> 移植的 <code>mod_remoteip</code> 模块文件。如果是 <code>Apache</code> 高版本安装则下载对应版本（版本不同安装可能会报错）。</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>wget &lt;https://raw.githubusercontent.com/ttkzw/mod_remoteip-httpd22/master/mod_remoteip.c&gt;</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>安装 <code>httpd-devel</code> 和 <code>gcc</code> 编译器以便稍后可以通过 <code>apxs</code> 扩展工具安装 <code>Apache</code> 模块。</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>yum -y install httpd-devel gcc gcc-c++</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>运行下面命令安装 <code>mod_remoteip</code> 模块（其中参数选项含义可查阅此文档）。</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>apxs -i -a -c mod_remoteip.c</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>创建 httpd-remoteip.conf 配置文件</h2>
-<p>在 <code>Apache</code> 扩展目录下创建 <code>remoteip</code> 配置文件。之前有介绍如何查看 <code>Apache</code> 目录路径。</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>vi /www/server/apache/conf/extra/httpd-remoteip.conf</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>使用 <code>RemoteIPProxiesHeader</code> 从指定字段获取信任 CDN IP，这样不用设置指定代理 IP。更多 <code>Apache mod_remoteip</code> 选项参数介绍可参考<a href="https://httpd.apache.org/docs/2.4/mod/mod_remoteip.html" target="_blank" rel="noopener noreferrer">[这个文档]</a></p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>RemoteIPHeader X-Forwarded-For</span></span>
-<span class="line"><span>RemoteIPProxiesHeader X-Forwarded-By</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>编辑 httpd.conf 配置文件</h3>
-<p>先确认 <code>httpd.conf</code> 里已设置加载 <code>mod_remoteip</code> 模块，参数如下。</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>LoadModule remoteip_module modules/mod_remoteip.so</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>在其下面添加一句，以链接上步创建的 <code>mod_remoteip</code> 配置文件。</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Include conf/extra/httpd-remoteip.conf</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>再在文件里修改记录日志格式，使之记录访客 IP。搜索下面两行内容。</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>LogFormat "%h %l %u %t \"%r\" %&gt;s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined</span></span>
-<span class="line"><span>LogFormat "%h %l %u %t \"%r\" %&gt;s %b" common</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>将里面的 %h 改为 %a（完整格式选项可查看此文档），修改后的内容如下。</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>LogFormat "%a %l %u %t \"%r\" %&gt;s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined</span></span>
-<span class="line"><span>LogFormat "%a %l %u %t \"%r\" %&gt;s %b" common</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>保存文件修改，<code>/etc/init.d/httpd restart</code> 重启服务生效。</p>
-<h2>CloudFlare</h2>
-<p>在 <code>Apache</code> 扩展目录下创建 <code>remoteip</code> 配置文件。之前有介绍如何查看 <code>Apache</code> 目录路径。</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>vi /www/server/apache/conf/extra/httpd-remoteip.conf</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>内容如下。首行指定代理 IP <code>Header</code>名，次行设置信任的 IP 地址和范围（多个用空格隔开。CloudFlare CDN IP 列表可<a href="https://www.cloudflare.com/ips/" target="_blank" rel="noopener noreferrer">在这获取</a>）</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>RemoteIPHeader X-Forwarded-For</span></span>
-<span class="line"><span>RemoteIPInternalProxy 173.245.48.0/20 103.21.244.0/22 ...</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>如果要添加的 CDN IP 太多，可用 <code>RemoteIPInternalProxyList</code> 指向一个 IP 列表文件（里面用空格或换行分隔）。</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>RemoteIPHeader X-Forwarded-For</span></span>
-<span class="line"><span>RemoteIPInternalProxyList conf/cloudflare_ip.lst</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>如果用这种方式可以使用下面的脚本</p>
-<details class="hint-container details"><summary>自动更新 CloudFlare CDN IP 脚本</summary>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># !/usr/bin/env bash</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>echo "# CloudFlare Proxy IP;" &gt; /usr/local/apache/conf/cloudflare_ip.lst;</span></span>
-<span class="line"><span>for i in `curl https://www.cloudflare.com/ips-v4`; do</span></span>
-<span class="line"><span>    echo "$i" &gt;&gt; /usr/local/apache/conf/cloudflare_ip.lst;</span></span>
-<span class="line"><span>done</span></span>
-<span class="line"><span>for i in `curl https://www.cloudflare.com/ips-v6`; do</span></span>
-<span class="line"><span>    echo "$i" &gt;&gt; /usr/local/apache/conf/cloudflare_ip.lst;</span></span>
-<span class="line"><span>done</span></span>
-<span class="line"><span>echo "# End;" &gt;&gt; /usr/local/apache/conf/cloudflare_ip.lst;</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>创建后 <code>chmod +x ./update_cloudflare_ip.sh</code> 赋予脚本可执行权限。然后 <code>crontab -e</code> 添加定期任务，例如每月 1 号凌晨 5 点 30 运行更新。</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>30 5 1 ** /bin/bash /root/update_cloudflare_ip.sh 2&gt;&amp;1 &gt; /dev/null</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></details>
-<div style="text-align:right">
-<p>参考 <a href="https://www.hostarr.com/apache-mod_remoteip/" target="_blank" rel="noopener noreferrer">主机指南</a></p>
-</div>
-]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?220301" type="image/"/>
-    </item>
-    <item>
-      <title>使用CDN后 NGINX 获取访问用户的真实 IP</title>
-      <link>https://blog.vlssu.com/views/notes/220505.html</link>
-      <guid>https://blog.vlssu.com/views/notes/220505.html</guid>
-      <source url="https://blog.vlssu.com/rss.xml">使用CDN后 NGINX 获取访问用户的真实 IP</source>
-      <description>当网站启用 CDN 会给获取访客 IP 带来障碍，由于多了个代理流程，故日志记录 IP 变为 CDN 的 IP。基于 NGINX 的网站要解决这个问题，需要使用以下模块通过 HTTP 标头里的 X_FORWARDED_FOR 字段获取访客 IP 修改nginx.conf配置文件</description>
-      <category>笔记</category>
-      <pubDate>Thu, 05 May 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>当网站启用 CDN 会给获取访客 IP 带来障碍，由于多了个代理流程，故日志记录 IP 变为 CDN 的 IP。基于 NGINX 的网站要解决这个问题，需要使用以下模块通过 HTTP 标头里的 <code>X_FORWARDED_FOR</code> 字段获取访客 IP</p>
-<p>修改nginx.conf配置文件</p>
-<div class="language-conf line-numbers-mode" data-highlighter="shiki" data-ext="conf" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>http</span></span>
-<span class="line"><span>    {</span></span>
-<span class="line"><span>    …</span></span>
-<span class="line highlighted"><span>    log_format  main  '$http_x_forwarded_for - $remote_user [$time_local] "$request" ' </span></span>
-<span class="line highlighted"><span>                    '$status $body_bytes_sent "$http_referer" ' </span></span>
-<span class="line highlighted"><span>                   '"$http_user_agent" ';</span></span>
-<span class="line"><span>    …</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-conf line-numbers-mode" data-highlighter="shiki" data-ext="conf" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>server</span></span>
-<span class="line"><span>    {</span></span>
-<span class="line"><span>        …</span></span>
-<span class="line highlighted"><span>        set_real_ip_from 127.0.0.1; #服务器本地</span></span>
-<span class="line highlighted"><span>        real_ip_header    X-Forwarded-For;</span></span>
-<span class="line highlighted"><span>        real_ip_recursive on;</span></span>
-<span class="line"><span>        …</span></span>
-<span class="line"><span>    }</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--
-https://cloud.tencent.com/developer/article/1050223
--->]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?220505" type="image/"/>
-    </item>
-    <item>
-      <title>MySQL 8.0数据导入5.7及以下版本</title>
-      <link>https://blog.vlssu.com/views/notes/220601.html</link>
-      <guid>https://blog.vlssu.com/views/notes/220601.html</guid>
-      <source url="https://blog.vlssu.com/rss.xml">MySQL 8.0数据导入5.7及以下版本</source>
-      <description>前段时间我为了尝鲜 MySQL 8.0，谁知道占内存特别多，一些低内存的想用作备用的，但是 5.7 相对于 8.0 改了字符，导致不兼容了，所以我只能去网上找了些方法 8.0 于 5.7 之间的改动变化 表编码为 utf8mb4_0900_ai_ci 排序规则为 utf8mb4 因此打开.sql文件 使用notpad++或者txt都可以，进行全局替换就...</description>
-      <category>笔记</category>
-      <pubDate>Wed, 01 Jun 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>前段时间我为了尝鲜 MySQL 8.0，谁知道占内存特别多，一些低内存的想用作备用的，但是 5.7 相对于 8.0 改了字符，导致不兼容了，所以我只能去网上找了些方法</p>
-<ol>
-<li>8.0 于 5.7 之间的改动变化<br>
-表编码为 <code>utf8mb4_0900_ai_ci</code><br>
-排序规则为 <code>utf8mb4</code></li>
-</ol>
-<p>因此打开<code>.sql</code>文件 使用<code>notpad++</code>或者<code>txt</code>都可以，进行全局替换就好</p>
-<p>|原值|替换为|<br>
-|:</p>
-]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?220601" type="image/"/>
     </item>
     <item>
       <title>Markdown基本语法</title>
