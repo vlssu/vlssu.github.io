@@ -12,10 +12,22 @@ categories:
 ---
 
 1. 安装github
+
+::: code-tabs
+@tab Centos
+
 ```bash
-yum install git -y # (Centos)
-apt install git # (Ubuntu)
+yum install git -y
 ```
+
+@tab Ubuntu
+
+```bash
+apt install git -y
+```
+
+:::
+
 2. 安装node.js管理器等组件
 ```bash
 git clone https://github.com/creationix/nvm.git ~/nvm

@@ -51,12 +51,18 @@ wget -qO- https://gitee.com/mcsmanager/script/raw/master/setup.sh | bash
 ## 环境部署
 ### 系统更新
 - 首先你要确保你的系统是最新的
+
+::: code-tabs
+@tab Centos
 ```bash
-yum update # (Centos)
-//Ubuntu需要两条指令来升级
-apt-get update -y # (Ubuntu)
-apt-get upgrade -y # (Ubuntu)
+yum update
 ```
+@tab Ubuntu
+```bash
+apt-get update -y
+apt-get upgrade -y
+```
+:::
 
 ### 安装node.js
 

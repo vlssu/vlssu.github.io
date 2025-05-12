@@ -48,22 +48,38 @@ wget -qO- https://gitee.com/Suwingser/MCSManager-installer/raw/master/install.sh
 ## 环境部署
 ### 系统更新
 - 首先你要确保你的系统是最新的
+
+::: code-tabs
+@tab Centos
 ```bash
-yum update # (Centos)
-//Ubuntu需要两条指令来升级
-apt-get update -y # (Ubuntu)
-apt-get upgrade -y # (Ubuntu)
+yum update
 ```
+@tab Ubuntu
+```bash
+apt-get update -y
+apt-get upgrade -y
+```
+:::
 
 ### 安装node.js
 
 - **若发现国内下载很慢可以参考这篇来使用国内镜像部署**[**[Linux系统如何安装node管理器]**](../linux/node.html)
 
 1. 安装Git
+::: code-tabs
+@tab Centos
+
 ```bash
-yum install git -y # (Centos)
-apt install git # (Ubuntu)
+yum install git -y
 ```
+
+@tab Ubuntu
+
+```bash
+apt install git -y
+```
+
+:::
 2. 安装node.js管理器等组件
 ```bash
 git clone https://github.com/creationix/nvm.git ~/nvm

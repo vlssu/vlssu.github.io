@@ -26,7 +26,7 @@ yum install java-1.8.0-openjdk java-1.8.0-openjdk-devel
 
 ![复制版本的位置](./images/java8_1.png)
 
-2. 查看`java8`安装位置 # (Centos)
+2. 查看`java8`安装位置
 
 通过此方法安装的java放在固定位置
 ```bash
@@ -34,7 +34,7 @@ ll /usr/lib/jvm
 ```
 ![java8固定位置](./images/java8_2.png)
 
-3. 设置环境变量 # (Centos)
+3. 设置环境变量
 ```bash
 vi /etc/profile
 ```
