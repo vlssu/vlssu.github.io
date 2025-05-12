@@ -26,6 +26,9 @@ export default hopeTheme({
 
   // 页脚
   footer: '<a href="https://beian.miit.gov.cn">沪ICP备2024046839号-21</a>',
+  copyright: "CC BY-SA 4.0 Licensed | Copyright © 2018 - 2025 飒爽师叔",
+  license: "CC BY-SA 4.0",
+
   displayFooter: true,
 
   // 博客相关
@@ -162,7 +165,7 @@ export default hopeTheme({
     feed: true,
 
     copyright: {
-      author: "飒爽师叔",
+      global: true,
     },
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释

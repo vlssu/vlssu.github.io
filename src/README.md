@@ -54,7 +54,7 @@ projects:
   #   desc: 伙伴详细介绍
   #   link: https://你的伙伴链接
 
-footer:  <a href="https://beian.miit.gov.cn">沪ICP备2024046839号-21</a>
+# footer:  <a href="https://beian.miit.gov.cn">沪ICP备2024046839号-21</a>
 ---
 
 <!-- 这是一个博客主页的案例。
