@@ -6,8 +6,8 @@
     <link>https://blog.vlssu.com/</link>
     <description>Share knowledge and stay happy</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 12 May 2025 12:01:46 GMT</pubDate>
-    <lastBuildDate>Mon, 12 May 2025 12:01:46 GMT</lastBuildDate>
+    <pubDate>Mon, 12 May 2025 13:42:43 GMT</pubDate>
+    <lastBuildDate>Mon, 12 May 2025 13:42:43 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -210,13 +210,13 @@
       <category>笔记</category>
       <pubDate>Thu, 31 Aug 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>首次部署时</h2>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mkdir</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -p</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /data/docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker</span></span>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mkdir</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -p</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /data/docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ln</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -s</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /data/docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h2>已有数据迁移时</h2>
 <ol>
 <li>暂停docker服务</li>
 </ol>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> stop</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> docker</span></span>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> stop</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> docker</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 查看dokcer服务是否停止完毕</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> status</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> docker</span></span>
@@ -225,31 +225,31 @@
 <li>拷贝/var/lib目录到挂载目录</li>
 </ol>
 <p>挂载目录以<code>/data</code>为例</p>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">cp</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -r</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /data/docker</span></span></code></pre>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">cp</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -r</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /data/docker</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><ol start="3">
 <li>备份原有数据</li>
 </ol>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mv</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker_bk</span></span></code></pre>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mv</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker_bk</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><ol start="4">
 <li>创建软链接</li>
 </ol>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ln</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -s</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /data/docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker</span></span>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ln</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -s</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /data/docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 查看软链接是否生效</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ll</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="5">
 <li>启动docker服务</li>
 </ol>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> docker</span></span></code></pre>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> docker</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><ol start="6">
 <li>查看容器是否正常拉起</li>
 </ol>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ps</span></span></code></pre>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ps</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><ol start="7">
 <li>删掉备份目录</li>
 </ol>
 <p>如果迁移成功，可以删除备份的目录</p>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">rm</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -rf</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker_bk</span></span></code></pre>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">rm</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -rf</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/docker_bk</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content:encoded>
       <enclosure url="https://api.vlssu.com/img/?230831" type="image/"/>
     </item>
@@ -507,19 +507,13 @@
 <ul>
 <li>首先你要确保你的系统是最新的</li>
 </ul>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> update</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # (Centos)</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">//Ubuntu需要两条指令来升级</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">apt-get</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> update</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -y</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # (Ubuntu)</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">apt-get</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> upgrade</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -y</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # (Ubuntu)</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>宝塔安装</h3>
+
+<h3>宝塔安装</h3>
 <ol>
 <li>使用指令安装</li>
 </ol>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">//Centos指令</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -y</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> wget</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &amp;&amp; </span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">wget</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -O</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install.sh</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> http://download.bt.cn/install/install_6.0.sh</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &amp;&amp; </span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sh</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install.sh</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">//Ubuntu指令</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">wget</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -O</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install.sh</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> http://download.bt.cn/install/install-ubuntu_6.0.sh</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &amp;&amp; </span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> bash</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install.sh</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">if</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> [ </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-f</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> /usr/bin/curl ];</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">then</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> curl -sSO https://download.bt.cn/install/install_panel.sh;</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">else</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> wget -O install_panel.sh https://download.bt.cn/install/install_panel.sh;</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">fi</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">bash</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install_panel.sh</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ed8484bec</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><ol start="2">
 <li>安装所需环境</li>
 </ol>
 <ul>
@@ -562,7 +556,7 @@
 <li><a href="https://nextcloud.com/install/#instructions-server" target="_blank" rel="noopener noreferrer">[前往Nextcloud下载页]</a>下载<strong>NextCloud</strong>安装包，并上传至服务器或<code>cd</code>到你要部署的文件夹自行下方命令</li>
 <li><strong>注意！</strong> 链接非统一性，在官方随时更新版本链接随时变更，链接最好前往官方获取链接</li>
 </ul>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">wget</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -c</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> https://download.nextcloud.com/server/releases/nextcloud-22.1.1.zip</span></span></code></pre>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">wget</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -c</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> https://download.nextcloud.com/server/releases/nextcloud-22.1.1.zip</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><figure><figcaption>下载nextcloud</figcaption></figure>
 <ol start="2">
 <li>解压压缩包<code>nextcloud-22.1.1.zip</code></li>
@@ -575,7 +569,7 @@
 <ol start="4">
 <li>删除无用文件的<code>nextcloud``nextcloud-18.0.1.zip</code>，不删除容易出错</li>
 </ol>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">rm</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -rf</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> nextcloud</span></span>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">rm</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -rf</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> nextcloud</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">rm</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -rf</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> nextcloud-18.0.1.zip</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><ol start="5">
 <li>变更权限组合权限，权限选择「755」+用户组选择「www」，最后确定即可</li>
@@ -589,7 +583,7 @@
 <li>点击安装后就安装好啦</li>
 </ol>
 <h2>维护模式指令</h2>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -u</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> www</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> php</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> occ</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> maintenance:mode</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --on</span></span>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -u</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> www</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> php</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> occ</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> maintenance:mode</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --on</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -u</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> www</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> php</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> occ</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> maintenance:mode</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --off</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h2>解决后续问题</h2>
 <ul>
@@ -601,13 +595,13 @@
 <p class="hint-container-title">提示</p>
 <p>宝塔php点击<strong>配置修改</strong>，编辑<code>脚本内存限制</code>,给<strong>512M</strong>即可</p>
 </div>
-<h3>PHP 的 OPcache 模块未载入。推荐开启获得更好的性能。</h3>
+<h3>PHP 的 OPcache 模块未载入。推荐开启获得更好的性能</h3>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>按照提示在php配置文件中搜索Zend ZendGuard Loader，添加：</p>
 <div class="language-ini line-numbers-mode" data-highlighter="shiki" data-ext="ini" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">zend_extension</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">opcache.so</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></div>
-<h3>PHP 的组件 OPcache 没有正确配置。 为了提供更好的性能，我们建议在 php.ini中使用下列设置：</h3>
+<h3>PHP 的组件 OPcache 没有正确配置。 为了提供更好的性能，我们建议在 php.ini中使用下列设置</h3>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>宝塔php点击安装<code>opcache</code>。</p>
@@ -619,7 +613,7 @@
 <p>宝塔php点击安装<code>imagemagick</code>。</p>
 <figure><figcaption>安装imagemagick</figcaption></figure>
 </div>
-<h3>内存缓存未配置，为了提升使用体验，请尽量配置内存缓存。</h3>
+<h3>内存缓存未配置，为了提升使用体验，请尽量配置内存缓存</h3>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>宝塔php点击安装<code>apcu</code> ，编辑<code>/config</code>下的<code>config.php</code>在<code>);</code>前加入以下代码：<br>
@@ -633,7 +627,7 @@
 <div class="language-php line-numbers-mode" data-highlighter="shiki" data-ext="php" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#986801;--shiki-dark:#ABB2BF">apc</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#ABB2BF">enable_cli</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>然后重启电脑</p>
 </div>
-<h3>您的安装没有设置默认的电话区域。这对验证配置设定中没有国家代码的电话号码而言是必需的。要允许没有国家代码的电话号码，请添加带区域相应的 ISO 3166-1 code ↗ 的“默认_电话_区域”到你的配置文件中。</h3>
+<h3>您的安装没有设置默认的电话区域。这对验证配置设定中没有国家代码的电话号码而言是必需的。要允许没有国家代码的电话号码，请添加带区域相应的 ISO 3166-1 code ↗ 的“默认_电话_区域”到你的配置文件中</h3>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>编辑<code>/config</code>下的<code>config.php</code>在<code>);</code>前加入以下代码：</p>
@@ -646,17 +640,17 @@
 <p>宝塔php点击安装<code>gmp</code></p>
 <figure><figcaption>安装gmp</figcaption></figure>
 </div>
-<h3>数据库中的一些列由于进行长整型转换而缺失。</h3>
+<h3>数据库中的一些列由于进行长整型转换而缺失</h3>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>cd到nextcloud目录，执行</p>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -u</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> www</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> php</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> occ</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> db:convert-filecache-bigint</span></span></code></pre>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -u</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> www</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> php</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> occ</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> db:convert-filecache-bigint</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></div>
-<h3>数据库丢失了一些索引。</h3>
+<h3>数据库丢失了一些索引</h3>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>cd到nextcloud目录，执行</p>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -u</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> www</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> php</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> occ</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> db:add-missing-indices</span></span></code></pre>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -u</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> www</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> php</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> occ</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> db:add-missing-indices</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></div>
 <h3>美化URL，去除入口文件index.php</h3>
 <div class="hint-container tip">
@@ -664,14 +658,14 @@
 <p>使用config.php+OCC命令生成<code>.htaccess</code>。编辑<code>/config/config.php</code>添加规则：</p>
 <div class="language-php line-numbers-mode" data-highlighter="shiki" data-ext="php" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'htaccess.RewriteBase'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =&gt; </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'/'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>然后使用occ命令生成.htaccess文件：</p>
-<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -u</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> www</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> php</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> occ</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> maintenance:update:htaccess</span></span></code></pre>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -u</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> www</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> php</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> occ</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> maintenance:update:htaccess</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></div>
 <h3>通过 HTTP 访问网站不安全。强烈建议您将服务器设置成要求使用HTTPS 协议</h3>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>去证书网站申请证书即可。</p>
 </div>
-<h3>HTTP的请求头 "Strict-Transport-Security" 未设置为至少 "15552000" 秒。为了提高安全性，建议参照security tips 中的说明启用HSTS。</h3>
+<h3>HTTP的请求头 "Strict-Transport-Security" 未设置为至少 "15552000" 秒。为了提高安全性，建议参照security tips 中的说明启用HSTS</h3>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>在站点配置文件里面添加如下代码，然后重启Apache即可。</p>
@@ -1359,7 +1353,7 @@
       <link>https://blog.vlssu.com/views/tech-sharing/linux/java8.html</link>
       <guid>https://blog.vlssu.com/views/tech-sharing/linux/java8.html</guid>
       <source url="https://blog.vlssu.com/rss.xml">如何在Linux系统中安装Java8</source>
-      <description>Centos 使用yum安装java8。 查看java版本库 在新的编译版本可以不用配置了，但旧版可能还是需要配置 安装完毕后如下图，需复制图中箭头指向的名称，java8完整版本名称。后面设置环境变量会用到。 复制版本的位置复制版本的位置 查看java8安装位置 # (Centos) 通过此方法安装的java放在固定位置 java8固定位置java8固...</description>
+      <description>Centos 使用yum安装java8。 查看java版本库 在新的编译版本可以不用配置了，但旧版可能还是需要配置 安装完毕后如下图，需复制图中箭头指向的名称，java8完整版本名称。后面设置环境变量会用到。 复制版本的位置复制版本的位置 查看java8安装位置 通过此方法安装的java放在固定位置 java8固定位置java8固定位置 设置环境变量 ...</description>
       <category>Linux使用小知识</category>
       <pubDate>Tue, 21 Apr 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>Centos</h2>
@@ -1374,13 +1368,13 @@
 <p>安装完毕后如下图，需复制图中箭头指向的名称，<code>java8</code>完整版本名称。后面设置环境变量会用到。</p>
 <figure><figcaption>复制版本的位置</figcaption></figure>
 <ol start="2">
-<li>查看<code>java8</code>安装位置 # (Centos)</li>
+<li>查看<code>java8</code>安装位置</li>
 </ol>
 <p>通过此方法安装的java放在固定位置</p>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ll</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /usr/lib/jvm</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><figure><figcaption>java8固定位置</figcaption></figure>
 <ol start="3">
-<li>设置环境变量 # (Centos)</li>
+<li>设置环境变量</li>
 </ol>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">vi</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /etc/profile</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>编辑该文件，在末尾加上如下内容：（jdk版本需自行填写，上面复制的版本）</p>
@@ -1507,9 +1501,8 @@ https://cloud.tencent.com/developer/article/1050223
       <content:encoded><![CDATA[<ol>
 <li>安装github</li>
 </ol>
-<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> git</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -y</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # (Centos)</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">apt</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> git</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # (Ubuntu)</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+
+<ol start="2">
 <li>安装node.js管理器等组件</li>
 </ol>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">git</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> clone</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> https://github.com/creationix/nvm.git</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ~/nvm</span></span>
@@ -2005,20 +1998,16 @@ https://cloud.tencent.com/developer/article/1050223
 <ul>
 <li>首先你要确保你的系统是最新的</li>
 </ul>
-<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> update</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # (Centos)</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">//Ubuntu需要两条指令来升级</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">apt-get</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> update</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -y</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # (Ubuntu)</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">apt-get</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> upgrade</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -y</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # (Ubuntu)</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>安装node.js</h3>
+
+<h3>安装node.js</h3>
 <ul>
 <li><strong>若发现国内下载很慢可以参考这篇来使用国内镜像部署</strong><a href="/views/tech-sharing/linux/node.html" target="_blank"><strong>[Linux系统如何安装node管理器]</strong></a></li>
 </ul>
 <ol>
 <li>安装Git</li>
 </ol>
-<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> git</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -y</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # (Centos)</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">apt</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> git</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # (Ubuntu)</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+
+<ol start="2">
 <li>安装node.js管理器等组件</li>
 </ol>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">git</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> clone</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> https://github.com/creationix/nvm.git</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ~/nvm</span></span>
@@ -2244,11 +2233,8 @@ https://cloud.tencent.com/developer/article/1050223
 <ul>
 <li>首先你要确保你的系统是最新的</li>
 </ul>
-<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> update</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # (Centos)</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">//Ubuntu需要两条指令来升级</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">apt-get</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> update</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -y</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # (Ubuntu)</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">apt-get</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> upgrade</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -y</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # (Ubuntu)</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>安装node.js</h3>
+
+<h3>安装node.js</h3>
 <ul>
 <li><strong>若发现国内下载很慢可以参考这篇来使用国内镜像部署</strong><a href="/views/tech-sharing/linux/node.html" target="_blank"><strong>[Linux系统如何安装node管理器]</strong></a></li>
 </ul>
