@@ -21,8 +21,13 @@ projects:
 
   - icon: book
     name: vlssu文档
-    desc: 我在运营项目的所有文档
+    desc: 我运营项目所有文档
     link: https://docs.vlssu.com
+
+  - icon: https://www.mofuc.cn/zb_users/upload/2024/10/20241025183536172985253620223.jpg
+    name: 小奏笔记
+    desc: 一个鸽子的网站
+    link: https://www.mofuc.cn
 
   - icon: https://natgo.cn/static/img/logo64.png
     name: NetGo
