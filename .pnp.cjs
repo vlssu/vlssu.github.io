@@ -29,6 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@vuepress/bundler-vite", "npm:2.0.0-rc.22"],\
+          ["@vuepress/plugin-docsearch", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-feed", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-google-analytics", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-pwa", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
@@ -42,6 +43,266 @@ const RAW_RUNTIME_STATE =
           ["vuepress-theme-hope", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.87"]\
         ],\
         "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@algolia/autocomplete-core", [\
+      ["npm:1.17.9", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-autocomplete-core-npm-1.17.9-7f2c26563f-10c0.zip/node_modules/@algolia/autocomplete-core/",\
+        "packageDependencies": [\
+          ["@algolia/autocomplete-core", "npm:1.17.9"],\
+          ["@algolia/autocomplete-plugin-algolia-insights", "virtual:7f2c26563fced2ebc932f0dd265b0f5aaa3690d447fce337ce619f3070a3da8f751ea57fe2c823b80190a68e21cdbf3938831f1c6356d84cfda86cde31ea4ad4#npm:1.17.9"],\
+          ["@algolia/autocomplete-shared", "virtual:7f2c26563fced2ebc932f0dd265b0f5aaa3690d447fce337ce619f3070a3da8f751ea57fe2c823b80190a68e21cdbf3938831f1c6356d84cfda86cde31ea4ad4#npm:1.17.9"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/autocomplete-plugin-algolia-insights", [\
+      ["npm:1.17.9", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-autocomplete-plugin-algolia-insights-npm-1.17.9-d08980654e-10c0.zip/node_modules/@algolia/autocomplete-plugin-algolia-insights/",\
+        "packageDependencies": [\
+          ["@algolia/autocomplete-plugin-algolia-insights", "npm:1.17.9"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:7f2c26563fced2ebc932f0dd265b0f5aaa3690d447fce337ce619f3070a3da8f751ea57fe2c823b80190a68e21cdbf3938831f1c6356d84cfda86cde31ea4ad4#npm:1.17.9", {\
+        "packageLocation": "./.yarn/__virtual__/@algolia-autocomplete-plugin-algolia-insights-virtual-761d42df1c/6/root/.yarn/berry/cache/@algolia-autocomplete-plugin-algolia-insights-npm-1.17.9-d08980654e-10c0.zip/node_modules/@algolia/autocomplete-plugin-algolia-insights/",\
+        "packageDependencies": [\
+          ["@algolia/autocomplete-plugin-algolia-insights", "virtual:7f2c26563fced2ebc932f0dd265b0f5aaa3690d447fce337ce619f3070a3da8f751ea57fe2c823b80190a68e21cdbf3938831f1c6356d84cfda86cde31ea4ad4#npm:1.17.9"],\
+          ["@algolia/autocomplete-shared", "virtual:7f2c26563fced2ebc932f0dd265b0f5aaa3690d447fce337ce619f3070a3da8f751ea57fe2c823b80190a68e21cdbf3938831f1c6356d84cfda86cde31ea4ad4#npm:1.17.9"],\
+          ["@types/search-insights", null],\
+          ["search-insights", null]\
+        ],\
+        "packagePeers": [\
+          "@types/search-insights",\
+          "search-insights"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/autocomplete-preset-algolia", [\
+      ["npm:1.17.9", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-autocomplete-preset-algolia-npm-1.17.9-3037790f31-10c0.zip/node_modules/@algolia/autocomplete-preset-algolia/",\
+        "packageDependencies": [\
+          ["@algolia/autocomplete-preset-algolia", "npm:1.17.9"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:a4abca5f7343158e4cb16741d13f8bdb524715a73db92d17c8026a796c2e4d29f8dea2499766d323c9d9e9b5cf30927e736d529fdc9c021bbe536ff9f74a76bf#npm:1.17.9", {\
+        "packageLocation": "./.yarn/__virtual__/@algolia-autocomplete-preset-algolia-virtual-573a2dd0f6/6/root/.yarn/berry/cache/@algolia-autocomplete-preset-algolia-npm-1.17.9-3037790f31-10c0.zip/node_modules/@algolia/autocomplete-preset-algolia/",\
+        "packageDependencies": [\
+          ["@algolia/autocomplete-preset-algolia", "virtual:a4abca5f7343158e4cb16741d13f8bdb524715a73db92d17c8026a796c2e4d29f8dea2499766d323c9d9e9b5cf30927e736d529fdc9c021bbe536ff9f74a76bf#npm:1.17.9"],\
+          ["@algolia/autocomplete-shared", "virtual:573a2dd0f64591319139d722d27dc62ee9b98567adfe784e385cd430c22f1c5e1a46737f9b7b73bdc554fa7cdaa77104b147c552e3061dc88049989c4261c697#npm:1.17.9"],\
+          ["@algolia/client-search", null],\
+          ["@types/algolia__client-search", null],\
+          ["@types/algoliasearch", null],\
+          ["algoliasearch", "npm:5.25.0"]\
+        ],\
+        "packagePeers": [\
+          "@algolia/client-search",\
+          "@types/algolia__client-search",\
+          "@types/algoliasearch",\
+          "algoliasearch"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/autocomplete-shared", [\
+      ["npm:1.17.9", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-autocomplete-shared-npm-1.17.9-cdbcffd1c1-10c0.zip/node_modules/@algolia/autocomplete-shared/",\
+        "packageDependencies": [\
+          ["@algolia/autocomplete-shared", "npm:1.17.9"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:573a2dd0f64591319139d722d27dc62ee9b98567adfe784e385cd430c22f1c5e1a46737f9b7b73bdc554fa7cdaa77104b147c552e3061dc88049989c4261c697#npm:1.17.9", {\
+        "packageLocation": "./.yarn/__virtual__/@algolia-autocomplete-shared-virtual-1fc0291ce8/6/root/.yarn/berry/cache/@algolia-autocomplete-shared-npm-1.17.9-cdbcffd1c1-10c0.zip/node_modules/@algolia/autocomplete-shared/",\
+        "packageDependencies": [\
+          ["@algolia/autocomplete-shared", "virtual:573a2dd0f64591319139d722d27dc62ee9b98567adfe784e385cd430c22f1c5e1a46737f9b7b73bdc554fa7cdaa77104b147c552e3061dc88049989c4261c697#npm:1.17.9"],\
+          ["@algolia/client-search", null],\
+          ["@types/algolia__client-search", null],\
+          ["@types/algoliasearch", null],\
+          ["algoliasearch", "npm:5.25.0"]\
+        ],\
+        "packagePeers": [\
+          "@algolia/client-search",\
+          "@types/algolia__client-search",\
+          "@types/algoliasearch",\
+          "algoliasearch"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:7f2c26563fced2ebc932f0dd265b0f5aaa3690d447fce337ce619f3070a3da8f751ea57fe2c823b80190a68e21cdbf3938831f1c6356d84cfda86cde31ea4ad4#npm:1.17.9", {\
+        "packageLocation": "./.yarn/__virtual__/@algolia-autocomplete-shared-virtual-71945a2094/6/root/.yarn/berry/cache/@algolia-autocomplete-shared-npm-1.17.9-cdbcffd1c1-10c0.zip/node_modules/@algolia/autocomplete-shared/",\
+        "packageDependencies": [\
+          ["@algolia/autocomplete-shared", "virtual:7f2c26563fced2ebc932f0dd265b0f5aaa3690d447fce337ce619f3070a3da8f751ea57fe2c823b80190a68e21cdbf3938831f1c6356d84cfda86cde31ea4ad4#npm:1.17.9"],\
+          ["@algolia/client-search", null],\
+          ["@types/algolia__client-search", null],\
+          ["@types/algoliasearch", null],\
+          ["algoliasearch", null]\
+        ],\
+        "packagePeers": [\
+          "@algolia/client-search",\
+          "@types/algolia__client-search",\
+          "@types/algoliasearch",\
+          "algoliasearch"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/client-abtesting", [\
+      ["npm:5.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-client-abtesting-npm-5.25.0-8279d52e2e-10c0.zip/node_modules/@algolia/client-abtesting/",\
+        "packageDependencies": [\
+          ["@algolia/client-abtesting", "npm:5.25.0"],\
+          ["@algolia/client-common", "npm:5.25.0"],\
+          ["@algolia/requester-browser-xhr", "npm:5.25.0"],\
+          ["@algolia/requester-fetch", "npm:5.25.0"],\
+          ["@algolia/requester-node-http", "npm:5.25.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/client-analytics", [\
+      ["npm:5.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-client-analytics-npm-5.25.0-057d51c7f7-10c0.zip/node_modules/@algolia/client-analytics/",\
+        "packageDependencies": [\
+          ["@algolia/client-analytics", "npm:5.25.0"],\
+          ["@algolia/client-common", "npm:5.25.0"],\
+          ["@algolia/requester-browser-xhr", "npm:5.25.0"],\
+          ["@algolia/requester-fetch", "npm:5.25.0"],\
+          ["@algolia/requester-node-http", "npm:5.25.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/client-common", [\
+      ["npm:5.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-client-common-npm-5.25.0-09c2a96bd3-10c0.zip/node_modules/@algolia/client-common/",\
+        "packageDependencies": [\
+          ["@algolia/client-common", "npm:5.25.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/client-insights", [\
+      ["npm:5.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-client-insights-npm-5.25.0-7a473fda5e-10c0.zip/node_modules/@algolia/client-insights/",\
+        "packageDependencies": [\
+          ["@algolia/client-common", "npm:5.25.0"],\
+          ["@algolia/client-insights", "npm:5.25.0"],\
+          ["@algolia/requester-browser-xhr", "npm:5.25.0"],\
+          ["@algolia/requester-fetch", "npm:5.25.0"],\
+          ["@algolia/requester-node-http", "npm:5.25.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/client-personalization", [\
+      ["npm:5.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-client-personalization-npm-5.25.0-a512da25b0-10c0.zip/node_modules/@algolia/client-personalization/",\
+        "packageDependencies": [\
+          ["@algolia/client-common", "npm:5.25.0"],\
+          ["@algolia/client-personalization", "npm:5.25.0"],\
+          ["@algolia/requester-browser-xhr", "npm:5.25.0"],\
+          ["@algolia/requester-fetch", "npm:5.25.0"],\
+          ["@algolia/requester-node-http", "npm:5.25.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/client-query-suggestions", [\
+      ["npm:5.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-client-query-suggestions-npm-5.25.0-6702fd2fc7-10c0.zip/node_modules/@algolia/client-query-suggestions/",\
+        "packageDependencies": [\
+          ["@algolia/client-common", "npm:5.25.0"],\
+          ["@algolia/client-query-suggestions", "npm:5.25.0"],\
+          ["@algolia/requester-browser-xhr", "npm:5.25.0"],\
+          ["@algolia/requester-fetch", "npm:5.25.0"],\
+          ["@algolia/requester-node-http", "npm:5.25.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/client-search", [\
+      ["npm:5.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-client-search-npm-5.25.0-bc14fada3a-10c0.zip/node_modules/@algolia/client-search/",\
+        "packageDependencies": [\
+          ["@algolia/client-common", "npm:5.25.0"],\
+          ["@algolia/client-search", "npm:5.25.0"],\
+          ["@algolia/requester-browser-xhr", "npm:5.25.0"],\
+          ["@algolia/requester-fetch", "npm:5.25.0"],\
+          ["@algolia/requester-node-http", "npm:5.25.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/ingestion", [\
+      ["npm:1.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-ingestion-npm-1.25.0-ac7aac729d-10c0.zip/node_modules/@algolia/ingestion/",\
+        "packageDependencies": [\
+          ["@algolia/client-common", "npm:5.25.0"],\
+          ["@algolia/ingestion", "npm:1.25.0"],\
+          ["@algolia/requester-browser-xhr", "npm:5.25.0"],\
+          ["@algolia/requester-fetch", "npm:5.25.0"],\
+          ["@algolia/requester-node-http", "npm:5.25.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/monitoring", [\
+      ["npm:1.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-monitoring-npm-1.25.0-663dc7daec-10c0.zip/node_modules/@algolia/monitoring/",\
+        "packageDependencies": [\
+          ["@algolia/client-common", "npm:5.25.0"],\
+          ["@algolia/monitoring", "npm:1.25.0"],\
+          ["@algolia/requester-browser-xhr", "npm:5.25.0"],\
+          ["@algolia/requester-fetch", "npm:5.25.0"],\
+          ["@algolia/requester-node-http", "npm:5.25.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/recommend", [\
+      ["npm:5.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-recommend-npm-5.25.0-01fe131c8b-10c0.zip/node_modules/@algolia/recommend/",\
+        "packageDependencies": [\
+          ["@algolia/client-common", "npm:5.25.0"],\
+          ["@algolia/recommend", "npm:5.25.0"],\
+          ["@algolia/requester-browser-xhr", "npm:5.25.0"],\
+          ["@algolia/requester-fetch", "npm:5.25.0"],\
+          ["@algolia/requester-node-http", "npm:5.25.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/requester-browser-xhr", [\
+      ["npm:5.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-requester-browser-xhr-npm-5.25.0-4f3e8d5e40-10c0.zip/node_modules/@algolia/requester-browser-xhr/",\
+        "packageDependencies": [\
+          ["@algolia/client-common", "npm:5.25.0"],\
+          ["@algolia/requester-browser-xhr", "npm:5.25.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/requester-fetch", [\
+      ["npm:5.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-requester-fetch-npm-5.25.0-ae11ec78d7-10c0.zip/node_modules/@algolia/requester-fetch/",\
+        "packageDependencies": [\
+          ["@algolia/client-common", "npm:5.25.0"],\
+          ["@algolia/requester-fetch", "npm:5.25.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@algolia/requester-node-http", [\
+      ["npm:5.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@algolia-requester-node-http-npm-5.25.0-208dc3c547-10c0.zip/node_modules/@algolia/requester-node-http/",\
+        "packageDependencies": [\
+          ["@algolia/client-common", "npm:5.25.0"],\
+          ["@algolia/requester-node-http", "npm:5.25.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@ampproject/remapping", [\
@@ -1998,6 +2259,60 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../root/.yarn/berry/cache/@bufbuild-protobuf-npm-2.3.0-74d0f980bc-10c0.zip/node_modules/@bufbuild/protobuf/",\
         "packageDependencies": [\
           ["@bufbuild/protobuf", "npm:2.3.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@docsearch/css", [\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@docsearch-css-npm-3.9.0-7ffc6f22e6-10c0.zip/node_modules/@docsearch/css/",\
+        "packageDependencies": [\
+          ["@docsearch/css", "npm:3.9.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@docsearch/js", [\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@docsearch-js-npm-3.9.0-9a87b98610-10c0.zip/node_modules/@docsearch/js/",\
+        "packageDependencies": [\
+          ["@docsearch/js", "npm:3.9.0"],\
+          ["@docsearch/react", "virtual:9a87b9861010e01da979beb43abf0b2b7aa108f6f2d6d77a996f5dc88f7eec5be84b32184345c5f4e64a73cfcb19824687a847f7ff344f0d7ca8bc7786620922#npm:3.9.0"],\
+          ["preact", "npm:10.26.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@docsearch/react", [\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@docsearch-react-npm-3.9.0-ed0a33f83b-10c0.zip/node_modules/@docsearch/react/",\
+        "packageDependencies": [\
+          ["@docsearch/react", "npm:3.9.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:9a87b9861010e01da979beb43abf0b2b7aa108f6f2d6d77a996f5dc88f7eec5be84b32184345c5f4e64a73cfcb19824687a847f7ff344f0d7ca8bc7786620922#npm:3.9.0", {\
+        "packageLocation": "./.yarn/__virtual__/@docsearch-react-virtual-a4abca5f73/6/root/.yarn/berry/cache/@docsearch-react-npm-3.9.0-ed0a33f83b-10c0.zip/node_modules/@docsearch/react/",\
+        "packageDependencies": [\
+          ["@algolia/autocomplete-core", "npm:1.17.9"],\
+          ["@algolia/autocomplete-preset-algolia", "virtual:a4abca5f7343158e4cb16741d13f8bdb524715a73db92d17c8026a796c2e4d29f8dea2499766d323c9d9e9b5cf30927e736d529fdc9c021bbe536ff9f74a76bf#npm:1.17.9"],\
+          ["@docsearch/css", "npm:3.9.0"],\
+          ["@docsearch/react", "virtual:9a87b9861010e01da979beb43abf0b2b7aa108f6f2d6d77a996f5dc88f7eec5be84b32184345c5f4e64a73cfcb19824687a847f7ff344f0d7ca8bc7786620922#npm:3.9.0"],\
+          ["@types/react", null],\
+          ["@types/react-dom", null],\
+          ["@types/search-insights", null],\
+          ["algoliasearch", "npm:5.25.0"],\
+          ["react", null],\
+          ["react-dom", null],\
+          ["search-insights", null]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "@types/search-insights",\
+          "react-dom",\
+          "react",\
+          "search-insights"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4014,12 +4329,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:41d85777788123aae6f12993fb6d74e7da180a36e6122ac6db5c3c2bd5fb8b39a172dcfb52386dc79546be6727c7aa8b16da0fe4632855ce598efce4fe0dea75#npm:2.0.0-rc.103", {\
-        "packageLocation": "./.yarn/__virtual__/@vuepress-helper-virtual-a15a2e5006/6/root/.yarn/berry/cache/@vuepress-helper-npm-2.0.0-rc.103-cfb6c7c136-10c0.zip/node_modules/@vuepress/helper/",\
+      ["virtual:38adb2f71b583173848b8d0805c71a132d7c14ec8fd07219e760177ca90f600b1092570b7e3ad3a29c1265fcf4156e6ef38f3e8e2a8a8cb8716967c60cc23115#npm:2.0.0-rc.103", {\
+        "packageLocation": "./.yarn/__virtual__/@vuepress-helper-virtual-362a3d008e/6/root/.yarn/berry/cache/@vuepress-helper-npm-2.0.0-rc.103-cfb6c7c136-10c0.zip/node_modules/@vuepress/helper/",\
         "packageDependencies": [\
           ["@types/vuepress", null],\
           ["@vue/shared", "npm:3.5.13"],\
-          ["@vuepress/helper", "virtual:41d85777788123aae6f12993fb6d74e7da180a36e6122ac6db5c3c2bd5fb8b39a172dcfb52386dc79546be6727c7aa8b16da0fe4632855ce598efce4fe0dea75#npm:2.0.0-rc.103"],\
+          ["@vuepress/helper", "virtual:38adb2f71b583173848b8d0805c71a132d7c14ec8fd07219e760177ca90f600b1092570b7e3ad3a29c1265fcf4156e6ef38f3e8e2a8a8cb8716967c60cc23115#npm:2.0.0-rc.103"],\
           ["@vueuse/core", "virtual:2acae17fd3b14ca7df17adf46adf6964d7296d4b01c354e97aba3e374d102b9042373dda42d73252f0120ae9ddcdbe584783e85eabe803642e9a982c42ea2d6b#npm:13.1.0"],\
           ["cheerio", "npm:1.0.0"],\
           ["fflate", "npm:0.8.2"],\
@@ -4290,6 +4605,35 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@vuepress/plugin-docsearch", [\
+      ["npm:2.0.0-rc.103", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/@vuepress-plugin-docsearch-npm-2.0.0-rc.103-753ec10125-10c0.zip/node_modules/@vuepress/plugin-docsearch/",\
+        "packageDependencies": [\
+          ["@vuepress/plugin-docsearch", "npm:2.0.0-rc.103"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103", {\
+        "packageLocation": "./.yarn/__virtual__/@vuepress-plugin-docsearch-virtual-38adb2f71b/6/root/.yarn/berry/cache/@vuepress-plugin-docsearch-npm-2.0.0-rc.103-753ec10125-10c0.zip/node_modules/@vuepress/plugin-docsearch/",\
+        "packageDependencies": [\
+          ["@docsearch/css", "npm:3.9.0"],\
+          ["@docsearch/js", "npm:3.9.0"],\
+          ["@docsearch/react", "virtual:9a87b9861010e01da979beb43abf0b2b7aa108f6f2d6d77a996f5dc88f7eec5be84b32184345c5f4e64a73cfcb19824687a847f7ff344f0d7ca8bc7786620922#npm:3.9.0"],\
+          ["@types/vuepress", null],\
+          ["@vuepress/helper", "virtual:38adb2f71b583173848b8d0805c71a132d7c14ec8fd07219e760177ca90f600b1092570b7e3ad3a29c1265fcf4156e6ef38f3e8e2a8a8cb8716967c60cc23115#npm:2.0.0-rc.103"],\
+          ["@vuepress/plugin-docsearch", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
+          ["@vueuse/core", "virtual:2acae17fd3b14ca7df17adf46adf6964d7296d4b01c354e97aba3e374d102b9042373dda42d73252f0120ae9ddcdbe584783e85eabe803642e9a982c42ea2d6b#npm:13.1.0"],\
+          ["ts-debounce", "npm:4.0.0"],\
+          ["vue", "virtual:d94005f979693fada1ef126826ca923917228d04ee7d5fe577a046ac951405e9896db03fce8621f4ce0cfbb33aa5dbcbc033dd69e6212cadbf6a2499b12259f2#npm:3.5.13"],\
+          ["vuepress", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.22"]\
+        ],\
+        "packagePeers": [\
+          "@types/vuepress",\
+          "vuepress"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@vuepress/plugin-feed", [\
       ["npm:2.0.0-rc.103", {\
         "packageLocation": "../../../../../root/.yarn/berry/cache/@vuepress-plugin-feed-npm-2.0.0-rc.103-c9b9f3aacb-10c0.zip/node_modules/@vuepress/plugin-feed/",\
@@ -4302,7 +4646,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@vuepress-plugin-feed-virtual-41d8577778/6/root/.yarn/berry/cache/@vuepress-plugin-feed-npm-2.0.0-rc.103-c9b9f3aacb-10c0.zip/node_modules/@vuepress/plugin-feed/",\
         "packageDependencies": [\
           ["@types/vuepress", null],\
-          ["@vuepress/helper", "virtual:41d85777788123aae6f12993fb6d74e7da180a36e6122ac6db5c3c2bd5fb8b39a172dcfb52386dc79546be6727c7aa8b16da0fe4632855ce598efce4fe0dea75#npm:2.0.0-rc.103"],\
+          ["@vuepress/helper", "virtual:38adb2f71b583173848b8d0805c71a132d7c14ec8fd07219e760177ca90f600b1092570b7e3ad3a29c1265fcf4156e6ef38f3e8e2a8a8cb8716967c60cc23115#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-feed", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
           ["vuepress", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.22"],\
           ["xml-js", "npm:1.6.11"]\
@@ -4703,7 +5047,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@vuepress-plugin-pwa-virtual-f700b20234/6/root/.yarn/berry/cache/@vuepress-plugin-pwa-npm-2.0.0-rc.103-29b3f33c6b-10c0.zip/node_modules/@vuepress/plugin-pwa/",\
         "packageDependencies": [\
           ["@types/vuepress", null],\
-          ["@vuepress/helper", "virtual:41d85777788123aae6f12993fb6d74e7da180a36e6122ac6db5c3c2bd5fb8b39a172dcfb52386dc79546be6727c7aa8b16da0fe4632855ce598efce4fe0dea75#npm:2.0.0-rc.103"],\
+          ["@vuepress/helper", "virtual:38adb2f71b583173848b8d0805c71a132d7c14ec8fd07219e760177ca90f600b1092570b7e3ad3a29c1265fcf4156e6ef38f3e8e2a8a8cb8716967c60cc23115#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-pwa", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
           ["@vueuse/core", "virtual:2acae17fd3b14ca7df17adf46adf6964d7296d4b01c354e97aba3e374d102b9042373dda42d73252f0120ae9ddcdbe584783e85eabe803642e9a982c42ea2d6b#npm:13.1.0"],\
           ["mitt", "npm:3.0.1"],\
@@ -4921,7 +5265,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@vuepress-plugin-slimsearch-virtual-34f4b41e90/6/root/.yarn/berry/cache/@vuepress-plugin-slimsearch-npm-2.0.0-rc.103-95c2e0ec2c-10c0.zip/node_modules/@vuepress/plugin-slimsearch/",\
         "packageDependencies": [\
           ["@types/vuepress", null],\
-          ["@vuepress/helper", "virtual:41d85777788123aae6f12993fb6d74e7da180a36e6122ac6db5c3c2bd5fb8b39a172dcfb52386dc79546be6727c7aa8b16da0fe4632855ce598efce4fe0dea75#npm:2.0.0-rc.103"],\
+          ["@vuepress/helper", "virtual:38adb2f71b583173848b8d0805c71a132d7c14ec8fd07219e760177ca90f600b1092570b7e3ad3a29c1265fcf4156e6ef38f3e8e2a8a8cb8716967c60cc23115#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-slimsearch", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
           ["@vueuse/core", "virtual:2acae17fd3b14ca7df17adf46adf6964d7296d4b01c354e97aba3e374d102b9042373dda42d73252f0120ae9ddcdbe584783e85eabe803642e9a982c42ea2d6b#npm:13.1.0"],\
           ["cheerio", "npm:1.0.0"],\
@@ -5137,6 +5481,28 @@ const RAW_RUNTIME_STATE =
           ["fast-uri", "npm:3.0.6"],\
           ["json-schema-traverse", "npm:1.0.0"],\
           ["require-from-string", "npm:2.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["algoliasearch", [\
+      ["npm:5.25.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/algoliasearch-npm-5.25.0-e9f74b337a-10c0.zip/node_modules/algoliasearch/",\
+        "packageDependencies": [\
+          ["@algolia/client-abtesting", "npm:5.25.0"],\
+          ["@algolia/client-analytics", "npm:5.25.0"],\
+          ["@algolia/client-common", "npm:5.25.0"],\
+          ["@algolia/client-insights", "npm:5.25.0"],\
+          ["@algolia/client-personalization", "npm:5.25.0"],\
+          ["@algolia/client-query-suggestions", "npm:5.25.0"],\
+          ["@algolia/client-search", "npm:5.25.0"],\
+          ["@algolia/ingestion", "npm:1.25.0"],\
+          ["@algolia/monitoring", "npm:1.25.0"],\
+          ["@algolia/recommend", "npm:5.25.0"],\
+          ["@algolia/requester-browser-xhr", "npm:5.25.0"],\
+          ["@algolia/requester-fetch", "npm:5.25.0"],\
+          ["@algolia/requester-node-http", "npm:5.25.0"],\
+          ["algoliasearch", "npm:5.25.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8661,6 +9027,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["preact", [\
+      ["npm:10.26.6", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/preact-npm-10.26.6-873044a0d9-10c0.zip/node_modules/preact/",\
+        "packageDependencies": [\
+          ["preact", "npm:10.26.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["pretty-bytes", [\
       ["npm:5.6.0", {\
         "packageLocation": "../../../../../root/.yarn/berry/cache/pretty-bytes-npm-5.6.0-0061079c9f-10c0.zip/node_modules/pretty-bytes/",\
@@ -10041,6 +10416,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["ts-debounce", [\
+      ["npm:4.0.0", {\
+        "packageLocation": "../../../../../root/.yarn/berry/cache/ts-debounce-npm-4.0.0-59e3ec0db2-10c0.zip/node_modules/ts-debounce/",\
+        "packageDependencies": [\
+          ["ts-debounce", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["tslib", [\
       ["npm:2.8.1", {\
         "packageLocation": "../../../../../root/.yarn/berry/cache/tslib-npm-2.8.1-66590b21b8-10c0.zip/node_modules/tslib/",\
@@ -10465,6 +10849,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@vuepress/bundler-vite", "npm:2.0.0-rc.22"],\
+          ["@vuepress/plugin-docsearch", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-feed", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-google-analytics", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-pwa", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
@@ -10587,7 +10972,7 @@ const RAW_RUNTIME_STATE =
           ["@types/sass-loader", null],\
           ["@types/vidstack", null],\
           ["@types/vuepress", null],\
-          ["@vuepress/helper", "virtual:41d85777788123aae6f12993fb6d74e7da180a36e6122ac6db5c3c2bd5fb8b39a172dcfb52386dc79546be6727c7aa8b16da0fe4632855ce598efce4fe0dea75#npm:2.0.0-rc.103"],\
+          ["@vuepress/helper", "virtual:38adb2f71b583173848b8d0805c71a132d7c14ec8fd07219e760177ca90f600b1092570b7e3ad3a29c1265fcf4156e6ef38f3e8e2a8a8cb8716967c60cc23115#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-sass-palette", "virtual:a38da001591102d59b7599ed207864059b2a174f30997837100aa4a0e29f9e8cda8d142643842bb3527d2e225176d659329fa70cb615397fb259f33e4000be77#npm:2.0.0-rc.102"],\
           ["@vueuse/core", "virtual:2acae17fd3b14ca7df17adf46adf6964d7296d4b01c354e97aba3e374d102b9042373dda42d73252f0120ae9ddcdbe584783e85eabe803642e9a982c42ea2d6b#npm:13.1.0"],\
           ["artplayer", null],\
@@ -10660,7 +11045,7 @@ const RAW_RUNTIME_STATE =
           ["@types/vue__repl", null],\
           ["@types/vuepress", null],\
           ["@vue/repl", null],\
-          ["@vuepress/helper", "virtual:41d85777788123aae6f12993fb6d74e7da180a36e6122ac6db5c3c2bd5fb8b39a172dcfb52386dc79546be6727c7aa8b16da0fe4632855ce598efce4fe0dea75#npm:2.0.0-rc.103"],\
+          ["@vuepress/helper", "virtual:38adb2f71b583173848b8d0805c71a132d7c14ec8fd07219e760177ca90f600b1092570b7e3ad3a29c1265fcf4156e6ef38f3e8e2a8a8cb8716967c60cc23115#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-sass-palette", "virtual:a38da001591102d59b7599ed207864059b2a174f30997837100aa4a0e29f9e8cda8d142643842bb3527d2e225176d659329fa70cb615397fb259f33e4000be77#npm:2.0.0-rc.102"],\
           ["@vueuse/core", "virtual:2acae17fd3b14ca7df17adf46adf6964d7296d4b01c354e97aba3e374d102b9042373dda42d73252f0120ae9ddcdbe584783e85eabe803642e9a982c42ea2d6b#npm:13.1.0"],\
           ["balloon-css", "npm:1.2.0"],\
@@ -10739,7 +11124,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/vuepress-shared-virtual-69c6e625d8/6/root/.yarn/berry/cache/vuepress-shared-npm-2.0.0-rc.86-dfb07308df-10c0.zip/node_modules/vuepress-shared/",\
         "packageDependencies": [\
           ["@types/vuepress", null],\
-          ["@vuepress/helper", "virtual:41d85777788123aae6f12993fb6d74e7da180a36e6122ac6db5c3c2bd5fb8b39a172dcfb52386dc79546be6727c7aa8b16da0fe4632855ce598efce4fe0dea75#npm:2.0.0-rc.103"],\
+          ["@vuepress/helper", "virtual:38adb2f71b583173848b8d0805c71a132d7c14ec8fd07219e760177ca90f600b1092570b7e3ad3a29c1265fcf4156e6ef38f3e8e2a8a8cb8716967c60cc23115#npm:2.0.0-rc.103"],\
           ["@vueuse/core", "virtual:2acae17fd3b14ca7df17adf46adf6964d7296d4b01c354e97aba3e374d102b9042373dda42d73252f0120ae9ddcdbe584783e85eabe803642e9a982c42ea2d6b#npm:13.1.0"],\
           ["vue", "virtual:d94005f979693fada1ef126826ca923917228d04ee7d5fe577a046ac951405e9896db03fce8621f4ce0cfbb33aa5dbcbc033dd69e6212cadbf6a2499b12259f2#npm:3.5.13"],\
           ["vuepress", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.22"],\
@@ -10778,7 +11163,7 @@ const RAW_RUNTIME_STATE =
           ["@types/vuepress__plugin-slimsearch", null],\
           ["@types/vuepress__plugin-watermark", null],\
           ["@types/vuepress__shiki-twoslash", null],\
-          ["@vuepress/helper", "virtual:41d85777788123aae6f12993fb6d74e7da180a36e6122ac6db5c3c2bd5fb8b39a172dcfb52386dc79546be6727c7aa8b16da0fe4632855ce598efce4fe0dea75#npm:2.0.0-rc.103"],\
+          ["@vuepress/helper", "virtual:38adb2f71b583173848b8d0805c71a132d7c14ec8fd07219e760177ca90f600b1092570b7e3ad3a29c1265fcf4156e6ef38f3e8e2a8a8cb8716967c60cc23115#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-active-header-links", "virtual:a38da001591102d59b7599ed207864059b2a174f30997837100aa4a0e29f9e8cda8d142643842bb3527d2e225176d659329fa70cb615397fb259f33e4000be77#npm:2.0.0-rc.98"],\
           ["@vuepress/plugin-back-to-top", "virtual:a38da001591102d59b7599ed207864059b2a174f30997837100aa4a0e29f9e8cda8d142643842bb3527d2e225176d659329fa70cb615397fb259f33e4000be77#npm:2.0.0-rc.102"],\
           ["@vuepress/plugin-blog", "virtual:a38da001591102d59b7599ed207864059b2a174f30997837100aa4a0e29f9e8cda8d142643842bb3527d2e225176d659329fa70cb615397fb259f33e4000be77#npm:2.0.0-rc.102"],\
@@ -10786,7 +11171,7 @@ const RAW_RUNTIME_STATE =
           ["@vuepress/plugin-comment", "virtual:a38da001591102d59b7599ed207864059b2a174f30997837100aa4a0e29f9e8cda8d142643842bb3527d2e225176d659329fa70cb615397fb259f33e4000be77#npm:2.0.0-rc.102"],\
           ["@vuepress/plugin-copy-code", "virtual:a38da001591102d59b7599ed207864059b2a174f30997837100aa4a0e29f9e8cda8d142643842bb3527d2e225176d659329fa70cb615397fb259f33e4000be77#npm:2.0.0-rc.102"],\
           ["@vuepress/plugin-copyright", "virtual:a38da001591102d59b7599ed207864059b2a174f30997837100aa4a0e29f9e8cda8d142643842bb3527d2e225176d659329fa70cb615397fb259f33e4000be77#npm:2.0.0-rc.102"],\
-          ["@vuepress/plugin-docsearch", null],\
+          ["@vuepress/plugin-docsearch", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-feed", "virtual:d87cf155fb92723a659af6bbfea4c614a197c06e9066136e1e10fd3119e5df38731f5ff4b47d0933bca214f1415f9ab894fab167d239cb356de6eab95a54ae06#npm:2.0.0-rc.103"],\
           ["@vuepress/plugin-git", "virtual:a38da001591102d59b7599ed207864059b2a174f30997837100aa4a0e29f9e8cda8d142643842bb3527d2e225176d659329fa70cb615397fb259f33e4000be77#npm:2.0.0-rc.102"],\
           ["@vuepress/plugin-icon", "virtual:a38da001591102d59b7599ed207864059b2a174f30997837100aa4a0e29f9e8cda8d142643842bb3527d2e225176d659329fa70cb615397fb259f33e4000be77#npm:2.0.0-rc.102"],\

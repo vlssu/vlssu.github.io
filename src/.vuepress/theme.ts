@@ -152,6 +152,12 @@ export default hopeTheme({
       reaction: true, // 开启反应
     },
 
+    docsearch: {
+      appId: "22FRF8XJLD",
+      apiKey: "75697080892c953e9450582bf49d7575",
+      indexName: "vlssu",
+    },
+
     components: {
       components: ["Badge", "VPCard"],
     },
