@@ -103,7 +103,7 @@ img
 ::: code-tabs
 @tab index.php
 @[code](./file/img_txt.php)
-@tab autoUP<span/>.py
+@tab autoUP\.py
 @[code](./file/autoUP.py)
 :::
 

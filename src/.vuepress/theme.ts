@@ -9,6 +9,7 @@ export default hopeTheme({
   author: {
     name: "飒爽师叔",
     url: "https://blog.vlssu.com",
+    email: "vlssu@vlssu.com",
   },
 
   logo: "logo.svg",
@@ -145,6 +146,7 @@ export default hopeTheme({
       provider: "Waline",
       serverURL: "https://waline-comment.vlssu.com",
       requiredMeta: ['nick', 'mail'], // 必要值
+      reaction: true, // 开启反应
     },
 
     components: {
