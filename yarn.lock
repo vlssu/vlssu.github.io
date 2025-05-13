@@ -3294,15 +3294,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-remove-pwa@npm:2.0.0-rc.103":
-  version: 2.0.0-rc.103
-  resolution: "@vuepress/plugin-remove-pwa@npm:2.0.0-rc.103"
-  peerDependencies:
-    vuepress: 2.0.0-rc.23
-  checksum: 10c0/5871e635f9cc470091c503783ed3e016b575710149be6919a20b2658c1750d2452389660e17d34e93ee8a373ffb94998fa9ac3e7e246c2dfb632461aef02e460
-  languageName: node
-  linkType: hard
-
 "@vuepress/plugin-rtl@npm:2.0.0-rc.104":
   version: 2.0.0-rc.104
   resolution: "@vuepress/plugin-rtl@npm:2.0.0-rc.104"
@@ -7910,8 +7901,8 @@ __metadata:
   linkType: hard
 
 "terser@npm:^5.17.4":
-  version: 5.39.0
-  resolution: "terser@npm:5.39.0"
+  version: 5.39.1
+  resolution: "terser@npm:5.39.1"
   dependencies:
     "@jridgewell/source-map": "npm:^0.3.3"
     acorn: "npm:^8.8.2"
@@ -7919,7 +7910,7 @@ __metadata:
     source-map-support: "npm:~0.5.20"
   bin:
     terser: bin/terser
-  checksum: 10c0/83326545ea1aecd6261030568b6191ccfa4cb6aa61d9ea41746a52479f50017a78b77e4725fbbc207c5df841ffa66a773c5ac33636e95c7ab94fe7e0379ae5c7
+  checksum: 10c0/d49e06dd4dd03661dac41f45c9cf187b2aa3fe80775235e838398c29311705169387c007f398ab44cd1bd8f89b14a1eea383feaa95c1cae29e3f5b6b606b6b37
   languageName: node
   linkType: hard
 
@@ -8336,7 +8327,6 @@ __metadata:
     "@vuepress/plugin-feed": "npm:2.0.0-rc.104"
     "@vuepress/plugin-google-analytics": "npm:2.0.0-rc.103"
     "@vuepress/plugin-pwa": "npm:2.0.0-rc.104"
-    "@vuepress/plugin-remove-pwa": "npm:2.0.0-rc.103"
     "@vuepress/plugin-slimsearch": "npm:2.0.0-rc.104"
     "@waline/client": "npm:3.5.7"
     sass-embedded: "npm:1.88.0"
