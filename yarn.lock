@@ -1297,9 +1297,9 @@ __metadata:
   linkType: hard
 
 "@bufbuild/protobuf@npm:^2.0.0":
-  version: 2.3.0
-  resolution: "@bufbuild/protobuf@npm:2.3.0"
-  checksum: 10c0/ddd628ffa86fa9a64f7a434a13ebb73200a43ecbecc36001d8d73534c281cecaf2b4ec890a12810ac54302ae10a9fee794b438db91af54e268f8d6cdcdb82a49
+  version: 2.4.0
+  resolution: "@bufbuild/protobuf@npm:2.4.0"
+  checksum: 10c0/023835fc96062f6610d4420591f497aafa375be9831dbef3176d798e5e76aafca6c52d256d8b997939f82782d9c3e89b3711f0f3d7a379f92c859edfd79109dc
   languageName: node
   linkType: hard
 
@@ -2877,9 +2877,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/helper@npm:2.0.0-rc.103, @vuepress/helper@npm:^2.0.0-rc.102":
-  version: 2.0.0-rc.103
-  resolution: "@vuepress/helper@npm:2.0.0-rc.103"
+"@vuepress/helper@npm:2.0.0-rc.104, @vuepress/helper@npm:^2.0.0-rc.102":
+  version: 2.0.0-rc.104
+  resolution: "@vuepress/helper@npm:2.0.0-rc.104"
   dependencies:
     "@vue/shared": "npm:^3.5.13"
     "@vueuse/core": "npm:^13.1.0"
@@ -2889,7 +2889,7 @@ __metadata:
     vue: "npm:^3.5.13"
   peerDependencies:
     vuepress: 2.0.0-rc.23
-  checksum: 10c0/1a52f44ccd517bac5ac8c28344e605ab0ded2c0fed47ba9a07bfb256b8ea6cf3b51259c2d87dc453260655444cf6dbc9b2942cb889fa343ce9bb61141158f563
+  checksum: 10c0/ca5de3f489084b9922720cd8e4bbb9dc3e23e340af2f9bad258fd1f24762928d5f5f637ecab4621c4c608c69db8df10abb47f76aea6d97007cc8019ba2d37f58
   languageName: node
   linkType: hard
 
@@ -3030,32 +3030,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-docsearch@npm:^2.0.0-rc.103":
-  version: 2.0.0-rc.103
-  resolution: "@vuepress/plugin-docsearch@npm:2.0.0-rc.103"
+"@vuepress/plugin-docsearch@npm:^2.0.0-rc.104":
+  version: 2.0.0-rc.104
+  resolution: "@vuepress/plugin-docsearch@npm:2.0.0-rc.104"
   dependencies:
     "@docsearch/css": "npm:^3.9.0"
     "@docsearch/js": "npm:^3.9.0"
     "@docsearch/react": "npm:^3.9.0"
-    "@vuepress/helper": "npm:2.0.0-rc.103"
+    "@vuepress/helper": "npm:2.0.0-rc.104"
     "@vueuse/core": "npm:^13.1.0"
     ts-debounce: "npm:^4.0.0"
     vue: "npm:^3.5.13"
   peerDependencies:
     vuepress: 2.0.0-rc.23
-  checksum: 10c0/732b84bc5989bf65d55dd153a38b821aabbda453a9d007768293cc4b6b3ff057ebbba68bb90c4f72e93a418b6a33839843917ed2706d2bbc73bf2117d6cc76c6
+  checksum: 10c0/6262b4a806b83599b5d69f74a9601c8437c2d0f58b7751169dd75b112d3f3631c34c91dcf24befeb059a8d6b419e5b10f4dafc264d92bdb3838d50b6210e0b37
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-feed@npm:^2.0.0-rc.103":
-  version: 2.0.0-rc.103
-  resolution: "@vuepress/plugin-feed@npm:2.0.0-rc.103"
+"@vuepress/plugin-feed@npm:^2.0.0-rc.104":
+  version: 2.0.0-rc.104
+  resolution: "@vuepress/plugin-feed@npm:2.0.0-rc.104"
   dependencies:
-    "@vuepress/helper": "npm:2.0.0-rc.103"
+    "@vuepress/helper": "npm:2.0.0-rc.104"
     xml-js: "npm:^1.6.11"
   peerDependencies:
     vuepress: 2.0.0-rc.23
-  checksum: 10c0/821376d594354e3570029b6fab654b58c2a1b0a16727e013f63a44e7c82844b531aeb1b26026e7f378baddadc7aad5de81e0e04a65e01b0aecfc82b151849e85
+  checksum: 10c0/2b4a3a096cb64ad1e416e5f3692b98177eadadcb2214dd78cedd2782423fdf05343221af6c7da4a215bd8adde4060c18cc78214378ed7418e52baabca8046c10
   languageName: node
   linkType: hard
 
@@ -3266,11 +3266,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-pwa@npm:^2.0.0-rc.103":
-  version: 2.0.0-rc.103
-  resolution: "@vuepress/plugin-pwa@npm:2.0.0-rc.103"
+"@vuepress/plugin-pwa@npm:^2.0.0-rc.104":
+  version: 2.0.0-rc.104
+  resolution: "@vuepress/plugin-pwa@npm:2.0.0-rc.104"
   dependencies:
-    "@vuepress/helper": "npm:2.0.0-rc.103"
+    "@vuepress/helper": "npm:2.0.0-rc.104"
     "@vueuse/core": "npm:^13.1.0"
     mitt: "npm:^3.0.1"
     register-service-worker: "npm:^1.7.2"
@@ -3278,7 +3278,7 @@ __metadata:
     workbox-build: "npm:^7.3.0"
   peerDependencies:
     vuepress: 2.0.0-rc.23
-  checksum: 10c0/b5b9284354c7bac2727ed943f99f8b329efe25a5eae0cd1157d2a97f79625d1ef032e5fa26948b39bd8be42facff4b324671816c8919b93563066781008575ee
+  checksum: 10c0/b8503b0884621a7819f50a4dbb7b6c09672a1e997b8ed1a85f1f277bc80ee3e0ec6afa8dab231439ac3893b2c5f09fccbfc2ed0b1a6cc5fa1c6c0bc7ed19d883
   languageName: node
   linkType: hard
 
@@ -3307,6 +3307,15 @@ __metadata:
   bin:
     vp-redirect: ./lib/cli/index.js
   checksum: 10c0/41169c9614842ae13bb751f36309060a007e6a36a02e5744d3010060a9a8c9bed98417a59babc049bd7dad8354c2d711472d70dbf5e28c8d9adebdc56e0536de
+  languageName: node
+  linkType: hard
+
+"@vuepress/plugin-remove-pwa@npm:^2.0.0-rc.103":
+  version: 2.0.0-rc.103
+  resolution: "@vuepress/plugin-remove-pwa@npm:2.0.0-rc.103"
+  peerDependencies:
+    vuepress: 2.0.0-rc.23
+  checksum: 10c0/5871e635f9cc470091c503783ed3e016b575710149be6919a20b2658c1750d2452389660e17d34e93ee8a373ffb94998fa9ac3e7e246c2dfb632461aef02e460
   languageName: node
   linkType: hard
 
@@ -3388,11 +3397,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-slimsearch@npm:^2.0.0-rc.103":
-  version: 2.0.0-rc.103
-  resolution: "@vuepress/plugin-slimsearch@npm:2.0.0-rc.103"
+"@vuepress/plugin-slimsearch@npm:^2.0.0-rc.104":
+  version: 2.0.0-rc.104
+  resolution: "@vuepress/plugin-slimsearch@npm:2.0.0-rc.104"
   dependencies:
-    "@vuepress/helper": "npm:2.0.0-rc.103"
+    "@vuepress/helper": "npm:2.0.0-rc.104"
     "@vueuse/core": "npm:^13.1.0"
     cheerio: "npm:^1.0.0"
     chokidar: "npm:^3.6.0"
@@ -3400,7 +3409,7 @@ __metadata:
     vue: "npm:^3.5.13"
   peerDependencies:
     vuepress: 2.0.0-rc.23
-  checksum: 10c0/356e77d6ff425ee39c5af22e60381c033da91f463aa63f933ec62facf5f3b4114c180502892976c3e9a59f118a94cc44d8286c643608f13eb4405a72fe679323
+  checksum: 10c0/338ffe4080e726dee7a934aa2f01f4987e20ff5ef4a202cc5f197fd7c76fbb51f13dee04ae0bad3ace35ed26a32791d4f3553d574796ddf59cd7141ff795cdb5
   languageName: node
   linkType: hard
 
@@ -3920,9 +3929,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001702, caniuse-lite@npm:^1.0.30001716":
-  version: 1.0.30001717
-  resolution: "caniuse-lite@npm:1.0.30001717"
-  checksum: 10c0/6c0bb1e5182fd578ebe97ee2203250849754a4e17d985839fab527ad27e125a4c4ffce3ece5505217fedf30ea0bbc17ac9f93e9ac525c0389ccba61c6e8345dc
+  version: 1.0.30001718
+  resolution: "caniuse-lite@npm:1.0.30001718"
+  checksum: 10c0/67f9ad09bc16443e28d14f265d6e468480cd8dc1900d0d8b982222de80c699c4f2306599c3da8a3fa7139f110d4b30d49dbac78f215470f479abb6ffe141d5d3
   languageName: node
   linkType: hard
 
@@ -4380,9 +4389,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.149":
-  version: 1.5.151
-  resolution: "electron-to-chromium@npm:1.5.151"
-  checksum: 10c0/9b3d73836a784af4fd113676b87b0d233ae51984cd4d4396f7252c7369e2f897afeca9fb53910c314e74a4b5d22b6faa4450e95304ceeb1c4fd04e8356030d4b
+  version: 1.5.152
+  resolution: "electron-to-chromium@npm:1.5.152"
+  checksum: 10c0/99c58dc8fc6b22ea64f118599663a0d336aa28693fbd275d06f3e2c1d1a6c954fcb88f5b2390223267bb3487940d3e587b6acac8b1b2ebc4dc65c44cd7739c7c
   languageName: node
   linkType: hard
 
@@ -5278,9 +5287,9 @@ __metadata:
   linkType: hard
 
 "http-cache-semantics@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "http-cache-semantics@npm:4.1.1"
-  checksum: 10c0/ce1319b8a382eb3cbb4a37c19f6bfe14e5bb5be3d09079e885e8c513ab2d3cd9214902f8a31c9dc4e37022633ceabfc2d697405deeaf1b8f3552bb4ed996fdfc
+  version: 4.2.0
+  resolution: "http-cache-semantics@npm:4.2.0"
+  checksum: 10c0/45b66a945cf13ec2d1f29432277201313babf4a01d9e52f44b31ca923434083afeca03f18417f599c9ab3d0e7b618ceb21257542338b57c54b710463b4a53e37
   languageName: node
   linkType: hard
 
@@ -7130,175 +7139,175 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass-embedded-android-arm64@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-android-arm64@npm:1.87.0"
+"sass-embedded-android-arm64@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-android-arm64@npm:1.88.0"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"sass-embedded-android-arm@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-android-arm@npm:1.87.0"
+"sass-embedded-android-arm@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-android-arm@npm:1.88.0"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"sass-embedded-android-ia32@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-android-ia32@npm:1.87.0"
+"sass-embedded-android-ia32@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-android-ia32@npm:1.88.0"
   conditions: os=android & cpu=ia32
   languageName: node
   linkType: hard
 
-"sass-embedded-android-riscv64@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-android-riscv64@npm:1.87.0"
+"sass-embedded-android-riscv64@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-android-riscv64@npm:1.88.0"
   conditions: os=android & cpu=riscv64
   languageName: node
   linkType: hard
 
-"sass-embedded-android-x64@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-android-x64@npm:1.87.0"
+"sass-embedded-android-x64@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-android-x64@npm:1.88.0"
   conditions: os=android & cpu=x64
   languageName: node
   linkType: hard
 
-"sass-embedded-darwin-arm64@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-darwin-arm64@npm:1.87.0"
+"sass-embedded-darwin-arm64@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-darwin-arm64@npm:1.88.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"sass-embedded-darwin-x64@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-darwin-x64@npm:1.87.0"
+"sass-embedded-darwin-x64@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-darwin-x64@npm:1.88.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"sass-embedded-linux-arm64@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-linux-arm64@npm:1.87.0"
+"sass-embedded-linux-arm64@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-linux-arm64@npm:1.88.0"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"sass-embedded-linux-arm@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-linux-arm@npm:1.87.0"
+"sass-embedded-linux-arm@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-linux-arm@npm:1.88.0"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"sass-embedded-linux-ia32@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-linux-ia32@npm:1.87.0"
+"sass-embedded-linux-ia32@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-linux-ia32@npm:1.88.0"
   conditions: os=linux & cpu=ia32
   languageName: node
   linkType: hard
 
-"sass-embedded-linux-musl-arm64@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-linux-musl-arm64@npm:1.87.0"
+"sass-embedded-linux-musl-arm64@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-linux-musl-arm64@npm:1.88.0"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"sass-embedded-linux-musl-arm@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-linux-musl-arm@npm:1.87.0"
+"sass-embedded-linux-musl-arm@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-linux-musl-arm@npm:1.88.0"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"sass-embedded-linux-musl-ia32@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-linux-musl-ia32@npm:1.87.0"
+"sass-embedded-linux-musl-ia32@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-linux-musl-ia32@npm:1.88.0"
   conditions: os=linux & cpu=ia32
   languageName: node
   linkType: hard
 
-"sass-embedded-linux-musl-riscv64@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-linux-musl-riscv64@npm:1.87.0"
+"sass-embedded-linux-musl-riscv64@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-linux-musl-riscv64@npm:1.88.0"
   conditions: os=linux & cpu=riscv64
   languageName: node
   linkType: hard
 
-"sass-embedded-linux-musl-x64@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-linux-musl-x64@npm:1.87.0"
+"sass-embedded-linux-musl-x64@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-linux-musl-x64@npm:1.88.0"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"sass-embedded-linux-riscv64@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-linux-riscv64@npm:1.87.0"
+"sass-embedded-linux-riscv64@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-linux-riscv64@npm:1.88.0"
   conditions: os=linux & cpu=riscv64
   languageName: node
   linkType: hard
 
-"sass-embedded-linux-x64@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-linux-x64@npm:1.87.0"
+"sass-embedded-linux-x64@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-linux-x64@npm:1.88.0"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"sass-embedded-win32-arm64@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-win32-arm64@npm:1.87.0"
+"sass-embedded-win32-arm64@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-win32-arm64@npm:1.88.0"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"sass-embedded-win32-ia32@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-win32-ia32@npm:1.87.0"
+"sass-embedded-win32-ia32@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-win32-ia32@npm:1.88.0"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"sass-embedded-win32-x64@npm:1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded-win32-x64@npm:1.87.0"
+"sass-embedded-win32-x64@npm:1.88.0":
+  version: 1.88.0
+  resolution: "sass-embedded-win32-x64@npm:1.88.0"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
 "sass-embedded@npm:^1.87.0":
-  version: 1.87.0
-  resolution: "sass-embedded@npm:1.87.0"
+  version: 1.88.0
+  resolution: "sass-embedded@npm:1.88.0"
   dependencies:
     "@bufbuild/protobuf": "npm:^2.0.0"
     buffer-builder: "npm:^0.2.0"
     colorjs.io: "npm:^0.5.0"
     immutable: "npm:^5.0.2"
     rxjs: "npm:^7.4.0"
-    sass-embedded-android-arm: "npm:1.87.0"
-    sass-embedded-android-arm64: "npm:1.87.0"
-    sass-embedded-android-ia32: "npm:1.87.0"
-    sass-embedded-android-riscv64: "npm:1.87.0"
-    sass-embedded-android-x64: "npm:1.87.0"
-    sass-embedded-darwin-arm64: "npm:1.87.0"
-    sass-embedded-darwin-x64: "npm:1.87.0"
-    sass-embedded-linux-arm: "npm:1.87.0"
-    sass-embedded-linux-arm64: "npm:1.87.0"
-    sass-embedded-linux-ia32: "npm:1.87.0"
-    sass-embedded-linux-musl-arm: "npm:1.87.0"
-    sass-embedded-linux-musl-arm64: "npm:1.87.0"
-    sass-embedded-linux-musl-ia32: "npm:1.87.0"
-    sass-embedded-linux-musl-riscv64: "npm:1.87.0"
-    sass-embedded-linux-musl-x64: "npm:1.87.0"
-    sass-embedded-linux-riscv64: "npm:1.87.0"
-    sass-embedded-linux-x64: "npm:1.87.0"
-    sass-embedded-win32-arm64: "npm:1.87.0"
-    sass-embedded-win32-ia32: "npm:1.87.0"
-    sass-embedded-win32-x64: "npm:1.87.0"
+    sass-embedded-android-arm: "npm:1.88.0"
+    sass-embedded-android-arm64: "npm:1.88.0"
+    sass-embedded-android-ia32: "npm:1.88.0"
+    sass-embedded-android-riscv64: "npm:1.88.0"
+    sass-embedded-android-x64: "npm:1.88.0"
+    sass-embedded-darwin-arm64: "npm:1.88.0"
+    sass-embedded-darwin-x64: "npm:1.88.0"
+    sass-embedded-linux-arm: "npm:1.88.0"
+    sass-embedded-linux-arm64: "npm:1.88.0"
+    sass-embedded-linux-ia32: "npm:1.88.0"
+    sass-embedded-linux-musl-arm: "npm:1.88.0"
+    sass-embedded-linux-musl-arm64: "npm:1.88.0"
+    sass-embedded-linux-musl-ia32: "npm:1.88.0"
+    sass-embedded-linux-musl-riscv64: "npm:1.88.0"
+    sass-embedded-linux-musl-x64: "npm:1.88.0"
+    sass-embedded-linux-riscv64: "npm:1.88.0"
+    sass-embedded-linux-x64: "npm:1.88.0"
+    sass-embedded-win32-arm64: "npm:1.88.0"
+    sass-embedded-win32-ia32: "npm:1.88.0"
+    sass-embedded-win32-x64: "npm:1.88.0"
     supports-color: "npm:^8.1.1"
     sync-child-process: "npm:^1.0.2"
     varint: "npm:^6.0.0"
@@ -7345,7 +7354,7 @@ __metadata:
       optional: true
   bin:
     sass: dist/bin/sass.js
-  checksum: 10c0/44b6dd76bc14a1d75cfae99cc577ccb3b034325886fe77409a739ea3e789c6c04f712a7b579ab9adbacfd1d8f091035799675419d8ec357642295a7f29f4225f
+  checksum: 10c0/ece5ebf41f7d6e9f09593b77d13e435045951347dbab702786742bafe787f0c502c126b18e3b30b6b26b83eb465af0e48cd4b5033a4de77632ace1e9bfe15731
   languageName: node
   linkType: hard
 
@@ -7376,11 +7385,11 @@ __metadata:
   linkType: hard
 
 "semver@npm:^7.3.5":
-  version: 7.7.1
-  resolution: "semver@npm:7.7.1"
+  version: 7.7.2
+  resolution: "semver@npm:7.7.2"
   bin:
     semver: bin/semver.js
-  checksum: 10c0/fd603a6fb9c399c6054015433051bdbe7b99a940a8fb44b85c2b524c4004b023d7928d47cb22154f8d054ea7ee8597f586605e05b52047f048278e4ac56ae958
+  checksum: 10c0/aca305edfbf2383c22571cb7714f48cadc7ac95371b4b52362fb8eeffdfbc0de0669368b82b2b15978f8848f01d7114da65697e56cd8c37b0dab8c58e543f9ea
   languageName: node
   linkType: hard
 
@@ -8073,9 +8082,9 @@ __metadata:
   linkType: hard
 
 "undici@npm:^6.19.5":
-  version: 6.21.2
-  resolution: "undici@npm:6.21.2"
-  checksum: 10c0/799bbc02b77dda9b6b12d56d2620a3a4d4cf087908d6a548acc3ce32f21b5c27467f75c2c4b30fab281daf341210be3d685e8fe99854288de541715ae5735027
+  version: 6.21.3
+  resolution: "undici@npm:6.21.3"
+  checksum: 10c0/294da109853fad7a6ef5a172ad0ca3fb3f1f60cf34703d062a5ec967daf69ad8c03b52e6d536c5cba3bb65615769bf08e5b30798915cbccdddaca01045173dda
   languageName: node
   linkType: hard
 
@@ -8339,11 +8348,12 @@ __metadata:
   resolution: "vlssu_blog@workspace:."
   dependencies:
     "@vuepress/bundler-vite": "npm:2.0.0-rc.22"
-    "@vuepress/plugin-docsearch": "npm:^2.0.0-rc.103"
-    "@vuepress/plugin-feed": "npm:^2.0.0-rc.103"
+    "@vuepress/plugin-docsearch": "npm:^2.0.0-rc.104"
+    "@vuepress/plugin-feed": "npm:^2.0.0-rc.104"
     "@vuepress/plugin-google-analytics": "npm:^2.0.0-rc.103"
-    "@vuepress/plugin-pwa": "npm:^2.0.0-rc.103"
-    "@vuepress/plugin-slimsearch": "npm:^2.0.0-rc.103"
+    "@vuepress/plugin-pwa": "npm:^2.0.0-rc.104"
+    "@vuepress/plugin-remove-pwa": "npm:^2.0.0-rc.103"
+    "@vuepress/plugin-slimsearch": "npm:^2.0.0-rc.104"
     "@waline/client": "npm:^3.5.7"
     sass-embedded: "npm:^1.87.0"
     vue: "npm:^3.5.13"

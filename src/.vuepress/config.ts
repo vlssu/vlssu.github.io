@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
 import metingPlugin from "vuepress-plugin-meting2";
+import { removePwaPlugin } from '@vuepress/plugin-remove-pwa'
 
 import theme from "./theme.js";
 
@@ -42,6 +43,9 @@ export default defineUserConfig({
           //listMaxHeight: 250  //设置播放列表最大高度，单位为像素
         }
       },
+    }),
+    removePwaPlugin({
+      // options
     }),
   ],
 });
