@@ -3014,7 +3014,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-docsearch@npm:^2.0.0-rc.104":
+"@vuepress/plugin-docsearch@npm:2.0.0-rc.104":
   version: 2.0.0-rc.104
   resolution: "@vuepress/plugin-docsearch@npm:2.0.0-rc.104"
   dependencies:
@@ -3031,7 +3031,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-feed@npm:^2.0.0-rc.104":
+"@vuepress/plugin-feed@npm:2.0.0-rc.104":
   version: 2.0.0-rc.104
   resolution: "@vuepress/plugin-feed@npm:2.0.0-rc.104"
   dependencies:
@@ -3060,7 +3060,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-google-analytics@npm:^2.0.0-rc.103":
+"@vuepress/plugin-google-analytics@npm:2.0.0-rc.103":
   version: 2.0.0-rc.103
   resolution: "@vuepress/plugin-google-analytics@npm:2.0.0-rc.103"
   peerDependencies:
@@ -3250,7 +3250,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-pwa@npm:^2.0.0-rc.104":
+"@vuepress/plugin-pwa@npm:2.0.0-rc.104":
   version: 2.0.0-rc.104
   resolution: "@vuepress/plugin-pwa@npm:2.0.0-rc.104"
   dependencies:
@@ -3294,7 +3294,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-remove-pwa@npm:^2.0.0-rc.103":
+"@vuepress/plugin-remove-pwa@npm:2.0.0-rc.103":
   version: 2.0.0-rc.103
   resolution: "@vuepress/plugin-remove-pwa@npm:2.0.0-rc.103"
   peerDependencies:
@@ -3381,7 +3381,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-slimsearch@npm:^2.0.0-rc.104":
+"@vuepress/plugin-slimsearch@npm:2.0.0-rc.104":
   version: 2.0.0-rc.104
   resolution: "@vuepress/plugin-slimsearch@npm:2.0.0-rc.104"
   dependencies:
@@ -3473,7 +3473,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@waline/client@npm:^3.5.7":
+"@waline/client@npm:3.5.7":
   version: 3.5.7
   resolution: "@waline/client@npm:3.5.7"
   dependencies:
@@ -7263,7 +7263,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass-embedded@npm:^1.87.0":
+"sass-embedded@npm:1.88.0":
   version: 1.88.0
   resolution: "sass-embedded@npm:1.88.0"
   dependencies:
@@ -8332,17 +8332,17 @@ __metadata:
   resolution: "vlssu_blog@workspace:."
   dependencies:
     "@vuepress/bundler-vite": "npm:2.0.0-rc.23"
-    "@vuepress/plugin-docsearch": "npm:^2.0.0-rc.104"
-    "@vuepress/plugin-feed": "npm:^2.0.0-rc.104"
-    "@vuepress/plugin-google-analytics": "npm:^2.0.0-rc.103"
-    "@vuepress/plugin-pwa": "npm:^2.0.0-rc.104"
-    "@vuepress/plugin-remove-pwa": "npm:^2.0.0-rc.103"
-    "@vuepress/plugin-slimsearch": "npm:^2.0.0-rc.104"
-    "@waline/client": "npm:^3.5.7"
-    sass-embedded: "npm:^1.87.0"
-    vue: "npm:^3.5.13"
+    "@vuepress/plugin-docsearch": "npm:2.0.0-rc.104"
+    "@vuepress/plugin-feed": "npm:2.0.0-rc.104"
+    "@vuepress/plugin-google-analytics": "npm:2.0.0-rc.103"
+    "@vuepress/plugin-pwa": "npm:2.0.0-rc.104"
+    "@vuepress/plugin-remove-pwa": "npm:2.0.0-rc.103"
+    "@vuepress/plugin-slimsearch": "npm:2.0.0-rc.104"
+    "@waline/client": "npm:3.5.7"
+    sass-embedded: "npm:1.88.0"
+    vue: "npm:3.5.13"
     vuepress: "npm:2.0.0-rc.23"
-    vuepress-plugin-meting2: "npm:^1.4.2"
+    vuepress-plugin-meting2: "npm:1.4.2"
     vuepress-theme-hope: "npm:2.0.0-rc.88"
   languageName: unknown
   linkType: soft
@@ -8358,7 +8358,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue@npm:^3.5.13":
+"vue@npm:3.5.13, vue@npm:^3.5.13":
   version: 3.5.13
   resolution: "vue@npm:3.5.13"
   dependencies:
@@ -8482,7 +8482,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuepress-plugin-meting2@npm:^1.4.2":
+"vuepress-plugin-meting2@npm:1.4.2":
   version: 1.4.2
   resolution: "vuepress-plugin-meting2@npm:1.4.2"
   dependencies:
