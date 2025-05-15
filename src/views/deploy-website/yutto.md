@@ -1,5 +1,5 @@
 ---
-title: 如果yutto搭建下载bilibili视频
+title: 如何yutto搭建下载bilibili视频
 date: 2021-08-23
 cover: https://api.vlssu.com/img/?210823
 tags:
@@ -21,34 +21,44 @@ categories:
 :::
 ::::
 
-[**[在Ubuntu如何安装Python3.9（Ubuntu 20.04）]**](../tech-sharing/linux/python3.9.html)
-
 ## 安装yutto
+
+:::: details 操作前请先安装 Python3.10
+<!-- @include: @views/tech-sharing/linux/python3.10.md -->
+::::
+
 ```bash
 pip install --pre yutto
-# 一般系统预装python都是3.8，所以想要调用3.9（更高版本以此类推）需要使用以下命令
-# pip3.9 install --pre yutto
 # 用于加速的
 pip install uvloop
 ```
+
 ### 记得安装一下ffmpeg
+
 ```bash
 apt install ffmpeg
 ```
-::: details yutto 支持一些基础参数
+
+### yutto的一些参数
+
+```bash
+apt install ffmpeg
+```
+
+::: details 基础参数
 
 #### 最大并行 worker 数量
 
--  参数 `-n` 或 `--num-workers`
--  默认值 `8`
+- 参数 `-n` 或 `--num-workers`
+- 默认值 `8`
 
 与 bilili 不同的是，yutto 并不是使用多线程实现并行下载，而是使用协程实现的，本参数限制的是最大的并行 Worker 数量。
 
 #### 指定视频清晰度等级
 
--  参数 `-q` 或 `--video-quality`
--  可选值 `125 | 120 | 116 | 112 | 80 | 74 | 64 | 32 | 16`
--  默认值 `125`
+- 参数 `-q` 或 `--video-quality`
+- 可选值 `125 | 120 | 116 | 112 | 80 | 74 | 64 | 32 | 16`
+- 默认值 `125`
 
 清晰度对应关系如下
 
@@ -69,9 +79,9 @@ apt install ffmpeg
 
 #### 指定音频码率等级
 
--  参数 `-aq` 或 `--audio-quality`
--  可选值 `30280 | 30232 | 30216`
--  默认值 `30280`
+- 参数 `-aq` 或 `--audio-quality`
+- 可选值 `30280 | 30232 | 30216`
+- 默认值 `30280`
 
 码率对应关系如下
 
@@ -86,10 +96,10 @@ apt install ffmpeg
 
 #### 指定视频编码
 
--  参数 `--vcodec`
--  下载编码可选值 `"hevc" | "avc"`
--  保存编码可选值 FFmpeg 所有可用的视频编码器
--  默认值 `"avc:copy"`
+- 参数 `--vcodec`
+- 下载编码可选值 `"hevc" | "avc"`
+- 保存编码可选值 FFmpeg 所有可用的视频编码器
+- 默认值 `"avc:copy"`
 
 该参数略微复杂，前半部分表示在下载时**优先**选择哪一种编码的视频流，后半部分则表示在合并时如何编码视频流，两者使用 `:` 分隔。
 
@@ -99,22 +109,22 @@ apt install ffmpeg
 
 #### 指定音频编码
 
--  参数 `--acodec`
--  下载编码可选值 `"mp4a"`
--  保存编码可选值 FFmpeg 所有可用的音频编码器
--  默认值 `"mp4a:copy"`
+- 参数 `--acodec`
+- 下载编码可选值 `"mp4a"`
+- 保存编码可选值 FFmpeg 所有可用的音频编码器
+- 默认值 `"mp4a:copy"`
 
 详情同视频编码。
 
 #### 仅下载视频流
 
--  参数 `--video-only`
--  默认值 `False`
+- 参数 `--video-only`
+- 默认值 `False`
 
 #### 仅下载音频流
 
--  参数 `--audio-only`
--  默认值 `False`
+- 参数 `--audio-only`
+- 默认值 `False`
 
 仅下载其中的音频流，保存为 `.aac` 文件。
 
@@ -122,9 +132,9 @@ apt install ffmpeg
 
 #### 弹幕格式选择
 
--  参数 `-df` 或 `--danmaku-format`
--  可选值 `"ass" | "xml" | "protobuf"`
--  默认值 `"ass"`
+- 参数 `-df` 或 `--danmaku-format`
+- 可选值 `"ass" | "xml" | "protobuf"`
+- 默认值 `"ass"`
 
 B 站提供了 `xml` 与 `protobuf` 两种弹幕数据接口，yutto 会自动下载 `xml` 格式弹幕并转换为 `ass` 格式，如果你不喜欢 yutto 自动转换的效果，可以选择输出格式为 `xml` 或 `protobuf`，手动通过一些工具进行转换，比如 yutto 和 bilili 所使用的 [biliass](https://github.com/ShigureLab/biliass)，或者使用 [us-danmaku](https://tiansh.github.io/us-danmaku/bilibili/) 进行在线转换。
 
@@ -132,34 +142,34 @@ B 站提供了 `xml` 与 `protobuf` 两种弹幕数据接口，yutto 会自动�
 
 #### 下载块大小
 
--  参数 `-bs` 或 `--block-size`
--  默认值 `0.5`
+- 参数 `-bs` 或 `--block-size`
+- 默认值 `0.5`
 
 以 MiB 为单位，为分块下载时各块大小，不建议更改。
 
 #### 强制覆盖已下载文件
 
--  参数 `-w` 或 `--overwrite`
--  默认值 `False`
+- 参数 `-w` 或 `--overwrite`
+- 默认值 `False`
 
 #### 代理设置
 
--  参数 `-x` 或 `--proxy`
--  可选值 `"auto" | "no" | <https?://url/to/proxy/server>`
--  默认值 `"auto"`
+- 参数 `-x` 或 `--proxy`
+- 可选值 `"auto" | "no" | <https?://url/to/proxy/server>`
+- 默认值 `"auto"`
 
 设置代理服务器，默认是从环境变量读取，`no` 则为不设置代理，设置其它 http/https url 则将其作为代理服务器。
 
 #### 存放根目录
 
--  参数 `-d` 或 `--dir`
--  默认值 `"./"`
+- 参数 `-d` 或 `--dir`
+- 默认值 `"./"`
 
 #### 存放子路径模板
 
--  参数 `-tp` 或 `--subpath-template`
--  可选参数变量 `title | id | name | username | fav_title` （以后可能会有更多）
--  默认值 `"{auto}"`
+- 参数 `-tp` 或 `--subpath-template`
+- 可选参数变量 `title | id | name | username | fav_title` （以后可能会有更多）
+- 默认值 `"{auto}"`
 
 通过配置子路径模板可以灵活地控制视频存放位置。
 
@@ -171,8 +181,8 @@ B 站提供了 `xml` 与 `protobuf` 两种弹幕数据接口，yutto 会自动�
 
 #### url 别名文件路径
 
--  参数 `-af` 或 `--alias-file`
--  默认值 `None`
+- 参数 `-af` 或 `--alias-file`
+- 默认值 `None`
 
 指定别名文件路径，别名文件中存放一个别名与其对应的 url，使用空格或者 `=` 分隔，示例如下：
 
@@ -196,8 +206,8 @@ cat ~/.yutto_alias | yutto rimuru-nikki --batch --alias-file -
 
 #### Cookies 设置
 
--  参数 `-c` 或 `--sessdata`
--  默认值 `""`
+- 参数 `-c` 或 `--sessdata`
+- 默认值 `""`
 
 设置 Cookies 后你才可以下载更高清晰度以及更多的剧集，当你传入你的大会员 `SESSDATA` 时（当然前提是你是大会员），你就可以下载大会员可访问的资源咯。
 
@@ -221,23 +231,23 @@ yutto <url> -c "d8bc7493%2C2843925707%2C08c3e*81"
 
 #### 不下载弹幕
 
--  参数 `--no-danmaku`
--  默认值 `False`
+- 参数 `--no-danmaku`
+- 默认值 `False`
 
 #### 不下载字幕
 
--  参数 `--no-subtitle`
--  默认值 `False`
+- 参数 `--no-subtitle`
+- 默认值 `False`
 
 #### 不显示颜色
 
--  参数 `--no-color`
--  默认值 `False`
+- 参数 `--no-color`
+- 默认值 `False`
 
 #### 启用 Debug 模式
 
--  参数 `--debug`
--  默认值 `False`
+- 参数 `--debug`
+- 默认值 `False`
 
 :::
 
@@ -245,29 +255,28 @@ yutto <url> -c "d8bc7493%2C2843925707%2C08c3e*81"
 
 有些参数是只有批量下载时才可以使用的
 
-
 #### 启用批量下载
 
--  参数 `-b` 或 `--batch`
--  默认值 `False`
+- 参数 `-b` 或 `--batch`
+- 默认值 `False`
 
 只需要 `yutto --batch <url>` 即可启用批量下载功能。
 
 #### 选集
 
--  参数 `-p` 或 `--episodes`
--  默认值 `^~$`
+- 参数 `-p` 或 `--episodes`
+- 默认值 `^~$`
 
--  参数 `-p` 或 `--episodes`
--  默认值 `^~$`（也即全选）
+- 参数 `-p` 或 `--episodes`
+- 默认值 `^~$`（也即全选）
 
 也就是选集咯，其语法是这样的
 
--  `<p1>` 单独下某一剧集
-   -  支持负数来选择倒数第几话
-   -  此外还可以使用 `^` 与 `$` 来分别代表 `1` 与 `-1`
--  `<p_start>~<p_end>` 使用 `~` 可以连续选取
--  `<p1>,<p2>,<p3>,...,<pn>` 使用 `,` 可以不连续选取
+- `<p1>` 单独下某一剧集
+  - 支持负数来选择倒数第几话
+  - 此外还可以使用 `^` 与 `$` 来分别代表 `1` 与 `-1`
+- `<p_start>~<p_end>` 使用 `~` 可以连续选取
+- `<p1>,<p2>,<p3>,...,<pn>` 使用 `,` 可以不连续选取
 
 emmm，直接看的话大概并不能知道我在说什么，所以我们通过几个小例子来了解其语法
 
@@ -302,7 +311,7 @@ yutto <url> -b -p ^~3,10,12~14,16,-4~$
 
 #### 同时下载附加剧集
 
--  参数 `-s` 或 `--with-section`
--  默认值 `False`
+- 参数 `-s` 或 `--with-section`
+- 默认值 `False`
 
 :::

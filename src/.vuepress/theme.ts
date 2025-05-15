@@ -1,7 +1,10 @@
 import { hopeTheme } from "vuepress-theme-hope";
+import { getDirname, path } from "vuepress/utils";
 
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
+
+const __dirname = getDirname(import.meta.url);
 
 export default hopeTheme({
   hostname: "https://blog.vlssu.com",
@@ -79,7 +82,15 @@ export default hopeTheme({
     gfm: true,
     imgLazyload: true,
     imgSize: true,
-    include: true,
+    // 添加 `@views` 别名支持
+    include: {
+      resolvePath: (file) => {
+        if (file.startsWith('@views')) {
+          return file.replace('@views', path.resolve(__dirname, '../views'));
+        }
+        return file;
+      },
+    },
     mark: true,
     plantuml: true,
     spoiler: true,

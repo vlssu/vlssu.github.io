@@ -63,7 +63,7 @@ apt-get upgrade -y
 
 ### 安装node.js
 
-- **若发现国内下载很慢可以参考这篇来使用国内镜像部署**[**[Linux系统如何安装node管理器]**](../linux/node.html)
+- **若发现国内下载很慢可以参考这篇来使用国内镜像部署**[**[Linux系统如何安装node管理器]**](../linux/node.md)
 
 1. 安装Git
 ::: code-tabs
@@ -95,7 +95,7 @@ nvm use v14.17.4
 ```
 #### 请关闭终端重新打开或重新连接终端 再依次执行以下命令（重要！）
 ### 安装java8
-- 如果要看更精细的步骤可以看这个文章 [[如何在Linux系统中安装Java8]](../linux/java8.html)
+- 如果要看更精细的步骤可以看这个文章 [[如何在Linux系统中安装Java8]](../linux/java8.md)
 
 #### Centos
 - 使用`yum`安装`java8`。
@@ -227,7 +227,7 @@ systemctl disable firewalld.service
 ```
 
 ## Docker 启动 Minecraft 服务端
-- 如何安装Docker参考我这篇文章[[在Linux中安装Docker]](../linux/docker.html)
+- 如何安装Docker参考我这篇文章[[在Linux中安装Docker]](../linux/docker.md)
 ### 关闭SElinux
 - 临时关闭SElinux
 
@@ -236,7 +236,7 @@ setenforce 0
 ```
 
 - SElinux系统默认开启，如果不关闭会导致`Docker`无法访问项目目录
-- 如何关闭Linux里面SElinux参考我这篇文章[[如何关闭Linux里面的SElinux]](../linux/selinux.html)
+- 如何关闭Linux里面SElinux参考我这篇文章[[如何关闭Linux里面的SElinux]](../linux/selinux.md)
 
 ### 创建Docker
 
