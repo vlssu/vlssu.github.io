@@ -50,4 +50,17 @@ article: false
 
 ## 更多
 
+::: md-demo 请按照此格式填写
+
+<SiteInfo
+  name="师叔の小窝"
+  desc="人生没有后悔，我们只能尽力去不让自己后悔"
+  url="https://blog.vlssu.com"
+  logo="https://blog.vlssu.com/head.png"
+  repo="https://github.com/vlssu/vlssu.github.io"
+  preview="https://blog.vlssu.com/assets/images/blog_preview.png"
+/>
+
+:::
+
 - 随时随地通过 PR 添加你的博客或文档至此。
