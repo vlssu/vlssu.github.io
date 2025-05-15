@@ -15,7 +15,8 @@ export default hopeTheme({
   logo: "logo.svg",
 
   repo: "vlssu/vlssu.github.io",
-
+  
+  docsBranch: "master",
   docsDir: "src",
 
   // 导航栏
