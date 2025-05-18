@@ -3,8 +3,8 @@ home: true
 layout: Blog
 icon: house
 title: 博客主页
-heroImage: logo.svg
-heroText: 师叔の小窝
+# heroImage: logo.svg
+heroText: false
 heroFullScreen: true
 bgImage: assets/images/pixiv18.jpg
 tagline: 人生没有后悔，我们只能尽力去不让自己后悔。
