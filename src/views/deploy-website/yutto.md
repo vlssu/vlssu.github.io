@@ -11,7 +11,7 @@ categories:
 ---
 
 :::tip
-我看到一个下载的bilibili视频的程序，贼好用但是需要Python3.9，就是我上一篇文章不是写了Python3.9的安装教程吗。其实最主要是Python安装有点反人类，至少在win上面，所以我只能在我习惯的linux上部署了。
+我看到一个下载的bilibili视频的程序，贼好用但是需要Python3.10(对，他不支持3.9了)。其实最主要是Python安装有点反人类，至少在win上面，所以我只能在我习惯的linux上部署了。
 :::
 
 :::: note yutto
