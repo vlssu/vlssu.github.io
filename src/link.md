@@ -50,9 +50,8 @@ article: false
 <SiteInfo
   name="冰凌"
   desc="不要温和的走进那个良夜。"
-  logo="https://avatars.githubusercontent.com/u/34296329?v=4"
+  logo="https://avatars.githubusercontent.com/u/34296329"
   url="https://icewk.org/"
-  preview=""
 />
 ## 更多
 
