@@ -47,7 +47,12 @@ article: false
   url="https://blog.wapriaily.com"
   preview="https://s2.loli.net/2025/05/13/SUsQT6D1eJHoyMu.png"
 />
-
+<SiteInfo
+  name="冰凌"
+  desc="不要温和的走进那个良夜。"
+  logo="https://avatars.githubusercontent.com/u/34296329"
+  url="https://icewk.org/"
+/>
 ## 更多
 
 ::: md-demo 请按照此格式填写
