@@ -6,13 +6,13 @@
     <link>https://blog.vlssu.com/</link>
     <description>Share knowledge and stay happy</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 01 Jun 2025 15:22:01 GMT</pubDate>
-    <lastBuildDate>Sun, 01 Jun 2025 15:22:01 GMT</lastBuildDate>
+    <pubDate>Fri, 20 Jun 2025 12:29:05 GMT</pubDate>
+    <lastBuildDate>Fri, 20 Jun 2025 12:29:05 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>Linux使用小知识</category>
-    <category>笔记</category>
     <category>教程</category>
+    <category>笔记</category>
     <category>VuePress</category>
     <item>
       <title>在Ubuntu如何安装Python3.10</title>
@@ -52,25 +52,6 @@
       <enclosure url="https://api.vlssu.com/img/?250515" type="image/"/>
     </item>
     <item>
-      <title>修复 BTpanel(宝塔) Python 环境（SSL续订错误）</title>
-      <link>https://blog.vlssu.com/views/notes/220925.html</link>
-      <guid>https://blog.vlssu.com/views/notes/220925.html</guid>
-      <source url="https://blog.vlssu.com/rss.xml">修复 BTpanel(宝塔) Python 环境（SSL续订错误）</source>
-      <description>在使用宝塔的时候，Python 很容易炸，在续签ssl证书的时候尤为明显，而这些问题基本都是 Python 惹的祸 提示 在运行以下命令并不会导致数据重置等现象。但为了保险起见，建议您先备份后在执行。</description>
-      <category>笔记</category>
-      <pubDate>Sun, 25 Sep 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>在使用宝塔的时候，Python 很容易炸，在续签ssl证书的时候尤为明显，而这些问题基本都是 Python 惹的祸</p>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>在运行以下命令并不会导致数据重置等现象。但为了保险起见，建议您先备份后在执行。</p>
-</div>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>rm -rf /www/server/panel/pyenv</span></span>
-<span class="line"><span>rm -rf /www/server/panel/class</span></span>
-<span class="line"><span>curl http://download.bt.cn/install/update_panel.sh|bash</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?220925" type="image/"/>
-    </item>
-    <item>
       <title>Frp搭建与使用</title>
       <link>https://blog.vlssu.com/views/deploy-website/frp.html</link>
       <guid>https://blog.vlssu.com/views/deploy-website/frp.html</guid>
@@ -93,6 +74,25 @@
 |</p>
 ]]></content:encoded>
       <enclosure url="https://api.vlssu.com/img/?201028" type="image/"/>
+    </item>
+    <item>
+      <title>修复 BTpanel(宝塔) Python 环境（SSL续订错误）</title>
+      <link>https://blog.vlssu.com/views/notes/220925.html</link>
+      <guid>https://blog.vlssu.com/views/notes/220925.html</guid>
+      <source url="https://blog.vlssu.com/rss.xml">修复 BTpanel(宝塔) Python 环境（SSL续订错误）</source>
+      <description>在使用宝塔的时候，Python 很容易炸，在续签ssl证书的时候尤为明显，而这些问题基本都是 Python 惹的祸 提示 在运行以下命令并不会导致数据重置等现象。但为了保险起见，建议您先备份后在执行。</description>
+      <category>笔记</category>
+      <pubDate>Sun, 25 Sep 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>在使用宝塔的时候，Python 很容易炸，在续签ssl证书的时候尤为明显，而这些问题基本都是 Python 惹的祸</p>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>在运行以下命令并不会导致数据重置等现象。但为了保险起见，建议您先备份后在执行。</p>
+</div>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>rm -rf /www/server/panel/pyenv</span></span>
+<span class="line"><span>rm -rf /www/server/panel/class</span></span>
+<span class="line"><span>curl http://download.bt.cn/install/update_panel.sh|bash</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+      <enclosure url="https://api.vlssu.com/img/?220925" type="image/"/>
     </item>
     <item>
       <title>使用阿里云CLI在1panel申请证书后自动上传阿里云DCDN</title>
@@ -319,79 +319,6 @@
 
 ]]></content:encoded>
       <enclosure url="https://api.vlssu.com/img/?230317" type="image/"/>
-    </item>
-    <item>
-      <title>android stadio Gradle 编译报错</title>
-      <link>https://blog.vlssu.com/views/notes/210209.html</link>
-      <guid>https://blog.vlssu.com/views/notes/210209.html</guid>
-      <source url="https://blog.vlssu.com/rss.xml">android stadio Gradle 编译报错</source>
-      <description>我在编译插件时一直在下载fastutil-xxx.jar 原因是需要翻墙(可惜我试过了，没用)。剩下的方法就是改镜像源了，在主要编译文件，如build.gradle，找到主代码组里头将镜像源改了。 我一改完就好了，不仅不用挂梯子，甚至速度贼快</description>
-      <category>笔记</category>
-      <pubDate>Tue, 09 Feb 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>我在编译插件时一直在下载<code>fastutil-xxx.jar</code></p>
-<p>原因是需要翻墙(可惜我试过了，没用)。剩下的方法就是改镜像源了，在主要编译文件，如<code>build.gradle</code>，找到主代码组里头将镜像源改了。</p>
-<p>我一改完就好了，不仅不用挂梯子，甚至速度贼快</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>buildscript {</span></span>
-<span class="line"><span>    </span></span>
-<span class="line"><span>    repositories {</span></span>
-<span class="line"><span>        maven{ url = "http://maven.aliyun.com/nexus/content/groups/public/" }</span></span>
-<span class="line"><span>        google()</span></span>
-<span class="line"><span>        jcenter()</span></span>
-<span class="line"><span>    }</span></span>
-<span class="line"><span>    dependencies {</span></span>
-<span class="line"><span>        classpath 'com.android.tools.build:gradle:3.1.2'</span></span>
-<span class="line"><span>        </span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>        // NOTE: Do not place your application dependencies here; they belong</span></span>
-<span class="line"><span>        // in the individual module build.gradle files</span></span>
-<span class="line"><span>    }</span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>allprojects {</span></span>
-<span class="line"><span>    repositories {</span></span>
-<span class="line"><span>        maven{ url = "http://maven.aliyun.com/nexus/content/groups/public/" }</span></span>
-<span class="line"><span>        google()</span></span>
-<span class="line"><span>        jcenter()</span></span>
-<span class="line"><span>    }</span></span>
-<span class="line"><span>}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?210209" type="image/"/>
-    </item>
-    <item>
-      <title>数控编程中常用的指令（G代码、M代码）</title>
-      <link>https://blog.vlssu.com/views/notes/210913.html</link>
-      <guid>https://blog.vlssu.com/views/notes/210913.html</guid>
-      <source url="https://blog.vlssu.com/rss.xml">数控编程中常用的指令（G代码、M代码）</source>
-      <description>在数控编程中，有的编程指令是不常用的，有的只适用于某些特殊的数控机床。这里只要介绍一些常用的编程指令，对于不常用的编程指令，请参考使用的数控机床编程手册。 准备功能指令（G指令） 准备功能指令由字符G和其后的1~3位数字组成，其主要功能是指定机床的运动方式，为数控系统的插补运算作准备。G指令的有关规定和含义见表1。 注： 以上G代码均为模态指令（或续效...</description>
-      <category>笔记</category>
-      <pubDate>Mon, 13 Sep 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>在数控编程中，有的编程指令是不常用的，有的只适用于某些特殊的数控机床。这里只要介绍一些常用的编程指令，对于不常用的编程指令，请参考使用的数控机床编程手册。</p>
-<h2>准备功能指令（G指令）</h2>
-<p>准备功能指令由字符G和其后的1~3位数字组成，其主要功能是指定机床的运动方式，为数控系统的插补运算作准备。G指令的有关规定和含义见表1。</p>
-<p>|	G代码	|	功能	|<br>
-|	:</p>
-]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?210913" type="image/"/>
-    </item>
-    <item>
-      <title>MySQL 8.0数据导入5.7及以下版本</title>
-      <link>https://blog.vlssu.com/views/notes/220601.html</link>
-      <guid>https://blog.vlssu.com/views/notes/220601.html</guid>
-      <source url="https://blog.vlssu.com/rss.xml">MySQL 8.0数据导入5.7及以下版本</source>
-      <description>前段时间我为了尝鲜 MySQL 8.0，谁知道占内存特别多，一些低内存的想用作备用的，但是 5.7 相对于 8.0 改了字符，导致不兼容了，所以我只能去网上找了些方法 8.0 于 5.7 之间的改动变化 表编码为 utf8mb4_0900_ai_ci 排序规则为 utf8mb4 因此打开.sql文件 使用notpad++或者txt都可以，进行全局替换就...</description>
-      <category>笔记</category>
-      <pubDate>Wed, 01 Jun 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>前段时间我为了尝鲜 MySQL 8.0，谁知道占内存特别多，一些低内存的想用作备用的，但是 5.7 相对于 8.0 改了字符，导致不兼容了，所以我只能去网上找了些方法</p>
-<ol>
-<li>8.0 于 5.7 之间的改动变化<br>
-表编码为 <code>utf8mb4_0900_ai_ci</code><br>
-排序规则为 <code>utf8mb4</code></li>
-</ol>
-<p>因此打开<code>.sql</code>文件 使用<code>notpad++</code>或者<code>txt</code>都可以，进行全局替换就好</p>
-<p>|原值|替换为|<br>
-|:</p>
-]]></content:encoded>
-      <enclosure url="https://api.vlssu.com/img/?220601" type="image/"/>
     </item>
     <item>
       <title>Flarum的搭建与部署</title>
@@ -1180,6 +1107,79 @@
 </details>
 ]]></content:encoded>
       <enclosure url="https://api.vlssu.com/img/?210823" type="image/"/>
+    </item>
+    <item>
+      <title>android stadio Gradle 编译报错</title>
+      <link>https://blog.vlssu.com/views/notes/210209.html</link>
+      <guid>https://blog.vlssu.com/views/notes/210209.html</guid>
+      <source url="https://blog.vlssu.com/rss.xml">android stadio Gradle 编译报错</source>
+      <description>我在编译插件时一直在下载fastutil-xxx.jar 原因是需要翻墙(可惜我试过了，没用)。剩下的方法就是改镜像源了，在主要编译文件，如build.gradle，找到主代码组里头将镜像源改了。 我一改完就好了，不仅不用挂梯子，甚至速度贼快</description>
+      <category>笔记</category>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>我在编译插件时一直在下载<code>fastutil-xxx.jar</code></p>
+<p>原因是需要翻墙(可惜我试过了，没用)。剩下的方法就是改镜像源了，在主要编译文件，如<code>build.gradle</code>，找到主代码组里头将镜像源改了。</p>
+<p>我一改完就好了，不仅不用挂梯子，甚至速度贼快</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>buildscript {</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    repositories {</span></span>
+<span class="line"><span>        maven{ url = "http://maven.aliyun.com/nexus/content/groups/public/" }</span></span>
+<span class="line"><span>        google()</span></span>
+<span class="line"><span>        jcenter()</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    dependencies {</span></span>
+<span class="line"><span>        classpath 'com.android.tools.build:gradle:3.1.2'</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        // NOTE: Do not place your application dependencies here; they belong</span></span>
+<span class="line"><span>        // in the individual module build.gradle files</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>allprojects {</span></span>
+<span class="line"><span>    repositories {</span></span>
+<span class="line"><span>        maven{ url = "http://maven.aliyun.com/nexus/content/groups/public/" }</span></span>
+<span class="line"><span>        google()</span></span>
+<span class="line"><span>        jcenter()</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+      <enclosure url="https://api.vlssu.com/img/?210209" type="image/"/>
+    </item>
+    <item>
+      <title>数控编程中常用的指令（G代码、M代码）</title>
+      <link>https://blog.vlssu.com/views/notes/210913.html</link>
+      <guid>https://blog.vlssu.com/views/notes/210913.html</guid>
+      <source url="https://blog.vlssu.com/rss.xml">数控编程中常用的指令（G代码、M代码）</source>
+      <description>在数控编程中，有的编程指令是不常用的，有的只适用于某些特殊的数控机床。这里只要介绍一些常用的编程指令，对于不常用的编程指令，请参考使用的数控机床编程手册。 准备功能指令（G指令） 准备功能指令由字符G和其后的1~3位数字组成，其主要功能是指定机床的运动方式，为数控系统的插补运算作准备。G指令的有关规定和含义见表1。 注： 以上G代码均为模态指令（或续效...</description>
+      <category>笔记</category>
+      <pubDate>Mon, 13 Sep 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>在数控编程中，有的编程指令是不常用的，有的只适用于某些特殊的数控机床。这里只要介绍一些常用的编程指令，对于不常用的编程指令，请参考使用的数控机床编程手册。</p>
+<h2>准备功能指令（G指令）</h2>
+<p>准备功能指令由字符G和其后的1~3位数字组成，其主要功能是指定机床的运动方式，为数控系统的插补运算作准备。G指令的有关规定和含义见表1。</p>
+<p>|	G代码	|	功能	|<br>
+|	:</p>
+]]></content:encoded>
+      <enclosure url="https://api.vlssu.com/img/?210913" type="image/"/>
+    </item>
+    <item>
+      <title>MySQL 8.0数据导入5.7及以下版本</title>
+      <link>https://blog.vlssu.com/views/notes/220601.html</link>
+      <guid>https://blog.vlssu.com/views/notes/220601.html</guid>
+      <source url="https://blog.vlssu.com/rss.xml">MySQL 8.0数据导入5.7及以下版本</source>
+      <description>前段时间我为了尝鲜 MySQL 8.0，谁知道占内存特别多，一些低内存的想用作备用的，但是 5.7 相对于 8.0 改了字符，导致不兼容了，所以我只能去网上找了些方法 8.0 于 5.7 之间的改动变化 表编码为 utf8mb4_0900_ai_ci 排序规则为 utf8mb4 因此打开.sql文件 使用notpad++或者txt都可以，进行全局替换就...</description>
+      <category>笔记</category>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>前段时间我为了尝鲜 MySQL 8.0，谁知道占内存特别多，一些低内存的想用作备用的，但是 5.7 相对于 8.0 改了字符，导致不兼容了，所以我只能去网上找了些方法</p>
+<ol>
+<li>8.0 于 5.7 之间的改动变化<br>
+表编码为 <code>utf8mb4_0900_ai_ci</code><br>
+排序规则为 <code>utf8mb4</code></li>
+</ol>
+<p>因此打开<code>.sql</code>文件 使用<code>notpad++</code>或者<code>txt</code>都可以，进行全局替换就好</p>
+<p>|原值|替换为|<br>
+|:</p>
+]]></content:encoded>
+      <enclosure url="https://api.vlssu.com/img/?220601" type="image/"/>
     </item>
     <item>
       <title>使用CDN后 Apache 获取访问用户的真实 IP</title>
