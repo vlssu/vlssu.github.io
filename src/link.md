@@ -52,7 +52,9 @@ article: false
   desc="不要温和的走进那个良夜。"
   logo="https://avatars.githubusercontent.com/u/34296329"
   url="https://icewk.org/"
+  preview="https://icewk.org/_next/static/media/icewk_web.0b579282.webp"
 />
+
 ## 更多
 
 ::: md-demo 请按照此格式填写
