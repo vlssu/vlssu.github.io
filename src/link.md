@@ -6,10 +6,10 @@ article: false
 
 <SiteInfo
   name="小奏笔记"
-  desc="一个鸽子的网站"
-  logo="https://www.mofuc.cn/zb_users/upload/2024/10/20241025183536172985253620223.jpg"
-  url="https://www.mofuc.cn"
-  preview="https://s2.loli.net/2025/05/13/QL28DgP7sYxSIyV.png"
+  desc="鸽了鸽了咕咕咕咕咕咕"
+  url="https://blog.mofuc.cn"
+  logo="https://blog.mofuc.cn/zb_users/upload/2024/10/20241025183536172985253620223.jpg"
+  preview="https://blog.mofuc.cn/zb_users/upload/2025/10/20251003225945175950358536895.png"
 />
 <SiteInfo
   name="NetGo"
