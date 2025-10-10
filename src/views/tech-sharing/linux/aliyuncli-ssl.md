@@ -1,5 +1,5 @@
 ---
-title: 使用阿里云CLI在1panel申请证书后自动上传阿里云DCDN
+title: 1Panel推送SSL证书到阿里云DCDN(使用阿里云cli)
 date: 2025-05-09
 cover: https://api.vlssu.com/img/?250509
 tags:
