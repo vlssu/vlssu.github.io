@@ -6,8 +6,8 @@
     <link>https://blog.vlssu.com/</link>
     <description>Share knowledge and stay happy</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 03 Oct 2025 15:04:18 GMT</pubDate>
-    <lastBuildDate>Fri, 03 Oct 2025 15:04:18 GMT</lastBuildDate>
+    <pubDate>Fri, 10 Oct 2025 12:51:46 GMT</pubDate>
+    <lastBuildDate>Fri, 10 Oct 2025 12:51:46 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>Linux使用小知识</category>
@@ -95,10 +95,10 @@
       <enclosure url="https://api.vlssu.com/img/?220925" type="image/"/>
     </item>
     <item>
-      <title>使用阿里云CLI在1panel申请证书后自动上传阿里云DCDN</title>
+      <title>1Panel推送SSL证书到阿里云DCDN(使用阿里云cli)</title>
       <link>https://blog.vlssu.com/views/tech-sharing/linux/aliyuncli-ssl.html</link>
       <guid>https://blog.vlssu.com/views/tech-sharing/linux/aliyuncli-ssl.html</guid>
-      <source url="https://blog.vlssu.com/rss.xml">使用阿里云CLI在1panel申请证书后自动上传阿里云DCDN</source>
+      <source url="https://blog.vlssu.com/rss.xml">1Panel推送SSL证书到阿里云DCDN(使用阿里云cli)</source>
       <description>安装 阿里云CLI 如果更新阿里云CLI，可以通过重复执行此命令即可更新 1Panel设置 安装1Panel需要保证版本 ≥ v1.10.29-lts ，否则可能没有以下功能 在1panel设置好相关设置后，在证书申请页需要将「推送证书到本地目录」选项打开，并设置一个目录，比如我设置的是 /etc/letsencrypt/live/vlssu.com ...</description>
       <category>Linux使用小知识</category>
       <pubDate>Fri, 09 May 2025 00:00:00 GMT</pubDate>
