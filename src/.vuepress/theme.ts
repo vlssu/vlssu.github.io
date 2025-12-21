@@ -29,7 +29,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: '<a href="https://beian.miit.gov.cn">沪ICP备2024046839号-21</a>',
+  footer: '<a href="https://beian.miit.gov.cn">沪ICP备2025151889号-4</a>',
   copyright: "CC BY-SA 4.0 Licensed | Copyright © 2018 - 2025 飒爽师叔",
   license: "CC BY-SA 4.0",
 
