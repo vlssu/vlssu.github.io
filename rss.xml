@@ -6,8 +6,8 @@
     <link>https://blog.vlssu.com/</link>
     <description>Share knowledge and stay happy</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 21 Dec 2025 04:24:10 GMT</pubDate>
-    <lastBuildDate>Sun, 21 Dec 2025 04:24:10 GMT</lastBuildDate>
+    <pubDate>Sun, 15 Feb 2026 09:52:12 GMT</pubDate>
+    <lastBuildDate>Sun, 15 Feb 2026 09:52:12 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>Linux使用小知识</category>
@@ -230,10 +230,10 @@
 <p>在设置完环境变量，我们就可以通过 Docker Compose 使用 <code>docker-compose.yml</code> 文件来启动面板了</p>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 在后台执行该服务</span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># -d 参数是让该程序在后台执行，如果你需要排查错误等情况你可以去除该参数</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">docker-compose</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> up</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -d</span></span></code></pre>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> compose</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> up</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -d</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>添加首位用户</h3>
 <p>您需要为面板创建一个管理用户，以便您可以登录面板。 为此，请运行以下命令。 并保证账户密码满足以下要求：8 个字符，大小写混合，至少一个数字。(此指令需在上文中含有 <code>docker-compose.yml</code> 的同级目录中执行）</p>
-<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">docker-compose</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> exec</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> panel</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> php</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> artisan</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> p:user:make</span></span></code></pre>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> compose</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> exec</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> panel</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> php</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> artisan</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> p:user:make</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>现在，你已经全部设置完毕，直接输入你的网站地址，即可访问翼龙面板</p>
 ]]></content:encoded>
       <enclosure url="https://api.vlssu.com/img/?231003" type="image/"/>
